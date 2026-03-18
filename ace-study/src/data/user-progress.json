@@ -1,0 +1,114 @@
+{
+  "user": {
+    "id": "user_001",
+    "name": "Matt",
+    "email": "matt@example.com",
+    "avatarUrl": "/avatar.png",
+    "activeSubject": "biology",
+    "examDate": "2025-06-15",
+    "joinedAt": "2024-09-01"
+  },
+  "stats": {
+    "questionsAnswered": 1247,
+    "questionsCorrect": 1059,
+    "studyHoursThisWeek": 12.5,
+    "streakDays": 14,
+    "averageScore": 85,
+    "completedNotes": 34,
+    "questionsLeft": 120,
+    "totalFlashcards": 280,
+    "flashcardsMastered": 168
+  },
+  "weeklyHours": [1.5, 2.0, 1.0, 3.5, 2.0, 1.5, 1.0],
+  "scoreHistory": [
+    { "date": "2025-01-01", "score": 62, "subject": "biology" },
+    { "date": "2025-01-08", "score": 58, "subject": "chemistry" },
+    { "date": "2025-01-15", "score": 71, "subject": "maths" },
+    { "date": "2025-01-22", "score": 68, "subject": "biology" },
+    { "date": "2025-02-01", "score": 78, "subject": "chemistry" },
+    { "date": "2025-02-08", "score": 75, "subject": "maths" },
+    { "date": "2025-02-15", "score": 82, "subject": "biology" },
+    { "date": "2025-03-01", "score": 85, "subject": "chemistry" }
+  ],
+  "subjectScores": {
+    "biology": 85,
+    "chemistry": 72,
+    "maths": 91,
+    "physics": 67,
+    "english": 78,
+    "history": 63
+  },
+  "recentActivity": [
+    {
+      "id": "act_001",
+      "type": "flashcard",
+      "title": "Biology Flashcards",
+      "subtitle": "Cell Biology deck — 20 cards",
+      "time": "10:30 AM",
+      "date": "today",
+      "scoreChange": 5,
+      "link": "/flashcards/cell-biology"
+    },
+    {
+      "id": "act_002",
+      "type": "quiz",
+      "title": "Maths Target Test",
+      "subtitle": "Calculus — 10 questions",
+      "time": "Yesterday",
+      "date": "yesterday",
+      "scoreChange": 8,
+      "link": "/questions"
+    },
+    {
+      "id": "act_003",
+      "type": "notes",
+      "title": "Chemistry Notes",
+      "subtitle": "Atomic Structure — 4 sections",
+      "time": "2 days ago",
+      "date": "2 days ago",
+      "scoreChange": 0,
+      "link": "/notes/atomic-model"
+    },
+    {
+      "id": "act_004",
+      "type": "mock",
+      "title": "Biology Mock Exam",
+      "subtitle": "Paper 1 — 75 minutes",
+      "time": "3 days ago",
+      "date": "3 days ago",
+      "scoreChange": 12,
+      "link": "/mocks/bio-mock-1"
+    }
+  ],
+  "recommendedTopics": [
+    {
+      "subjectId": "biology",
+      "topicId": "ecology",
+      "topicName": "Ecology & Ecosystems",
+      "reason": "You scored 45% on this topic",
+      "score": 45,
+      "icon": "🌿"
+    },
+    {
+      "subjectId": "chemistry",
+      "topicId": "organic-chemistry",
+      "topicName": "Organic Chemistry",
+      "reason": "Not started — exam date in 90 days",
+      "score": 0,
+      "icon": "⚗️"
+    },
+    {
+      "subjectId": "physics",
+      "topicId": "quantum",
+      "topicName": "Quantum Physics",
+      "reason": "You scored 52% on last mock",
+      "score": 52,
+      "icon": "⚡"
+    }
+  ],
+  "studyHeatmap": {
+    "2025-01": [0,1,1,0,2,1,0,1,1,2,0,0,1,2,1,0,1,0,1,2,1,0,0,1,1,2,0,1,1,0,1],
+    "2025-02": [0,1,2,1,0,1,2,1,0,2,1,0,1,2,0,1,1,0,2,1,1,0,1,2,1,0,0,1],
+    "2025-03": [1,2,1,0,1,2,1,0,1,2,1,1,0,2,1,0,1]
+  }
+}

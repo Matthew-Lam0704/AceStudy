@@ -1,0 +1,61 @@
+[
+  {
+    "id": "cell-biology",
+    "name": "Cell Biology",
+    "subject": "biology",
+    "cardCount": 24,
+    "masteredCount": 18,
+    "description": "Key terms and concepts in cell structure and function",
+    "cards": [
+      { "id": "fc_001", "front": "What is the function of the mitochondria?", "back": "The mitochondria is the powerhouse of the cell. It produces ATP through cellular respiration (oxidative phosphorylation). It has a double membrane — the inner membrane is folded into cristae to maximise surface area for ATP synthesis.", "mastered": true },
+      { "id": "fc_002", "front": "Define the term 'selectively permeable'", "back": "A selectively permeable membrane allows certain molecules to pass through while restricting others. Cell surface membranes are selectively permeable — small, non-polar molecules (O₂, CO₂) pass freely; larger or polar molecules require transport proteins.", "mastered": true },
+      { "id": "fc_003", "front": "What is osmosis?", "back": "Osmosis is the net movement of water molecules across a partially permeable membrane from a region of higher water potential to a region of lower water potential. It is a passive process requiring no energy.", "mastered": false },
+      { "id": "fc_004", "front": "What are the stages of mitosis?", "back": "PMAT: Prophase → chromosomes condense, spindle forms. Metaphase → chromosomes align at the cell equator. Anaphase → sister chromatids pulled to opposite poles. Telophase → nuclear envelopes reform, chromosomes decondense.", "mastered": true },
+      { "id": "fc_005", "front": "What is the difference between prokaryotic and eukaryotic cells?", "back": "Prokaryotic cells: no membrane-bound nucleus, no membrane-bound organelles, smaller (1-10μm), circular DNA, ribosomes are 70S. Eukaryotic cells: membrane-bound nucleus, membrane-bound organelles, larger (10-100μm), linear chromosomal DNA, ribosomes are 80S.", "mastered": true },
+      { "id": "fc_006", "front": "What is active transport?", "back": "Active transport is the movement of molecules against a concentration gradient using energy (ATP) and carrier proteins. It requires metabolic energy, unlike passive transport. Examples: sodium-potassium pump, glucose absorption in the gut.", "mastered": false },
+      { "id": "fc_007", "front": "Define 'cell cycle'", "back": "The cell cycle is the series of events that take place in a cell leading to its division. It consists of: Interphase (G1, S, G2 phases — cell grows and DNA replicates) and the Mitotic phase (M phase — cell divides).", "mastered": true },
+      { "id": "fc_008", "front": "What is the role of the ribosome?", "back": "Ribosomes are the sites of protein synthesis (translation). They read mRNA sequences and assemble amino acids into polypeptide chains. Found free in cytoplasm or attached to rough ER. Prokaryotes have 70S ribosomes; eukaryotes have 80S.", "mastered": false }
+    ]
+  },
+  {
+    "id": "genetics",
+    "name": "Genetics & Inheritance",
+    "subject": "biology",
+    "cardCount": 20,
+    "masteredCount": 8,
+    "description": "DNA, RNA, and patterns of inheritance",
+    "cards": [
+      { "id": "fc_101", "front": "What is the structure of DNA?", "back": "DNA is a double helix made of two antiparallel polynucleotide strands. Each nucleotide contains a deoxyribose sugar, a phosphate group, and one of four bases: Adenine (A), Thymine (T), Guanine (G), Cytosine (C). A-T and G-C are complementary base pairs.", "mastered": true },
+      { "id": "fc_102", "front": "What is the difference between genotype and phenotype?", "back": "Genotype is the genetic makeup of an organism — the alleles it carries (e.g., Bb). Phenotype is the observable characteristics of an organism resulting from its genotype and environment (e.g., brown eyes).", "mastered": true },
+      { "id": "fc_103", "front": "Define codominance", "back": "Codominance occurs when both alleles in a heterozygous organism are fully expressed, producing a phenotype that shows characteristics of both alleles. Example: AB blood type where both A and B alleles are expressed simultaneously.", "mastered": false },
+      { "id": "fc_104", "front": "What is a mutation?", "back": "A mutation is a change in the DNA base sequence. Types include: substitution (one base replaced), deletion (base removed — causes frameshift), insertion (base added — causes frameshift). Mutations can be beneficial, neutral, or harmful.", "mastered": false }
+    ]
+  },
+  {
+    "id": "calculus",
+    "name": "Calculus Essentials",
+    "subject": "maths",
+    "cardCount": 18,
+    "masteredCount": 14,
+    "description": "Differentiation and integration rules",
+    "cards": [
+      { "id": "fc_201", "front": "Differentiate y = xⁿ", "back": "dy/dx = nxⁿ⁻¹ (Power Rule). The derivative of xⁿ is found by multiplying by the power n and reducing the power by 1. Example: d/dx(x⁵) = 5x⁴", "mastered": true },
+      { "id": "fc_202", "front": "What is the Chain Rule?", "back": "If y = f(g(x)), then dy/dx = f'(g(x)) × g'(x). For composite functions, differentiate the outer function first (keeping the inner the same), then multiply by the derivative of the inner function. Example: d/dx(sin(x²)) = cos(x²) × 2x", "mastered": true },
+      { "id": "fc_203", "front": "What is the integral of 1/x?", "back": "∫(1/x)dx = ln|x| + C. This is a special case as the power rule would give x⁰/0 which is undefined. The natural logarithm arises because d/dx(ln x) = 1/x.", "mastered": true },
+      { "id": "fc_204", "front": "State the Fundamental Theorem of Calculus", "back": "Part 1: If F(x) = ∫ₐˣ f(t)dt, then F'(x) = f(x). Part 2: ∫ₐᵇ f(x)dx = F(b) - F(a) where F is any antiderivative of f. This links differentiation and integration as inverse operations.", "mastered": false }
+    ]
+  },
+  {
+    "id": "atomic-structure",
+    "name": "Atomic Structure",
+    "subject": "chemistry",
+    "cardCount": 16,
+    "masteredCount": 10,
+    "description": "Atomic models, isotopes, and electronic configuration",
+    "cards": [
+      { "id": "fc_301", "front": "What is an isotope?", "back": "Isotopes are atoms of the same element (same atomic number) with different numbers of neutrons (different mass numbers). Example: Carbon-12 (6 protons, 6 neutrons) and Carbon-14 (6 protons, 8 neutrons). Isotopes have the same chemical properties but different physical properties.", "mastered": true },
+      { "id": "fc_302", "front": "What is ionisation energy?", "back": "Ionisation energy is the energy required to remove one mole of electrons from one mole of gaseous atoms. First ionisation energy: X(g) → X⁺(g) + e⁻. Increases across a period (more protons, same shielding). Decreases down a group (electrons further from nucleus).", "mastered": true },
+      { "id": "fc_303", "front": "Define electronegativity", "back": "Electronegativity is the ability of an atom to attract a bonding pair of electrons towards itself in a covalent bond (Pauling scale). Increases across a period. Decreases down a group. Fluorine is the most electronegative element (4.0 on Pauling scale).", "mastered": false }
+    ]
+  }
+]

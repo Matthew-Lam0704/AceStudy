@@ -1,0 +1,80 @@
+[
+  {
+    "id": "biology",
+    "name": "Biology",
+    "icon": "🧬",
+    "color": "#00F5D4",
+    "gradient": "from-[#00F5D4]/20 to-[#00D19F]/10",
+    "border": "border-[#00F5D4]/30",
+    "examBoards": ["AQA", "Edexcel", "OCR", "WJEC", "IB"],
+    "topicCount": 12,
+    "questionCount": 340,
+    "notesCount": 48,
+    "description": "Cell biology, genetics, ecology, and more"
+  },
+  {
+    "id": "chemistry",
+    "name": "Chemistry",
+    "icon": "⚗️",
+    "color": "#7c5cff",
+    "gradient": "from-[#7c5cff]/20 to-[#5a3fd4]/10",
+    "border": "border-[#7c5cff]/30",
+    "examBoards": ["AQA", "Edexcel", "OCR", "WJEC"],
+    "topicCount": 14,
+    "questionCount": 410,
+    "notesCount": 52,
+    "description": "Atomic structure, bonding, organic chemistry"
+  },
+  {
+    "id": "maths",
+    "name": "Mathematics",
+    "icon": "📐",
+    "color": "#ffb547",
+    "gradient": "from-[#ffb547]/20 to-[#ff8c00]/10",
+    "border": "border-[#ffb547]/30",
+    "examBoards": ["AQA", "Edexcel", "OCR", "WJEC", "IB"],
+    "topicCount": 16,
+    "questionCount": 520,
+    "notesCount": 64,
+    "description": "Pure maths, statistics, and mechanics"
+  },
+  {
+    "id": "physics",
+    "name": "Physics",
+    "icon": "⚡",
+    "color": "#00BBF9",
+    "gradient": "from-[#00BBF9]/20 to-[#0077cc]/10",
+    "border": "border-[#00BBF9]/30",
+    "examBoards": ["AQA", "Edexcel", "OCR", "WJEC", "IB"],
+    "topicCount": 13,
+    "questionCount": 380,
+    "notesCount": 50,
+    "description": "Mechanics, waves, electricity, quantum physics"
+  },
+  {
+    "id": "english",
+    "name": "English Literature",
+    "icon": "📚",
+    "color": "#ff6b9d",
+    "gradient": "from-[#ff6b9d]/20 to-[#cc3366]/10",
+    "border": "border-[#ff6b9d]/30",
+    "examBoards": ["AQA", "Edexcel", "OCR", "WJEC"],
+    "topicCount": 8,
+    "questionCount": 220,
+    "notesCount": 36,
+    "description": "Poetry, prose, drama, and unseen texts"
+  },
+  {
+    "id": "history",
+    "name": "History",
+    "icon": "🏛️",
+    "color": "#e8a87c",
+    "gradient": "from-[#e8a87c]/20 to-[#c47d3c]/10",
+    "border": "border-[#e8a87c]/30",
+    "examBoards": ["AQA", "Edexcel", "OCR", "WJEC"],
+    "topicCount": 10,
+    "questionCount": 280,
+    "notesCount": 42,
+    "description": "Modern, medieval, and world history"
+  }
+]

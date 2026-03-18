@@ -1,0 +1,120 @@
+[
+  {
+    "id": "cell-structure",
+    "title": "Cell Structure & Organisation",
+    "subject": "biology",
+    "topicId": "cell-biology",
+    "readTime": "12 min",
+    "sections": [
+      {
+        "id": "overview",
+        "title": "Overview of Cell Types",
+        "content": "All living organisms are made of cells. There are two fundamental cell types:\n\n**Prokaryotic cells** — found in bacteria and archaea. They lack a membrane-bound nucleus and membrane-bound organelles. DNA exists as a circular chromosome in the cytoplasm (nucleoid region). They are typically 1–10 μm in size.\n\n**Eukaryotic cells** — found in plants, animals, fungi, and protists. They have a membrane-bound nucleus containing linear chromosomes. They contain specialised membrane-bound organelles. They are typically 10–100 μm in size.\n\nBoth cell types share common features: a cell membrane, ribosomes, cytoplasm, and DNA."
+      },
+      {
+        "id": "nucleus",
+        "title": "The Nucleus",
+        "content": "The nucleus is the control centre of the eukaryotic cell. It contains the cell's genetic information (DNA) in the form of chromatin (loose DNA) or chromosomes (condensed DNA during cell division).\n\n**Nuclear envelope** — a double membrane surrounding the nucleus, perforated by nuclear pores that regulate the movement of molecules in and out.\n\n**Nucleolus** — a dense region within the nucleus where ribosomal RNA (rRNA) is synthesised and ribosomes are assembled.\n\n**Chromatin** — the complex of DNA and proteins (histones) that makes up chromosomes in their uncondensed form during interphase."
+      },
+      {
+        "id": "mitochondria",
+        "title": "Mitochondria",
+        "content": "Mitochondria are the sites of aerobic respiration and ATP production. They are often called the 'powerhouse of the cell'.\n\n**Structure:**\n- Outer membrane — smooth, permeable to small molecules\n- Inner membrane — highly folded into **cristae** (singular: crista), which maximise surface area for ATP synthase enzymes\n- Matrix — the inner compartment containing enzymes for the Krebs cycle, mitochondrial DNA, and ribosomes\n\n**Function:**\nOxidative phosphorylation occurs on the inner membrane. The proton gradient created by the electron transport chain drives ATP synthase to produce ATP.\n\nMitochondria have their own circular DNA and ribosomes, supporting the endosymbiotic theory that they were once free-living bacteria."
+      },
+      {
+        "id": "endoplasmic-reticulum",
+        "title": "Endoplasmic Reticulum",
+        "content": "The endoplasmic reticulum (ER) is a network of interconnected membranes extending from the nuclear envelope.\n\n**Rough ER (RER):**\n- Studded with ribosomes on its surface\n- Site of protein synthesis and initial protein folding\n- Newly synthesised proteins enter the lumen for transport\n- Continuous with the outer nuclear membrane\n\n**Smooth ER (SER):**\n- No ribosomes — smooth appearance\n- Site of lipid synthesis (phospholipids, steroids)\n- Detoxification of drugs and harmful substances\n- Calcium ion storage (important in muscle contraction)\n\nProteins synthesised at the RER are packaged into transport vesicles and sent to the Golgi apparatus."
+      }
+    ],
+    "keyPoints": [
+      "Prokaryotes lack membrane-bound nucleus; eukaryotes have one",
+      "Mitochondrial inner membrane folds (cristae) maximise ATP synthesis surface area",
+      "RER is studded with ribosomes for protein synthesis; SER makes lipids",
+      "Nuclear pores regulate transport between nucleus and cytoplasm"
+    ],
+    "relatedFlashcardDeckId": "cell-biology",
+    "relatedTopicId": "cell-biology"
+  },
+  {
+    "id": "dna-structure",
+    "title": "DNA Structure & Replication",
+    "subject": "biology",
+    "topicId": "genetics",
+    "readTime": "15 min",
+    "sections": [
+      {
+        "id": "double-helix",
+        "title": "The Double Helix",
+        "content": "DNA (deoxyribonucleic acid) is the molecule that carries genetic information. Its structure was elucidated by Watson and Crick in 1953, using X-ray crystallography data from Rosalind Franklin.\n\n**Key features of DNA structure:**\n- Double helix — two polynucleotide strands wound around each other\n- Antiparallel strands — one strand runs 5'→3', the other 3'→5'\n- Nucleotide monomers — each containing a deoxyribose sugar, a phosphate group, and a nitrogenous base\n- Complementary base pairing — Adenine (A) pairs with Thymine (T) via 2 hydrogen bonds; Guanine (G) pairs with Cytosine (C) via 3 hydrogen bonds\n- Sugar-phosphate backbone — the 'rails' of the DNA ladder, connected by phosphodiester bonds"
+      },
+      {
+        "id": "replication",
+        "title": "DNA Replication",
+        "content": "DNA replication is **semi-conservative** — each new DNA molecule consists of one original strand and one newly synthesised strand.\n\n**Key enzymes:**\n- **Helicase** — unwinds and separates the double helix by breaking hydrogen bonds between bases (creates a 'replication fork')\n- **DNA Polymerase** — synthesises the new strand by adding nucleotides in a 5'→3' direction, using the existing strand as a template\n- **Primase** — synthesises a short RNA primer to provide a free 3'-OH group for DNA polymerase\n- **Ligase** — joins Okazaki fragments on the lagging strand together\n\n**Leading vs Lagging Strand:**\nThe leading strand is synthesised continuously. The lagging strand is synthesised discontinuously in short segments (Okazaki fragments) in the opposite direction."
+      }
+    ],
+    "keyPoints": [
+      "DNA is a double helix with antiparallel, complementary strands",
+      "A-T (2 H-bonds) and G-C (3 H-bonds) base pairing is complementary",
+      "Semi-conservative replication: each daughter molecule has one old, one new strand",
+      "Helicase unwinds; DNA Polymerase III synthesises; Ligase joins fragments"
+    ],
+    "relatedFlashcardDeckId": "genetics",
+    "relatedTopicId": "genetics"
+  },
+  {
+    "id": "quadratics",
+    "title": "Quadratic Equations",
+    "subject": "maths",
+    "topicId": "algebra",
+    "readTime": "10 min",
+    "sections": [
+      {
+        "id": "forms",
+        "title": "Forms of a Quadratic",
+        "content": "A quadratic equation has the general form **ax² + bx + c = 0** where a ≠ 0.\n\n**Three key forms:**\n\n**Standard form:** ax² + bx + c\n- Easy to identify a, b, c for the quadratic formula\n- The y-intercept is the value of c\n\n**Factored form:** a(x - p)(x - q)\n- The roots are x = p and x = q\n- Most useful when solving for zeros\n\n**Vertex (completed square) form:** a(x - h)² + k\n- The vertex (turning point) is at (h, k)\n- The axis of symmetry is x = h\n- If a > 0, the parabola opens upward (minimum at vertex); if a < 0, opens downward (maximum)"
+      },
+      {
+        "id": "quadratic-formula",
+        "title": "The Quadratic Formula",
+        "content": "For ax² + bx + c = 0, the solutions are:\n\n**x = (−b ± √(b² − 4ac)) / 2a**\n\n**The Discriminant (Δ = b² − 4ac):**\n- Δ > 0: Two distinct real roots\n- Δ = 0: One repeated real root (tangent to x-axis)\n- Δ < 0: No real roots (roots are complex)\n\n**Worked Example:**\nSolve 2x² − 5x − 3 = 0\na = 2, b = −5, c = −3\nΔ = (−5)² − 4(2)(−3) = 25 + 24 = 49\nx = (5 ± √49) / 4 = (5 ± 7) / 4\nx = 3 or x = −½"
+      }
+    ],
+    "keyPoints": [
+      "Standard, factored, and vertex forms each have different uses",
+      "Quadratic formula: x = (−b ± √(b² − 4ac)) / 2a",
+      "Discriminant b²−4ac determines number of real roots",
+      "Negative discriminant → no real roots (complex roots only)"
+    ],
+    "relatedFlashcardDeckId": "calculus",
+    "relatedTopicId": "algebra"
+  },
+  {
+    "id": "atomic-model",
+    "title": "The Atomic Model",
+    "subject": "chemistry",
+    "topicId": "atomic-structure",
+    "readTime": "11 min",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Development of the Atomic Model",
+        "content": "Our understanding of the atom has evolved through a series of models:\n\n**Dalton's Model (1803)** — atoms are solid, indivisible spheres. Different elements have different atoms.\n\n**Thomson's Plum Pudding Model (1897)** — after discovering the electron, Thomson proposed atoms are a positive 'pudding' with embedded negative electrons.\n\n**Rutherford's Nuclear Model (1911)** — alpha particle scattering experiment showed most of an atom is empty space, with a small, dense, positively-charged nucleus.\n\n**Bohr's Model (1913)** — electrons occupy fixed orbits (shells) at specific energy levels. Electrons can jump between levels by absorbing or emitting photons.\n\n**Modern Quantum Model** — electrons occupy orbitals (probability clouds), not fixed orbits. Described by quantum numbers."
+      },
+      {
+        "id": "subatomic-particles",
+        "title": "Subatomic Particles",
+        "content": "All atoms consist of three types of subatomic particles:\n\n| Particle | Relative Mass | Relative Charge | Location |\n|---------|--------------|----------------|----------|\n| Proton  | 1            | +1              | Nucleus  |\n| Neutron | 1            | 0               | Nucleus  |\n| Electron| 1/1836 (~0)  | −1              | Shells   |\n\n**Atomic Number (Z)** — the number of protons in the nucleus. Defines the element.\n**Mass Number (A)** — the total number of protons + neutrons in the nucleus.\n**Isotopes** — atoms of the same element with different numbers of neutrons (same Z, different A)."
+      }
+    ],
+    "keyPoints": [
+      "Atomic models evolved: Dalton → Thomson → Rutherford → Bohr → Quantum",
+      "Proton = +1 charge, mass 1; Neutron = 0 charge, mass 1; Electron = −1, mass ~0",
+      "Atomic number = protons; Mass number = protons + neutrons",
+      "Isotopes: same atomic number, different mass number (different neutron count)"
+    ],
+    "relatedFlashcardDeckId": "atomic-structure",
+    "relatedTopicId": "atomic-structure"
+  }
+]

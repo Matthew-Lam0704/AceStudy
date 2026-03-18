@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_001",
+    "subject": "biology",
+    "topicId": "cell-biology",
+    "subtopicId": "cell-structure",
+    "difficulty": "easy",
+    "type": "multiple-choice",
+    "question": "Which organelle is responsible for producing ATP through aerobic respiration?",
+    "options": [
+      "Ribosome",
+      "Mitochondria",
+      "Golgi apparatus",
+      "Endoplasmic reticulum"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mitochondria are the primary sites of aerobic respiration and ATP production. The inner membrane (cristae) contains ATP synthase, which uses the proton gradient to synthesise ATP via oxidative phosphorylation.",
+    "markScheme": "Award 1 mark for: Mitochondria / mitochondrion",
+    "timeSeconds": 45,
+    "averageTimeSeconds": 38
+  },
+  {
+    "id": "q_002",
+    "subject": "biology",
+    "topicId": "cell-biology",
+    "subtopicId": "cell-structure",
+    "difficulty": "medium",
+    "type": "multiple-choice",
+    "question": "A student observes a cell under an electron microscope. The cell has a double membrane-bound nucleus, mitochondria, and chloroplasts. Which type of cell is this most likely to be?",
+    "options": [
+      "Animal cell",
+      "Prokaryotic cell",
+      "Plant cell",
+      "Fungal cell"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The presence of chloroplasts (for photosynthesis) alongside a nucleus and mitochondria indicates this is a plant cell. Animal and fungal cells lack chloroplasts; prokaryotic cells lack membrane-bound organelles entirely.",
+    "markScheme": "Award 1 mark for: Plant cell",
+    "timeSeconds": 60,
+    "averageTimeSeconds": 55
+  },
+  {
+    "id": "q_003",
+    "subject": "biology",
+    "topicId": "genetics",
+    "subtopicId": "dna-structure",
+    "difficulty": "medium",
+    "type": "multiple-choice",
+    "question": "During DNA replication, which enzyme is responsible for joining Okazaki fragments on the lagging strand?",
+    "options": [
+      "Helicase",
+      "DNA Polymerase I",
+      "DNA Ligase",
+      "Primase"
+    ],
+    "correctAnswer": 2,
+    "explanation": "DNA Ligase seals the nicks between Okazaki fragments on the lagging strand by forming phosphodiester bonds. Helicase unwinds the double helix; Primase synthesises RNA primers; DNA Polymerase III extends the new strand.",
+    "markScheme": "Award 1 mark for: DNA Ligase / Ligase",
+    "timeSeconds": 55,
+    "averageTimeSeconds": 62
+  },
+  {
+    "id": "q_004",
+    "subject": "biology",
+    "topicId": "genetics",
+    "subtopicId": "inheritance-patterns",
+    "difficulty": "hard",
+    "type": "multiple-choice",
+    "question": "In a cross between two individuals who are heterozygous for a trait showing codominance (R¹R² × R¹R²), what proportion of offspring will show an intermediate phenotype?",
+    "options": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "All offspring"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A cross R¹R² × R¹R² gives genotypes: R¹R¹ (1/4), R¹R² (1/2), R²R² (1/4). In codominance, only R¹R² individuals show the intermediate (blended) phenotype, which is 1/2 (50%) of offspring.",
+    "markScheme": "Award 1 mark for: 1/2 / 50% / half",
+    "timeSeconds": 90,
+    "averageTimeSeconds": 105
+  },
+  {
+    "id": "q_005",
+    "subject": "maths",
+    "topicId": "calculus",
+    "subtopicId": "differentiation",
+    "difficulty": "easy",
+    "type": "multiple-choice",
+    "question": "Find dy/dx when y = 3x⁴ − 2x² + 7x − 5",
+    "options": [
+      "12x³ − 4x + 7",
+      "12x³ − 4x",
+      "3x³ − 2x + 7",
+      "12x⁴ − 4x² + 7"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Using the power rule (d/dx xⁿ = nxⁿ⁻¹) term by term: d/dx(3x⁴) = 12x³, d/dx(−2x²) = −4x, d/dx(7x) = 7, d/dx(−5) = 0. Therefore dy/dx = 12x³ − 4x + 7.",
+    "markScheme": "Award 1 mark for correct differentiation of each term. Full marks: 12x³ − 4x + 7",
+    "timeSeconds": 50,
+    "averageTimeSeconds": 45
+  },
+  {
+    "id": "q_006",
+    "subject": "maths",
+    "topicId": "calculus",
+    "subtopicId": "differentiation",
+    "difficulty": "hard",
+    "type": "multiple-choice",
+    "question": "Differentiate y = sin(x²) × e^(3x) using the product rule",
+    "options": [
+      "2x·cos(x²)·e^(3x) + 3·sin(x²)·e^(3x)",
+      "cos(x²)·e^(3x) + 3·sin(x²)·e^(3x)",
+      "2x·cos(x²) + 3e^(3x)",
+      "sin(x²)·3e^(3x)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Product rule: d/dx(uv) = u'v + uv'. Let u = sin(x²), v = e^(3x). Then u' = 2x·cos(x²) (chain rule) and v' = 3e^(3x). Therefore dy/dx = 2x·cos(x²)·e^(3x) + sin(x²)·3e^(3x).",
+    "markScheme": "M1 for product rule structure, A1 for correct u', A1 for correct v', A1 for final answer",
+    "timeSeconds": 120,
+    "averageTimeSeconds": 135
+  },
+  {
+    "id": "q_007",
+    "subject": "chemistry",
+    "topicId": "atomic-structure",
+    "subtopicId": "atomic-model",
+    "difficulty": "easy",
+    "type": "multiple-choice",
+    "question": "Which scientist's experiment provided evidence for a small, dense, positively-charged nucleus?",
+    "options": [
+      "Thomson's cathode ray experiment",
+      "Bohr's spectral lines experiment",
+      "Rutherford's gold foil experiment",
+      "Dalton's combining volumes experiment"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Rutherford's gold foil (alpha particle scattering) experiment fired alpha particles at a thin gold foil. Most passed straight through (atom is mostly empty space), some deflected slightly (due to positive nucleus), and a very small number bounced back (nucleus is small and dense).",
+    "markScheme": "Award 1 mark for: Rutherford / gold foil / alpha particle scattering experiment",
+    "timeSeconds": 40,
+    "averageTimeSeconds": 35
+  },
+  {
+    "id": "q_008",
+    "subject": "chemistry",
+    "topicId": "bonding",
+    "subtopicId": "ionic-bonding",
+    "difficulty": "medium",
+    "type": "multiple-choice",
+    "question": "Which of the following would have the highest lattice enthalpy?",
+    "options": [
+      "NaCl (sodium chloride)",
+      "MgO (magnesium oxide)",
+      "KBr (potassium bromide)",
+      "CsI (caesium iodide)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Lattice enthalpy increases with higher ionic charges and smaller ionic radii (closer packing, stronger electrostatic attraction). MgO contains Mg²⁺ and O²⁻ ions (charge 2+/2−) which gives a much stronger lattice than the singly-charged ions in NaCl, KBr, and CsI.",
+    "markScheme": "Award 1 mark for: MgO. Award 1 further mark for explanation: higher charge on ions / smaller ions / greater electrostatic attraction",
+    "timeSeconds": 70,
+    "averageTimeSeconds": 78
+  },
+  {
+    "id": "q_009",
+    "subject": "biology",
+    "topicId": "ecology",
+    "subtopicId": "ecosystems",
+    "difficulty": "easy",
+    "type": "multiple-choice",
+    "question": "Which level of the food chain contains organisms that fix energy from an abiotic source (e.g., sunlight)?",
+    "options": [
+      "Primary consumers",
+      "Secondary consumers",
+      "Decomposers",
+      "Producers"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Producers (autotrophs) fix energy from abiotic sources. Plants, algae, and photosynthetic bacteria fix solar energy via photosynthesis. Chemosynthetic bacteria fix chemical energy. All other trophic levels depend on this fixed energy.",
+    "markScheme": "Award 1 mark for: Producers / autotrophs / plants",
+    "timeSeconds": 35,
+    "averageTimeSeconds": 30
+  },
+  {
+    "id": "q_010",
+    "subject": "maths",
+    "topicId": "algebra",
+    "subtopicId": "quadratics",
+    "difficulty": "medium",
+    "type": "multiple-choice",
+    "question": "Solve the equation 2x² + 5x − 3 = 0",
+    "options": [
+      "x = 1/2 or x = −3",
+      "x = −1/2 or x = 3",
+      "x = 3/2 or x = −2",
+      "x = −3/2 or x = 2"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Factor: 2x² + 5x − 3 = (2x − 1)(x + 3) = 0. Check: 2x² + 6x − x − 3 = 2x(x+3) − 1(x+3) = (2x−1)(x+3) ✓. Solutions: 2x − 1 = 0 → x = 1/2; x + 3 = 0 → x = −3.",
+    "markScheme": "M1 for factorisation or quadratic formula, A1 for x = 1/2, A1 for x = −3",
+    "timeSeconds": 75,
+    "averageTimeSeconds": 68
+  }
+]

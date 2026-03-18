@@ -1,0 +1,118 @@
+{
+  "biology": [
+    {
+      "id": "cell-biology",
+      "name": "Cell Biology",
+      "subtopics": [
+        { "id": "cell-structure", "name": "Cell Structure & Organisation", "questionsCount": 24, "notesCount": 4, "completed": true },
+        { "id": "cell-division", "name": "Cell Division (Mitosis & Meiosis)", "questionsCount": 28, "notesCount": 5, "completed": true },
+        { "id": "transport-cells", "name": "Transport Across Cell Membranes", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 72,
+      "color": "#00F5D4"
+    },
+    {
+      "id": "genetics",
+      "name": "Genetics & Inheritance",
+      "subtopics": [
+        { "id": "dna-structure", "name": "DNA Structure & Replication", "questionsCount": 30, "notesCount": 6, "completed": true },
+        { "id": "protein-synthesis", "name": "Protein Synthesis", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "inheritance-patterns", "name": "Inheritance Patterns", "questionsCount": 32, "notesCount": 6, "completed": false }
+      ],
+      "completionPercent": 45,
+      "color": "#7c5cff"
+    },
+    {
+      "id": "ecology",
+      "name": "Ecology & Ecosystems",
+      "subtopics": [
+        { "id": "ecosystems", "name": "Ecosystems & Biomes", "questionsCount": 18, "notesCount": 3, "completed": false },
+        { "id": "populations", "name": "Population Dynamics", "questionsCount": 20, "notesCount": 4, "completed": false },
+        { "id": "nutrient-cycles", "name": "Nutrient Cycles", "questionsCount": 16, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 20,
+      "color": "#ff6b9d"
+    },
+    {
+      "id": "physiology",
+      "name": "Human Physiology",
+      "subtopics": [
+        { "id": "digestion", "name": "Digestion & Absorption", "questionsCount": 22, "notesCount": 4, "completed": true },
+        { "id": "respiration", "name": "Respiration & Gas Exchange", "questionsCount": 28, "notesCount": 5, "completed": true },
+        { "id": "nervous-system", "name": "The Nervous System", "questionsCount": 24, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 60,
+      "color": "#00BBF9"
+    }
+  ],
+  "chemistry": [
+    {
+      "id": "atomic-structure",
+      "name": "Atomic Structure & Periodicity",
+      "subtopics": [
+        { "id": "atomic-model", "name": "The Atomic Model", "questionsCount": 20, "notesCount": 4, "completed": true },
+        { "id": "periodic-table", "name": "The Periodic Table", "questionsCount": 24, "notesCount": 5, "completed": true },
+        { "id": "electron-config", "name": "Electronic Configuration", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 68,
+      "color": "#7c5cff"
+    },
+    {
+      "id": "bonding",
+      "name": "Chemical Bonding",
+      "subtopics": [
+        { "id": "ionic-bonding", "name": "Ionic Bonding", "questionsCount": 22, "notesCount": 4, "completed": true },
+        { "id": "covalent-bonding", "name": "Covalent Bonding", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "metallic-bonding", "name": "Metallic Bonding & Structures", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 38,
+      "color": "#00F5D4"
+    },
+    {
+      "id": "organic-chemistry",
+      "name": "Organic Chemistry",
+      "subtopics": [
+        { "id": "alkanes", "name": "Alkanes & Alkenes", "questionsCount": 30, "notesCount": 6, "completed": false },
+        { "id": "alcohols", "name": "Alcohols & Ethers", "questionsCount": 24, "notesCount": 5, "completed": false },
+        { "id": "carbonyls", "name": "Carbonyl Compounds", "questionsCount": 28, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 15,
+      "color": "#ffb547"
+    }
+  ],
+  "maths": [
+    {
+      "id": "algebra",
+      "name": "Algebra & Functions",
+      "subtopics": [
+        { "id": "quadratics", "name": "Quadratic Equations", "questionsCount": 32, "notesCount": 6, "completed": true },
+        { "id": "polynomials", "name": "Polynomials", "questionsCount": 28, "notesCount": 5, "completed": true },
+        { "id": "functions", "name": "Functions & Graphs", "questionsCount": 36, "notesCount": 7, "completed": true }
+      ],
+      "completionPercent": 90,
+      "color": "#ffb547"
+    },
+    {
+      "id": "calculus",
+      "name": "Calculus",
+      "subtopics": [
+        { "id": "differentiation", "name": "Differentiation", "questionsCount": 40, "notesCount": 8, "completed": true },
+        { "id": "integration", "name": "Integration", "questionsCount": 38, "notesCount": 7, "completed": false },
+        { "id": "differential-equations", "name": "Differential Equations", "questionsCount": 30, "notesCount": 6, "completed": false }
+      ],
+      "completionPercent": 55,
+      "color": "#00F5D4"
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics & Probability",
+      "subtopics": [
+        { "id": "probability", "name": "Probability Theory", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "distributions", "name": "Probability Distributions", "questionsCount": 32, "notesCount": 6, "completed": false },
+        { "id": "hypothesis-testing", "name": "Hypothesis Testing", "questionsCount": 24, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 25,
+      "color": "#7c5cff"
+    }
+  ]
+}

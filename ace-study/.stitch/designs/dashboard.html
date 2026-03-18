@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AceStudy Dashboard</title>
+<!-- Tailwind CSS CDN with Forms and Container-Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Custom Configuration for Neumorphism -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'slate-gray': '#2D2D35',
+            'mint-green': '#00F5D4',
+            'teal-accent': '#00BBF9',
+          },
+          boxShadow: {
+            'neu-flat': '8px 8px 16px #24242a, -8px -8px 16px #363640',
+            'neu-flat-sm': '4px 4px 8px #24242a, -4px -4px 8px #363640',
+            'neu-inset': 'inset 6px 6px 12px #24242a, inset -6px -6px 12px #363640',
+            'neu-inset-sm': 'inset 3px 3px 6px #24242a, inset -3px -3px 6px #363640',
+            'neu-button': '5px 5px 10px #24242a, -5px -5px 10px #363640',
+            'neu-button-pressed': 'inset 5px 5px 10px #24242a, inset -5px -5px 10px #363640',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-neumorphism">
+    /* Custom styles for specific neumorphic elements that require precise shadows */
+    .neu-surface {
+      background: #2D2D35;
+      box-shadow: 8px 8px 16px #24242a, -8px -8px 16px #363640;
+    }
+    .neu-inset-surface {
+      background: #2D2D35;
+      box-shadow: inset 6px 6px 12px #24242a, inset -6px -6px 12px #363640;
+    }
+    .glow-text {
+      text-shadow: 0 0 8px rgba(0, 245, 212, 0.6);
+    }
+    body {
+      background-color: #2D2D35;
+      color: #E2E8F0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-12">
+<!-- BEGIN: TopHeader -->
+<header class="flex items-center justify-between px-6 py-8" data-purpose="header-container">
+<div class="w-12 h-12 rounded-full neu-surface flex items-center justify-center p-1" data-purpose="user-avatar">
+<img alt="Avatar" class="rounded-full w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXcwD0uN6ZMTso4SgluOwSO7wAIrRE4wbC8mpEuE8VQ2OWr3n6WclMsLioOdxiM67w2sFnL0xz8M2FG5A00S9cbnllW2jMb_Vf67f7wzQHEqSj4rWTj8quK_25FeMRRIKTy7wt0pfrhlYEiGNwj-RRvZ6cxBa0IidvGddH0cIaxAQ-KMfn6XXu4aQtT2XJBX_P4XlqTmBJpU6t227DTYMl5mx-yhUjOF0xKUwdJHcCKJ2d8ygJFl-HfC6oELaWqgVLqaKulFnozqa8"/>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white">Dashboard</h1>
+<button class="w-10 h-10 rounded-full neu-surface flex items-center justify-center text-mint-green hover:shadow-neu-button-pressed transition-all" data-purpose="add-button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</header>
+<!-- END: TopHeader -->
+<!-- BEGIN: SubjectTabBar -->
+<nav class="px-6 mb-8 overflow-x-auto whitespace-nowrap scrollbar-hide" data-purpose="navigation-tabs">
+<div class="flex gap-4">
+<button class="px-6 py-2 rounded-full neu-surface text-sm font-medium text-slate-400">
+        - Maths
+      </button>
+<button class="px-6 py-2 rounded-full neu-surface text-sm font-bold text-mint-green ring-1 ring-mint-green/30">
+        • Biology
+      </button>
+<button class="px-6 py-2 rounded-full neu-surface text-sm font-medium text-slate-400">
+        - Chemistry
+      </button>
+</div>
+</nav>
+<!-- END: SubjectTabBar -->
+<!-- BEGIN: StatsSection -->
+<section class="px-6 grid grid-cols-2 gap-6 mb-8" data-purpose="stats-summary">
+<!-- Completed Notes Card -->
+<div class="neu-surface rounded-2xl p-4 flex flex-col justify-between">
+<div>
+<span class="text-xs text-slate-400 uppercase tracking-wider">Completed notes</span>
+<div class="text-2xl font-bold mt-1">34</div>
+</div>
+<div class="mt-4 h-8 flex items-end">
+<canvas data-purpose="sparkline-canvas" height="30" id="sparkline-green" width="100"></canvas>
+</div>
+</div>
+<!-- Questions Left Card -->
+<div class="neu-surface rounded-2xl p-4 flex flex-col justify-between">
+<div>
+<span class="text-xs text-slate-400 uppercase tracking-wider">Questions left</span>
+<div class="text-2xl font-bold mt-1">120</div>
+</div>
+<div class="mt-4 h-8 flex items-end">
+<canvas data-purpose="sparkline-canvas" height="30" id="sparkline-red" width="100"></canvas>
+</div>
+</div>
+</section>
+<!-- END: StatsSection -->
+<!-- BEGIN: ChartCard -->
+<section class="px-6 mb-8" data-purpose="performance-chart">
+<div class="neu-surface rounded-[2rem] p-6 relative overflow-hidden">
+<!-- Toggle Filter -->
+<div class="flex justify-center mb-6">
+<div class="neu-inset-surface rounded-full p-1 flex w-full max-w-[240px]">
+<button class="flex-1 py-1 text-xs font-semibold text-slate-400">Day</button>
+<button class="flex-1 py-1 text-xs font-semibold text-slate-400">Week</button>
+<button class="flex-1 py-1 text-xs font-bold text-mint-green bg-slate-gray shadow-neu-flat-sm rounded-full">Month</button>
+</div>
+</div>
+<!-- Score Display -->
+<div class="mb-4">
+<p class="text-slate-400 text-sm">Average Score</p>
+<p class="text-4xl font-bold text-mint-green glow-text">85%</p>
+</div>
+<!-- Main Progress Chart -->
+<div class="h-40 w-full relative">
+<canvas class="w-full h-full" data-purpose="progress-chart-canvas" id="mainProgressChart"></canvas>
+</div>
+</div>
+</section>
+<!-- END: ChartCard -->
+<!-- BEGIN: PrimaryAction -->
+<section class="px-6 mb-10" data-purpose="main-action">
+<button class="w-full py-5 rounded-2xl neu-surface bg-slate-gray font-bold text-mint-green tracking-wide text-lg active:shadow-neu-inset transition-all border border-mint-green/10">
+      Continue Mock Exam
+    </button>
+</section>
+<!-- END: PrimaryAction -->
+<!-- BEGIN: RecentActivity -->
+<section class="px-6" data-purpose="activity-feed">
+<h2 class="text-sm font-semibold text-slate-400 mb-4 px-2">Today, 2 March</h2>
+<div class="space-y-4">
+<!-- Activity Item 1 -->
+<div class="flex items-center justify-between p-4 neu-surface rounded-2xl" data-purpose="activity-item">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full neu-inset-surface flex items-center justify-center text-teal-accent">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h3 class="font-bold text-sm">Biology Flashcards</h3>
+<p class="text-xs text-slate-500">10:30 AM</p>
+</div>
+</div>
+<div class="text-mint-green font-bold text-sm">+5%</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex items-center justify-between p-4 neu-surface rounded-2xl" data-purpose="activity-item">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full neu-inset-surface flex items-center justify-center text-mint-green">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h3 class="font-bold text-sm">Maths Target Test</h3>
+<p class="text-xs text-slate-500">Yesterday</p>
+</div>
+</div>
+<div class="text-mint-green font-bold text-sm">+5%</div>
+</div>
+</div>
+</section>
+<!-- END: RecentActivity -->
+<script data-purpose="canvas-setup">
+    // Sparkline Drawing Helper
+    function drawSparkline(id, color, trend) {
+      const canvas = document.getElementById(id);
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width;
+      const h = canvas.height;
+      
+      ctx.clearRect(0, 0, w, h);
+      ctx.beginPath();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.lineJoin = 'round';
+      
+      const step = w / (trend.length - 1);
+      ctx.moveTo(0, h - (trend[0] * h));
+      
+      for (let i = 1; i < trend.length; i++) {
+        ctx.lineTo(i * step, h - (trend[i] * h));
+      }
+      ctx.stroke();
+    }
+
+    // Main Chart Drawing Helper
+    function drawMainChart() {
+      const canvas = document.getElementById('mainProgressChart');
+      if (!canvas) return;
+      
+      // Adjust canvas resolution for high DPI
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * 2;
+      canvas.height = rect.height * 2;
+      const ctx = canvas.getContext('2d');
+      ctx.scale(2, 2);
+      
+      const w = rect.width;
+      const h = rect.height;
+      const points = [0.4, 0.3, 0.5, 0.45, 0.7, 0.65, 0.85, 0.8];
+      
+      // Create Gradient
+      const gradient = ctx.createLinearGradient(0, 0, 0, h);
+      gradient.addColorStop(0, 'rgba(0, 245, 212, 0.2)');
+      gradient.addColorStop(1, 'rgba(0, 245, 212, 0)');
+      
+      ctx.beginPath();
+      ctx.moveTo(0, h);
+      
+      const step = w / (points.length - 1);
+      
+      // Draw Curve
+      ctx.beginPath();
+      ctx.strokeStyle = '#00F5D4';
+      ctx.lineWidth = 3;
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = 'rgba(0, 245, 212, 0.5)';
+      
+      ctx.moveTo(0, h - (points[0] * h));
+      for (let i = 1; i < points.length; i++) {
+        const x = i * step;
+        const y = h - (points[i] * h);
+        const prevX = (i - 1) * step;
+        const prevY = h - (points[i-1] * h);
+        const cpX = (prevX + x) / 2;
+        ctx.bezierCurveTo(cpX, prevY, cpX, y, x, y);
+      }
+      ctx.stroke();
+      
+      // Draw Area under curve
+      ctx.shadowBlur = 0;
+      ctx.lineTo(w, h);
+      ctx.lineTo(0, h);
+      ctx.fillStyle = gradient;
+      ctx.fill();
+    }
+
+    // Initialize all visualizations
+    window.addEventListener('load', () => {
+      drawSparkline('sparkline-green', '#00F5D4', [0.2, 0.4, 0.3, 0.6, 0.5, 0.8]);
+      drawSparkline('sparkline-red', '#FF5D5D', [0.8, 0.6, 0.7, 0.4, 0.5, 0.3]);
+      drawMainChart();
+    });
+
+    // Handle Resize
+    window.addEventListener('resize', drawMainChart);
+  </script>
+</body></html>

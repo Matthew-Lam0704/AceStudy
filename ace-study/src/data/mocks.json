@@ -1,0 +1,94 @@
+[
+  {
+    "id": "bio-mock-1",
+    "title": "Biology Full Mock — Paper 1",
+    "subject": "biology",
+    "type": "full",
+    "duration": 75,
+    "questionCount": 40,
+    "difficulty": "medium",
+    "examBoard": "AQA",
+    "description": "Covers cell biology, genetics, and ecology. Simulates real AQA A-Level Paper 1 conditions.",
+    "bestScore": 82,
+    "attempts": 3,
+    "sections": [
+      { "name": "Cell Biology", "questionCount": 15 },
+      { "name": "Genetics", "questionCount": 15 },
+      { "name": "Ecology", "questionCount": 10 }
+    ],
+    "questionIds": ["q_001", "q_002", "q_003", "q_004", "q_009"]
+  },
+  {
+    "id": "bio-mock-2",
+    "title": "Biology Mini Mock — Cell Biology",
+    "subject": "biology",
+    "type": "mini",
+    "duration": 25,
+    "questionCount": 15,
+    "difficulty": "medium",
+    "examBoard": "AQA",
+    "description": "Focused mini-mock on cell structure and transport. Perfect for targeted revision.",
+    "bestScore": 87,
+    "attempts": 5,
+    "sections": [
+      { "name": "Cell Structure", "questionCount": 8 },
+      { "name": "Transport", "questionCount": 7 }
+    ],
+    "questionIds": ["q_001", "q_002"]
+  },
+  {
+    "id": "chem-mock-1",
+    "title": "Chemistry Full Mock — Paper 1",
+    "subject": "chemistry",
+    "type": "full",
+    "duration": 90,
+    "questionCount": 45,
+    "difficulty": "hard",
+    "examBoard": "AQA",
+    "description": "Covers physical and inorganic chemistry. Includes calculations and extended writing.",
+    "bestScore": 71,
+    "attempts": 2,
+    "sections": [
+      { "name": "Atomic Structure", "questionCount": 12 },
+      { "name": "Bonding", "questionCount": 16 },
+      { "name": "Energetics", "questionCount": 17 }
+    ],
+    "questionIds": ["q_007", "q_008"]
+  },
+  {
+    "id": "maths-mock-1",
+    "title": "Maths Mock — Pure Mathematics",
+    "subject": "maths",
+    "type": "full",
+    "duration": 120,
+    "questionCount": 50,
+    "difficulty": "hard",
+    "examBoard": "Edexcel",
+    "description": "Covers algebra, calculus, trigonometry, and proof. Edexcel A-Level style.",
+    "bestScore": 88,
+    "attempts": 4,
+    "sections": [
+      { "name": "Algebra & Functions", "questionCount": 15 },
+      { "name": "Calculus", "questionCount": 20 },
+      { "name": "Trigonometry", "questionCount": 15 }
+    ],
+    "questionIds": ["q_005", "q_006", "q_010"]
+  },
+  {
+    "id": "bio-diagnostic",
+    "title": "Biology Diagnostic Mock",
+    "subject": "biology",
+    "type": "diagnostic",
+    "duration": 40,
+    "questionCount": 25,
+    "difficulty": "easy",
+    "examBoard": "AQA",
+    "description": "Initial assessment to identify your starting level across all biology topics.",
+    "bestScore": null,
+    "attempts": 0,
+    "sections": [
+      { "name": "All Topics", "questionCount": 25 }
+    ],
+    "questionIds": ["q_001", "q_002", "q_003", "q_004", "q_009"]
+  }
+]
