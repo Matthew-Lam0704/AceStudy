@@ -27,26 +27,26 @@ export default function FlashcardStudyPage({ params }: { params: Promise<{ deckI
 
   const currentCard = cards[currentIndex];
 
-  const handleFlip = useCallback(() => setFlipped((f) => !f), []);
+  const handleFlip = () => setFlipped((f) => !f);
 
-  const nextCard = useCallback(() => {
+  const nextCard = () => {
     setFlipped(false);
     if (currentIndex + 1 >= cards.length) {
       setFinished(true);
     } else {
       setCurrentIndex((i) => i + 1);
     }
-  }, [currentIndex, cards.length]);
+  };
 
-  const handleGotIt = useCallback(() => {
+  const handleGotIt = () => {
     setMastered((prev) => new Set([...prev, currentCard.id]));
     nextCard();
-  }, [currentCard, nextCard]);
+  };
 
-  const handleStillLearning = useCallback(() => {
+  const handleStillLearning = () => {
     setStudying((prev) => new Set([...prev, currentCard.id]));
     nextCard();
-  }, [currentCard, nextCard]);
+  };
 
   const handleShuffle = () => {
     const shuffledCards = [...deck.cards].sort(() => Math.random() - 0.5);
