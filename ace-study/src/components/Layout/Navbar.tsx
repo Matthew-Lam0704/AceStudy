@@ -24,6 +24,7 @@ export default function Navbar({ onToggleSidebar }: NavbarProps) {
   const [userInitial, setUserInitial] = useState('');
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
+  const [streakDays, setStreakDays] = useState(0);
   const router = useRouter();
 
   const unreadCount = mockNotifications.filter((n) => n.unread && !readIds.has(n.id)).length;
@@ -42,6 +43,26 @@ export default function Navbar({ onToggleSidebar }: NavbarProps) {
           const name = data?.full_name || user.email?.split('@')[0] || '';
           setUserName(name);
           setUserInitial(name.charAt(0).toUpperCase());
+        });
+
+      supabase
+        .from('user_progress')
+        .select('created_at')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false })
+        .then(({ data: rows }) => {
+          if (!rows || rows.length === 0) { setStreakDays(0); return; }
+          let streak = 1;
+          const today = new Date(); today.setHours(0, 0, 0, 0);
+          const dates = [...new Set(rows.map(r => new Date(r.created_at).toDateString()))].map(d => new Date(d));
+          dates.sort((a, b) => b.getTime() - a.getTime());
+          for (let i = 1; i < dates.length; i++) {
+            const diff = (dates[i - 1].getTime() - dates[i].getTime()) / 86400000;
+            if (diff === 1) streak++; else break;
+          }
+          const lastDate = dates[0]; lastDate.setHours(0, 0, 0, 0);
+          if (today.getTime() - lastDate.getTime() > 86400000) streak = 0;
+          setStreakDays(streak);
         });
     });
   }, []);
@@ -186,8 +207,10 @@ export default function Navbar({ onToggleSidebar }: NavbarProps) {
 
         {/* Streak badge */}
         <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
-          <span>🔥</span>
-          <span className="text-sm font-bold" style={{ color: 'var(--warning)' }}>14</span>
+          <span>{streakDays > 0 ? '🔥' : '⚡'}</span>
+          <span className="text-sm font-bold" style={{ color: streakDays > 0 ? 'var(--warning)' : 'var(--text-muted)' }}>
+            {streakDays > 0 ? streakDays : '0'}
+          </span>
         </div>
 
         {/* Avatar + dropdown */}

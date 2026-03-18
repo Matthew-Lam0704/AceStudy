@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import userProgress from '@/data/user-progress.json';
 import subjects from '@/data/subjects.json';
 import { createClient } from '@/lib/supabase/client';
 
@@ -11,9 +10,9 @@ export default function Dashboard() {
   const sparkRedRef = useRef<HTMLCanvasElement>(null);
   const progressChartRef = useRef<HTMLCanvasElement>(null);
   const [displayName, setDisplayName] = useState('');
+  const [stats, setStats] = useState({ questionsAnswered: 0, studyHoursThisWeek: 0, averageScore: 0, streakDays: 0 });
 
-  const { stats, recentActivity, recommendedTopics, scoreHistory } = userProgress;
-  const chartPoints = scoreHistory.map((s) => s.score / 100);
+  const chartPoints = [0, 0, 0, 0, 0, 0, 0, 0];
 
   useEffect(() => {
     const supabase = createClient();
@@ -26,6 +25,22 @@ export default function Dashboard() {
         .single()
         .then(({ data }) => {
           setDisplayName(data?.full_name ?? user.email?.split('@')[0] ?? 'there');
+        });
+
+      // Fetch real stats from user_progress
+      supabase
+        .from('user_progress')
+        .select('score, is_correct, created_at, time_taken_seconds')
+        .eq('user_id', user.id)
+        .then(({ data: rows }) => {
+          if (!rows || rows.length === 0) return;
+          const total = rows.length;
+          const avgScore = rows.filter(r => r.score !== null).length > 0
+            ? Math.round(rows.reduce((sum, r) => sum + (r.score ?? 0), 0) / rows.filter(r => r.score !== null).length)
+            : 0;
+          const totalSeconds = rows.reduce((sum, r) => sum + (r.time_taken_seconds ?? 0), 0);
+          const hoursThisWeek = parseFloat((totalSeconds / 3600).toFixed(1));
+          setStats({ questionsAnswered: total, studyHoursThisWeek: hoursThisWeek, averageScore: avgScore, streakDays: 0 });
         });
     });
   }, []);
@@ -95,36 +110,6 @@ export default function Dashboard() {
     return () => window.removeEventListener('resize', drawMainChart);
   }, []);
 
-  const activityIcons: Record<string, React.ReactNode> = {
-    flashcard: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-      </svg>
-    ),
-    quiz: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
-    notes: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
-    mock: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  };
-
-  const activityColors: Record<string, string> = {
-    flashcard: '#00BBF9',
-    quiz: '#00d4aa',
-    notes: '#7c5cff',
-    mock: '#ffb547',
-  };
-
   const hour = new Date().getHours();
   const greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
   const greetingEmoji = hour < 12 ? '☀️' : hour < 17 ? '🌤️' : '🌙';
@@ -138,7 +123,9 @@ export default function Dashboard() {
             {greeting}{displayName ? `, ${displayName}` : ''} {greetingEmoji}
           </h1>
           <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
-            You&apos;re on a <span style={{ color: 'var(--warning)', fontWeight: 700 }}>🔥 {stats.streakDays}-day streak</span> — keep it up!
+            {stats.streakDays > 0
+              ? <>You&apos;re on a <span style={{ color: 'var(--warning)', fontWeight: 700 }}>🔥 {stats.streakDays}-day streak</span> — keep it up!</>
+              : 'Ready to start your study journey?'}
           </p>
         </div>
         <Link
@@ -158,7 +145,9 @@ export default function Dashboard() {
         <div className="card p-5">
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>Questions Answered</p>
           <p className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>{stats.questionsAnswered.toLocaleString()}</p>
-          <p className="text-xs mt-1" style={{ color: 'var(--secondary)' }}>+47 this week</p>
+          <p className="text-xs mt-1" style={{ color: stats.questionsAnswered > 0 ? 'var(--secondary)' : 'var(--text-muted)' }}>
+            {stats.questionsAnswered > 0 ? `+${stats.questionsAnswered} total` : 'None yet'}
+          </p>
           <div className="mt-3 h-8">
             <canvas ref={sparkGreenRef} height="30" width="100" className="w-full h-full" />
           </div>
@@ -166,8 +155,10 @@ export default function Dashboard() {
 
         <div className="card p-5">
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>Study Hours / Week</p>
-          <p className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>{stats.studyHoursThisWeek}h</p>
-          <p className="text-xs mt-1" style={{ color: 'var(--warning)' }}>↑ 2h vs last week</p>
+          <p className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>{stats.studyHoursThisWeek > 0 ? `${stats.studyHoursThisWeek}h` : '0h'}</p>
+          <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
+            {stats.studyHoursThisWeek > 0 ? `${stats.studyHoursThisWeek}h logged` : 'No sessions yet'}
+          </p>
           <div className="mt-3 h-8">
             <canvas ref={sparkRedRef} height="30" width="100" className="w-full h-full" />
           </div>
@@ -176,17 +167,18 @@ export default function Dashboard() {
         <div className="card p-5">
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>Average Score</p>
           <div className="flex items-end gap-2">
-            <p className="text-3xl font-bold" style={{ color: 'var(--primary)' }}>{stats.averageScore}%</p>
+            <p className="text-3xl font-bold" style={{ color: 'var(--primary)' }}>{stats.averageScore > 0 ? `${stats.averageScore}%` : '—'}</p>
           </div>
           <div className="mt-3 progress-bar">
             <div className="progress-fill" style={{ width: `${stats.averageScore}%` }} />
           </div>
+          {stats.averageScore === 0 && <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>No data yet</p>}
         </div>
 
         <div className="card p-5">
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>Streak Days</p>
-          <p className="text-3xl font-bold" style={{ color: 'var(--warning)' }}>🔥 {stats.streakDays}</p>
-          <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Personal best: 21 days</p>
+          <p className="text-3xl font-bold" style={{ color: 'var(--warning)' }}>{stats.streakDays > 0 ? `🔥 ${stats.streakDays}` : '—'}</p>
+          <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>{stats.streakDays > 0 ? `Personal best: ${stats.streakDays} days` : 'Start studying to build a streak!'}</p>
         </div>
       </div>
 
@@ -199,9 +191,11 @@ export default function Dashboard() {
               <h2 className="font-bold text-lg" style={{ color: 'var(--text-primary)' }}>Score Progress</h2>
               <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>Last 8 sessions</p>
             </div>
-            <div className="flex items-end gap-1">
-              <span className="text-3xl font-bold" style={{ color: 'var(--primary)' }}>{stats.averageScore}%</span>
-            </div>
+            {stats.averageScore > 0 && (
+              <div className="flex items-end gap-1">
+                <span className="text-3xl font-bold" style={{ color: 'var(--primary)' }}>{stats.averageScore}%</span>
+              </div>
+            )}
           </div>
           <div className="h-48 w-full">
             <canvas ref={progressChartRef} className="w-full h-full" />
@@ -211,21 +205,12 @@ export default function Dashboard() {
         {/* Recommended Topics */}
         <div className="card p-6">
           <h2 className="font-bold mb-4" style={{ color: 'var(--text-primary)' }}>Recommended Next</h2>
-          <div className="space-y-3">
-            {recommendedTopics.map((topic) => (
-              <Link
-                key={topic.topicId}
-                href={`/subjects/${topic.subjectId}`}
-                className="flex items-start gap-3 p-3 rounded-lg block"
-                style={{ background: 'var(--surface-raised)', textDecoration: 'none' }}
-              >
-                <span className="text-2xl">{topic.icon}</span>
-                <div className="min-w-0">
-                  <p className="text-sm font-semibold truncate" style={{ color: 'var(--text-primary)' }}>{topic.topicName}</p>
-                  <p className="text-xs mt-0.5" style={{ color: topic.score < 50 ? 'var(--accent)' : 'var(--text-muted)' }}>{topic.reason}</p>
-                </div>
-              </Link>
-            ))}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '140px', gap: '0.5rem' }}>
+            <span style={{ fontSize: '2rem' }}>🎯</span>
+            <p className="text-sm text-center" style={{ color: 'var(--text-muted)' }}>Complete some questions to get personalised recommendations.</p>
+            <Link href="/questions" style={{ fontSize: '0.8125rem', color: 'var(--primary)', fontWeight: 600, textDecoration: 'none', marginTop: '0.25rem' }}>
+              Start practising →
+            </Link>
           </div>
         </div>
       </div>
@@ -235,28 +220,9 @@ export default function Dashboard() {
         {/* Recent Activity */}
         <div className="card p-6">
           <h2 className="font-bold mb-4" style={{ color: 'var(--text-primary)' }}>Recent Activity</h2>
-          <div className="space-y-3">
-            {recentActivity.map((activity) => (
-              <Link
-                key={activity.id}
-                href={activity.link}
-                className="flex items-center justify-between p-3 rounded-lg"
-                style={{ background: 'var(--surface-raised)', textDecoration: 'none' }}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: `${activityColors[activity.type]}20`, color: activityColors[activity.type] }}>
-                    {activityIcons[activity.type]}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>{activity.title}</p>
-                    <p className="text-xs" style={{ color: 'var(--text-muted)' }}>{activity.time}</p>
-                  </div>
-                </div>
-                {activity.scoreChange > 0 && (
-                  <span className="text-sm font-bold" style={{ color: 'var(--secondary)' }}>+{activity.scoreChange}%</span>
-                )}
-              </Link>
-            ))}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '160px', gap: '0.5rem' }}>
+            <span style={{ fontSize: '2rem' }}>📭</span>
+            <p className="text-sm text-center" style={{ color: 'var(--text-muted)' }}>No activity yet. Your study sessions will appear here.</p>
           </div>
         </div>
 
