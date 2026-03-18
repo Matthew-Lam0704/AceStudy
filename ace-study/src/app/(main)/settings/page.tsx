@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createClient } from '@/lib/supabase/client';
 import userProgress from '@/data/user-progress.json';
 
 type Tab = 'profile' | 'preferences' | 'appearance' | 'goals';
@@ -15,16 +16,52 @@ const ACCENT_COLORS = [
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<Tab>('profile');
-  const [name, setName] = useState(userProgress.user.name);
-  const [email, setEmail] = useState(userProgress.user.email);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [examDate, setExamDate] = useState('');
+  const [memberSince, setMemberSince] = useState('');
   const [timerEnabled, setTimerEnabled] = useState(true);
   const [notifications, setNotifications] = useState(true);
   const [accentColor, setAccentColor] = useState('#7c5cff');
   const [fontSize, setFontSize] = useState('medium');
   const [dailyGoal, setDailyGoal] = useState(20);
   const [saved, setSaved] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const handleSave = () => {
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) return;
+      setEmail(user.email ?? '');
+      setMemberSince(user.created_at ?? '');
+      supabase
+        .from('profiles')
+        .select('full_name, exam_date, daily_questions_goal')
+        .eq('id', user.id)
+        .single()
+        .then(({ data }) => {
+          if (data) {
+            setName(data.full_name ?? '');
+            setExamDate(data.exam_date ?? '');
+            setDailyGoal(data.daily_questions_goal ?? 20);
+          }
+          setLoading(false);
+        });
+    });
+  }, []);
+
+  const handleSave = async () => {
+    const supabase = createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return;
+
+    await supabase.from('profiles').update({
+      full_name: name,
+      exam_date: examDate || null,
+      daily_questions_goal: dailyGoal,
+      updated_at: new Date().toISOString(),
+    }).eq('id', user.id);
+
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
   };
@@ -35,6 +72,8 @@ export default function SettingsPage() {
     { id: 'appearance', label: 'Appearance' },
     { id: 'goals', label: 'Study Goals' },
   ];
+
+  const initial = name?.charAt(0).toUpperCase() || email?.charAt(0).toUpperCase() || '?';
 
   return (
     <div className="page-enter space-y-8" style={{ maxWidth: '640px' }}>
@@ -64,19 +103,27 @@ export default function SettingsPage() {
       {/* Profile tab */}
       {activeTab === 'profile' && (
         <div className="card p-6 space-y-5">
-          <div className="flex items-center gap-4">
-            <div
-              className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-black text-white"
-              style={{ background: 'linear-gradient(135deg, var(--primary), #5a3fd4)' }}
-            >
-              {name.charAt(0).toUpperCase()}
+          {loading ? (
+            <div style={{ height: '80px', borderRadius: '0.75rem', background: 'var(--surface-raised)', animation: 'pulse 1.5s ease-in-out infinite' }} />
+          ) : (
+            <div className="flex items-center gap-4">
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-black text-white"
+                style={{ background: 'linear-gradient(135deg, var(--primary), #5a3fd4)' }}
+              >
+                {initial}
+              </div>
+              <div>
+                <p className="font-bold" style={{ color: 'var(--text-primary)' }}>{name || email}</p>
+                <p className="text-sm" style={{ color: 'var(--text-muted)' }}>{email}</p>
+                {memberSince && (
+                  <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
+                    Member since {new Date(memberSince).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}
+                  </p>
+                )}
+              </div>
             </div>
-            <div>
-              <p className="font-bold" style={{ color: 'var(--text-primary)' }}>{name}</p>
-              <p className="text-sm" style={{ color: 'var(--text-muted)' }}>{email}</p>
-              <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Member since {new Date(userProgress.user.joinedAt).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}</p>
-            </div>
-          </div>
+          )}
 
           <div className="space-y-4">
             <div>
@@ -94,18 +141,20 @@ export default function SettingsPage() {
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                readOnly
                 className="w-full px-4 py-3 rounded-xl text-sm outline-none"
-                style={{ background: 'var(--surface-raised)', border: '1px solid var(--border)', color: 'var(--text-primary)' }}
+                style={{ background: 'var(--surface-raised)', border: '1px solid var(--border)', color: 'var(--text-muted)', cursor: 'default' }}
               />
+              <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Email is managed through your sign-in provider.</p>
             </div>
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: 'var(--text-muted)' }}>Exam Date</label>
               <input
                 type="date"
-                defaultValue={userProgress.user.examDate}
+                value={examDate}
+                onChange={(e) => setExamDate(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl text-sm outline-none"
-                style={{ background: 'var(--surface-raised)', border: '1px solid var(--border)', color: 'var(--text-primary)' }}
+                style={{ background: 'var(--surface-raised)', border: '1px solid var(--border)', color: 'var(--text-primary)', colorScheme: 'dark' }}
               />
             </div>
           </div>

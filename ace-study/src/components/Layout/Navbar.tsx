@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createClient } from '@/lib/supabase/client';
+import { useRouter } from 'next/navigation';
 
 interface NavbarProps {
   onToggleSidebar: () => void;
@@ -18,8 +20,38 @@ export default function Navbar({ onToggleSidebar }: NavbarProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [notifOpen, setNotifOpen] = useState(false);
   const [readIds, setReadIds] = useState<Set<number>>(new Set());
+  const [avatarOpen, setAvatarOpen] = useState(false);
+  const [userInitial, setUserInitial] = useState('');
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const router = useRouter();
 
   const unreadCount = mockNotifications.filter((n) => n.unread && !readIds.has(n.id)).length;
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) return;
+      setUserEmail(user.email ?? '');
+      supabase
+        .from('profiles')
+        .select('full_name')
+        .eq('id', user.id)
+        .single()
+        .then(({ data }) => {
+          const name = data?.full_name || user.email?.split('@')[0] || '';
+          setUserName(name);
+          setUserInitial(name.charAt(0).toUpperCase());
+        });
+    });
+  }, []);
+
+  const handleSignOut = async () => {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    router.push('/auth/login');
+    router.refresh();
+  };
 
   const handleNotifOpen = () => {
     setNotifOpen((o) => !o);
@@ -90,7 +122,7 @@ export default function Navbar({ onToggleSidebar }: NavbarProps) {
         )}
       </div>
 
-      {/* Right actions — pushed to far right */}
+      {/* Right actions */}
       <div className="ml-auto flex items-center gap-2">
         {/* Notifications */}
         <div className="relative">
@@ -107,10 +139,8 @@ export default function Navbar({ onToggleSidebar }: NavbarProps) {
             )}
           </button>
 
-          {/* Dropdown */}
           {notifOpen && (
             <>
-              {/* Backdrop */}
               <div className="fixed inset-0 z-40" onClick={() => setNotifOpen(false)} />
               <div
                 className="absolute right-0 z-50 mt-2 w-80 rounded-xl shadow-xl"
@@ -160,12 +190,64 @@ export default function Navbar({ onToggleSidebar }: NavbarProps) {
           <span className="text-sm font-bold" style={{ color: 'var(--warning)' }}>14</span>
         </div>
 
-        {/* Avatar */}
-        <Link href="/settings" className="w-8 h-8 rounded-full overflow-hidden" style={{ outline: '2px solid var(--border)' }}>
-          <div className="w-full h-full flex items-center justify-center text-white text-sm font-bold" style={{ background: 'linear-gradient(135deg, var(--primary), #5a3fd4)' }}>
-            M
-          </div>
-        </Link>
+        {/* Avatar + dropdown */}
+        <div className="relative">
+          <button
+            onClick={() => setAvatarOpen((o) => !o)}
+            className="w-8 h-8 rounded-full overflow-hidden"
+            style={{ outline: '2px solid var(--border)' }}
+          >
+            <div className="w-full h-full flex items-center justify-center text-white text-sm font-bold" style={{ background: 'linear-gradient(135deg, var(--primary), #5a3fd4)' }}>
+              {userInitial || '?'}
+            </div>
+          </button>
+
+          {avatarOpen && (
+            <>
+              <div className="fixed inset-0 z-40" onClick={() => setAvatarOpen(false)} />
+              <div
+                className="absolute right-0 z-50 mt-2 w-56 rounded-xl shadow-xl"
+                style={{ background: 'var(--surface)', border: '1px solid var(--border)', top: '100%' }}
+              >
+                {/* User info */}
+                <div className="px-4 py-3 border-b" style={{ borderColor: 'var(--border)' }}>
+                  <p className="font-semibold text-sm truncate" style={{ color: 'var(--text-primary)' }}>{userName}</p>
+                  <p className="text-xs truncate mt-0.5" style={{ color: 'var(--text-muted)' }}>{userEmail}</p>
+                </div>
+                {/* Links */}
+                <div className="py-1">
+                  <Link
+                    href="/settings"
+                    onClick={() => setAvatarOpen(false)}
+                    className="flex items-center gap-3 px-4 py-2.5 text-sm"
+                    style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--surface-raised)')}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
+                  >
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Settings
+                  </Link>
+                  <div style={{ height: '1px', background: 'var(--border)', margin: '0.25rem 0' }} />
+                  <button
+                    onClick={handleSignOut}
+                    className="flex items-center gap-3 px-4 py-2.5 text-sm w-full text-left"
+                    style={{ color: '#ff6b6b', background: 'transparent', border: 'none', cursor: 'pointer' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,107,107,0.08)')}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
+                  >
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                    Sign out
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </header>
   );

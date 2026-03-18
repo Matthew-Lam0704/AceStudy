@@ -1,18 +1,34 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import userProgress from '@/data/user-progress.json';
 import subjects from '@/data/subjects.json';
+import { createClient } from '@/lib/supabase/client';
 
 export default function Dashboard() {
   const sparkGreenRef = useRef<HTMLCanvasElement>(null);
   const sparkRedRef = useRef<HTMLCanvasElement>(null);
   const progressChartRef = useRef<HTMLCanvasElement>(null);
+  const [displayName, setDisplayName] = useState('');
 
   const { stats, recentActivity, recommendedTopics, scoreHistory } = userProgress;
-
   const chartPoints = scoreHistory.map((s) => s.score / 100);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) return;
+      supabase
+        .from('profiles')
+        .select('full_name')
+        .eq('id', user.id)
+        .single()
+        .then(({ data }) => {
+          setDisplayName(data?.full_name ?? user.email?.split('@')[0] ?? 'there');
+        });
+    });
+  }, []);
 
   useEffect(() => {
     function drawSparkline(canvas: HTMLCanvasElement, color: string, trend: number[]) {
@@ -119,7 +135,7 @@ export default function Dashboard() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            {greeting}, {userProgress.user.name} {greetingEmoji}
+            {greeting}{displayName ? `, ${displayName}` : ''} {greetingEmoji}
           </h1>
           <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
             You&apos;re on a <span style={{ color: 'var(--warning)', fontWeight: 700 }}>🔥 {stats.streakDays}-day streak</span> — keep it up!
