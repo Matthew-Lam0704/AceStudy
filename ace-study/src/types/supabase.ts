@@ -65,24 +65,42 @@ export type Database = {
         Row: {
           avatar_url: string | null
           created_at: string
+          date_of_birth: string | null
+          daily_questions_goal: number | null
+          exam_date: string | null
           full_name: string | null
+          gender: string | null
+          goals: string[] | null
           id: string
+          onboarding_completed: boolean | null
           study_goal_minutes_per_day: number | null
           updated_at: string
         }
         Insert: {
           avatar_url?: string | null
           created_at?: string
+          date_of_birth?: string | null
+          daily_questions_goal?: number | null
+          exam_date?: string | null
           full_name?: string | null
+          gender?: string | null
+          goals?: string[] | null
           id: string
+          onboarding_completed?: boolean | null
           study_goal_minutes_per_day?: number | null
           updated_at?: string
         }
         Update: {
           avatar_url?: string | null
           created_at?: string
+          date_of_birth?: string | null
+          daily_questions_goal?: number | null
+          exam_date?: string | null
           full_name?: string | null
+          gender?: string | null
+          goals?: string[] | null
           id?: string
+          onboarding_completed?: boolean | null
           study_goal_minutes_per_day?: number | null
           updated_at?: string
         }
