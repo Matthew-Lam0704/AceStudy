@@ -9,11 +9,7 @@ interface NavbarProps {
   onToggleSidebar: () => void;
 }
 
-const mockNotifications = [
-  { id: 1, text: 'New mock exam available: A-Level Biology', time: '2m ago', unread: true },
-  { id: 2, text: 'You scored 85% on Genetics Quiz!', time: '1h ago', unread: true },
-  { id: 3, text: 'Flashcard deck "Cell Biology" updated', time: '3h ago', unread: false },
-];
+const mockNotifications: { id: number; text: string; time: string; unread: boolean }[] = [];
 
 export default function Navbar({ onToggleSidebar }: NavbarProps) {
   const [searchOpen, setSearchOpen] = useState(false);
