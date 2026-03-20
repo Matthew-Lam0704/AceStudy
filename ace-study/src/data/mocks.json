@@ -1,94 +1,200 @@
 [
   {
-    "id": "bio-mock-1",
-    "title": "Biology Full Mock — Paper 1",
-    "subject": "biology",
-    "type": "full",
-    "duration": 75,
-    "questionCount": 40,
-    "difficulty": "medium",
-    "examBoard": "AQA",
-    "description": "Covers cell biology, genetics, and ecology. Simulates real AQA A-Level Paper 1 conditions.",
-    "bestScore": 82,
-    "attempts": 3,
-    "sections": [
-      { "name": "Cell Biology", "questionCount": 15 },
-      { "name": "Genetics", "questionCount": 15 },
-      { "name": "Ecology", "questionCount": 10 }
-    ],
-    "questionIds": ["q_001", "q_002", "q_003", "q_004", "q_009"]
-  },
-  {
-    "id": "bio-mock-2",
-    "title": "Biology Mini Mock — Cell Biology",
-    "subject": "biology",
-    "type": "mini",
-    "duration": 25,
-    "questionCount": 15,
-    "difficulty": "medium",
-    "examBoard": "AQA",
-    "description": "Focused mini-mock on cell structure and transport. Perfect for targeted revision.",
-    "bestScore": 87,
-    "attempts": 5,
-    "sections": [
-      { "name": "Cell Structure", "questionCount": 8 },
-      { "name": "Transport", "questionCount": 7 }
-    ],
-    "questionIds": ["q_001", "q_002"]
-  },
-  {
-    "id": "chem-mock-1",
-    "title": "Chemistry Full Mock — Paper 1",
-    "subject": "chemistry",
-    "type": "full",
-    "duration": 90,
-    "questionCount": 45,
-    "difficulty": "hard",
-    "examBoard": "AQA",
-    "description": "Covers physical and inorganic chemistry. Includes calculations and extended writing.",
-    "bestScore": 71,
-    "attempts": 2,
-    "sections": [
-      { "name": "Atomic Structure", "questionCount": 12 },
-      { "name": "Bonding", "questionCount": 16 },
-      { "name": "Energetics", "questionCount": 17 }
-    ],
-    "questionIds": ["q_007", "q_008"]
-  },
-  {
     "id": "maths-mock-1",
-    "title": "Maths Mock — Pure Mathematics",
+    "title": "Maths Paper 1 (Pure) — Edexcel Style",
     "subject": "maths",
     "type": "full",
     "duration": 120,
     "questionCount": 50,
     "difficulty": "hard",
     "examBoard": "Edexcel",
-    "description": "Covers algebra, calculus, trigonometry, and proof. Edexcel A-Level style.",
-    "bestScore": 88,
-    "attempts": 4,
-    "sections": [
-      { "name": "Algebra & Functions", "questionCount": 15 },
-      { "name": "Calculus", "questionCount": 20 },
-      { "name": "Trigonometry", "questionCount": 15 }
-    ],
-    "questionIds": ["q_005", "q_006", "q_010"]
-  },
-  {
-    "id": "bio-diagnostic",
-    "title": "Biology Diagnostic Mock",
-    "subject": "biology",
-    "type": "diagnostic",
-    "duration": 40,
-    "questionCount": 25,
-    "difficulty": "easy",
-    "examBoard": "AQA",
-    "description": "Initial assessment to identify your starting level across all biology topics.",
+    "description": "Covers algebra, calculus, trigonometry, and proof. Edexcel A-Level Pure Mathematics style.",
     "bestScore": null,
     "attempts": 0,
     "sections": [
-      { "name": "All Topics", "questionCount": 25 }
+      { "name": "Algebra & Functions", "questionCount": 15 },
+      { "name": "Calculus", "questionCount": 20 },
+      { "name": "Trigonometry & Proof", "questionCount": 15 }
     ],
-    "questionIds": ["q_001", "q_002", "q_003", "q_004", "q_009"]
+    "questionIds": [
+      "maths-q001", "maths-q002", "maths-q003", "maths-q004", "maths-q005",
+      "maths-q006", "maths-q007", "maths-q008", "maths-q009", "maths-q010"
+    ]
+  },
+  {
+    "id": "further-maths-mock-1",
+    "title": "Further Maths Paper 1 — AQA Style",
+    "subject": "further-maths",
+    "type": "full",
+    "duration": 120,
+    "questionCount": 40,
+    "difficulty": "hard",
+    "examBoard": "AQA",
+    "description": "Covers complex numbers, matrices, further calculus, and proof by induction. AQA A-Level Further Mathematics style.",
+    "bestScore": null,
+    "attempts": 0,
+    "sections": [
+      { "name": "Complex Numbers", "questionCount": 12 },
+      { "name": "Matrices & Transformations", "questionCount": 14 },
+      { "name": "Further Calculus & Series", "questionCount": 14 }
+    ],
+    "questionIds": [
+      "fm-q001", "fm-q002", "fm-q003", "fm-q004", "fm-q005",
+      "fm-q006", "fm-q007", "fm-q008", "fm-q009", "fm-q010"
+    ]
+  },
+  {
+    "id": "physics-mock-1",
+    "title": "Physics Paper 1 — AQA Style",
+    "subject": "physics",
+    "type": "full",
+    "duration": 120,
+    "questionCount": 45,
+    "difficulty": "hard",
+    "examBoard": "AQA",
+    "description": "Covers mechanics, materials, electricity, and waves. AQA A-Level Physics Paper 1 style.",
+    "bestScore": null,
+    "attempts": 0,
+    "sections": [
+      { "name": "Mechanics & Materials", "questionCount": 15 },
+      { "name": "Electricity", "questionCount": 15 },
+      { "name": "Waves & Optics", "questionCount": 15 }
+    ],
+    "questionIds": [
+      "phys-q001", "phys-q002", "phys-q003", "phys-q004", "phys-q005",
+      "phys-q006", "phys-q007", "phys-q008", "phys-q009", "phys-q010"
+    ]
+  },
+  {
+    "id": "chemistry-mock-1",
+    "title": "Chemistry Paper 1 — AQA Style",
+    "subject": "chemistry",
+    "type": "full",
+    "duration": 120,
+    "questionCount": 45,
+    "difficulty": "hard",
+    "examBoard": "AQA",
+    "description": "Covers atomic structure, bonding, energetics, and kinetics. AQA A-Level Chemistry Paper 1 style.",
+    "bestScore": null,
+    "attempts": 0,
+    "sections": [
+      { "name": "Atomic Structure & Bonding", "questionCount": 15 },
+      { "name": "Energetics & Kinetics", "questionCount": 15 },
+      { "name": "Equilibria & Redox", "questionCount": 15 }
+    ],
+    "questionIds": [
+      "chem-q001", "chem-q002", "chem-q003", "chem-q004", "chem-q005",
+      "chem-q006", "chem-q007", "chem-q008", "chem-q009", "chem-q010"
+    ]
+  },
+  {
+    "id": "biology-mock-1",
+    "title": "Biology Paper 1 — AQA Style",
+    "subject": "biology",
+    "type": "full",
+    "duration": 120,
+    "questionCount": 40,
+    "difficulty": "medium",
+    "examBoard": "AQA",
+    "description": "Covers cell biology, genetics, and ecology. AQA A-Level Biology Paper 1 style.",
+    "bestScore": null,
+    "attempts": 0,
+    "sections": [
+      { "name": "Cell Biology", "questionCount": 14 },
+      { "name": "Genetics & Inheritance", "questionCount": 13 },
+      { "name": "Ecology & Ecosystems", "questionCount": 13 }
+    ],
+    "questionIds": [
+      "bio-q001", "bio-q002", "bio-q003", "bio-q004", "bio-q005",
+      "bio-q006", "bio-q007", "bio-q008", "bio-q009", "bio-q010"
+    ]
+  },
+  {
+    "id": "english-lit-mock-1",
+    "title": "English Literature Paper 1 — AQA Style",
+    "subject": "english-lit",
+    "type": "full",
+    "duration": 120,
+    "questionCount": 30,
+    "difficulty": "medium",
+    "examBoard": "AQA",
+    "description": "Covers prose analysis, poetry comparison, and unseen texts. AQA A-Level English Literature Paper 1 style.",
+    "bestScore": null,
+    "attempts": 0,
+    "sections": [
+      { "name": "Prose Analysis", "questionCount": 10 },
+      { "name": "Poetry Comparison", "questionCount": 10 },
+      { "name": "Unseen Text", "questionCount": 10 }
+    ],
+    "questionIds": [
+      "engl-q001", "engl-q002", "engl-q003", "engl-q004", "engl-q005",
+      "engl-q006", "engl-q007", "engl-q008", "engl-q009", "engl-q010"
+    ]
+  },
+  {
+    "id": "economics-mock-1",
+    "title": "Economics Paper 1 (Microeconomics) — AQA Style",
+    "subject": "economics",
+    "type": "full",
+    "duration": 120,
+    "questionCount": 40,
+    "difficulty": "medium",
+    "examBoard": "AQA",
+    "description": "Covers market structures, price mechanisms, market failure, and government intervention. AQA A-Level Economics Paper 1 style.",
+    "bestScore": null,
+    "attempts": 0,
+    "sections": [
+      { "name": "Price Mechanism & Elasticity", "questionCount": 12 },
+      { "name": "Market Structures", "questionCount": 16 },
+      { "name": "Market Failure & Intervention", "questionCount": 12 }
+    ],
+    "questionIds": [
+      "econ-q001", "econ-q002", "econ-q003", "econ-q004", "econ-q005",
+      "econ-q006", "econ-q007", "econ-q008", "econ-q009", "econ-q010"
+    ]
+  },
+  {
+    "id": "business-mock-1",
+    "title": "Business Studies Paper 1 — AQA Style",
+    "subject": "business",
+    "type": "full",
+    "duration": 120,
+    "questionCount": 40,
+    "difficulty": "medium",
+    "examBoard": "AQA",
+    "description": "Covers business objectives, financial management, marketing, and operations. AQA A-Level Business Paper 1 style.",
+    "bestScore": null,
+    "attempts": 0,
+    "sections": [
+      { "name": "Business Objectives & Strategy", "questionCount": 12 },
+      { "name": "Financial Management", "questionCount": 14 },
+      { "name": "Marketing & Operations", "questionCount": 14 }
+    ],
+    "questionIds": [
+      "biz-q001", "biz-q002", "biz-q003", "biz-q004", "biz-q005",
+      "biz-q006", "biz-q007", "biz-q008", "biz-q009", "biz-q010"
+    ]
+  },
+  {
+    "id": "philosophy-mock-1",
+    "title": "Philosophy Paper 1 — AQA Style",
+    "subject": "philosophy",
+    "type": "full",
+    "duration": 120,
+    "questionCount": 30,
+    "difficulty": "hard",
+    "examBoard": "AQA",
+    "description": "Covers epistemology, moral philosophy, and metaphysics of God. AQA A-Level Philosophy Paper 1 style.",
+    "bestScore": null,
+    "attempts": 0,
+    "sections": [
+      { "name": "Epistemology", "questionCount": 10 },
+      { "name": "Moral Philosophy", "questionCount": 10 },
+      { "name": "Metaphysics of God", "questionCount": 10 }
+    ],
+    "questionIds": [
+      "phil-q001", "phil-q002", "phil-q003", "phil-q004", "phil-q005",
+      "phil-q006", "phil-q007", "phil-q008", "phil-q009", "phil-q010"
+    ]
   }
 ]

@@ -1,118 +1,713 @@
 {
-  "biology": [
+  "maths": [
     {
-      "id": "cell-biology",
-      "name": "Cell Biology",
+      "id": "maths-t1",
+      "name": "Algebra & Functions",
       "subtopics": [
-        { "id": "cell-structure", "name": "Cell Structure & Organisation", "questionsCount": 24, "notesCount": 4, "completed": true },
-        { "id": "cell-division", "name": "Cell Division (Mitosis & Meiosis)", "questionsCount": 28, "notesCount": 5, "completed": true },
-        { "id": "transport-cells", "name": "Transport Across Cell Membranes", "questionsCount": 22, "notesCount": 4, "completed": false }
+        { "id": "maths-t1-s1", "name": "Quadratic Equations & Inequalities", "questionsCount": 38, "notesCount": 6, "completed": false },
+        { "id": "maths-t1-s2", "name": "Polynomials & Factor Theorem", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "maths-t1-s3", "name": "Functions, Domains & Inverses", "questionsCount": 34, "notesCount": 6, "completed": false },
+        { "id": "maths-t1-s4", "name": "Partial Fractions", "questionsCount": 22, "notesCount": 4, "completed": false }
       ],
-      "completionPercent": 72,
-      "color": "#00F5D4"
-    },
-    {
-      "id": "genetics",
-      "name": "Genetics & Inheritance",
-      "subtopics": [
-        { "id": "dna-structure", "name": "DNA Structure & Replication", "questionsCount": 30, "notesCount": 6, "completed": true },
-        { "id": "protein-synthesis", "name": "Protein Synthesis", "questionsCount": 26, "notesCount": 5, "completed": false },
-        { "id": "inheritance-patterns", "name": "Inheritance Patterns", "questionsCount": 32, "notesCount": 6, "completed": false }
-      ],
-      "completionPercent": 45,
+      "completionPercent": 0,
       "color": "#7c5cff"
     },
     {
-      "id": "ecology",
-      "name": "Ecology & Ecosystems",
+      "id": "maths-t2",
+      "name": "Calculus",
       "subtopics": [
-        { "id": "ecosystems", "name": "Ecosystems & Biomes", "questionsCount": 18, "notesCount": 3, "completed": false },
-        { "id": "populations", "name": "Population Dynamics", "questionsCount": 20, "notesCount": 4, "completed": false },
-        { "id": "nutrient-cycles", "name": "Nutrient Cycles", "questionsCount": 16, "notesCount": 3, "completed": false }
+        { "id": "maths-t2-s1", "name": "Differentiation", "questionsCount": 44, "notesCount": 8, "completed": false },
+        { "id": "maths-t2-s2", "name": "Integration & Area", "questionsCount": 42, "notesCount": 7, "completed": false },
+        { "id": "maths-t2-s3", "name": "Differential Equations", "questionsCount": 28, "notesCount": 5, "completed": false }
       ],
-      "completionPercent": 20,
-      "color": "#ff6b9d"
+      "completionPercent": 0,
+      "color": "#5c4bcc"
     },
     {
-      "id": "physiology",
-      "name": "Human Physiology",
+      "id": "maths-t3",
+      "name": "Trigonometry",
       "subtopics": [
-        { "id": "digestion", "name": "Digestion & Absorption", "questionsCount": 22, "notesCount": 4, "completed": true },
-        { "id": "respiration", "name": "Respiration & Gas Exchange", "questionsCount": 28, "notesCount": 5, "completed": true },
-        { "id": "nervous-system", "name": "The Nervous System", "questionsCount": 24, "notesCount": 5, "completed": false }
+        { "id": "maths-t3-s1", "name": "Trigonometric Identities", "questionsCount": 32, "notesCount": 6, "completed": false },
+        { "id": "maths-t3-s2", "name": "Solving Trigonometric Equations", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "maths-t3-s3", "name": "Radians & Arc Length", "questionsCount": 20, "notesCount": 4, "completed": false }
       ],
-      "completionPercent": 60,
+      "completionPercent": 0,
+      "color": "#7c5cff"
+    },
+    {
+      "id": "maths-t4",
+      "name": "Sequences & Series",
+      "subtopics": [
+        { "id": "maths-t4-s1", "name": "Arithmetic Sequences & Series", "questionsCount": 26, "notesCount": 4, "completed": false },
+        { "id": "maths-t4-s2", "name": "Geometric Sequences & Series", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "maths-t4-s3", "name": "Binomial Expansion", "questionsCount": 24, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    },
+    {
+      "id": "maths-t5",
+      "name": "Exponentials & Logarithms",
+      "subtopics": [
+        { "id": "maths-t5-s1", "name": "Exponential Functions & Graphs", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "maths-t5-s2", "name": "Logarithms & Laws of Logs", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "maths-t5-s3", "name": "Natural Logarithm & e", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#7c5cff"
+    },
+    {
+      "id": "maths-t6",
+      "name": "Statistics & Probability",
+      "subtopics": [
+        { "id": "maths-t6-s1", "name": "Probability Theory", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "maths-t6-s2", "name": "Binomial & Normal Distributions", "questionsCount": 34, "notesCount": 6, "completed": false },
+        { "id": "maths-t6-s3", "name": "Hypothesis Testing", "questionsCount": 26, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    },
+    {
+      "id": "maths-t7",
+      "name": "Mechanics",
+      "subtopics": [
+        { "id": "maths-t7-s1", "name": "Kinematics & SUVAT", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "maths-t7-s2", "name": "Forces & Newton's Laws", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "maths-t7-s3", "name": "Moments & Equilibrium", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#7c5cff"
+    },
+    {
+      "id": "maths-t8",
+      "name": "Vectors & Proof",
+      "subtopics": [
+        { "id": "maths-t8-s1", "name": "Vectors in 2D & 3D", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "maths-t8-s2", "name": "Methods of Proof", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    }
+  ],
+  "further-maths": [
+    {
+      "id": "further-maths-t1",
+      "name": "Complex Numbers",
+      "subtopics": [
+        { "id": "further-maths-t1-s1", "name": "Complex Arithmetic & Argand Diagrams", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "further-maths-t1-s2", "name": "Modulus-Argument Form & De Moivre", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "further-maths-t1-s3", "name": "Roots of Unity & Polynomials", "questionsCount": 24, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    },
+    {
+      "id": "further-maths-t2",
+      "name": "Matrices",
+      "subtopics": [
+        { "id": "further-maths-t2-s1", "name": "Matrix Operations & Transformations", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "further-maths-t2-s2", "name": "Determinants & Inverse Matrices", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "further-maths-t2-s3", "name": "Eigenvalues & Eigenvectors", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    },
+    {
+      "id": "further-maths-t3",
+      "name": "Further Calculus",
+      "subtopics": [
+        { "id": "further-maths-t3-s1", "name": "Maclaurin & Taylor Series", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "further-maths-t3-s2", "name": "Polar Coordinates", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "further-maths-t3-s3", "name": "Further Integration Techniques", "questionsCount": 32, "notesCount": 6, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    },
+    {
+      "id": "further-maths-t4",
+      "name": "Differential Equations",
+      "subtopics": [
+        { "id": "further-maths-t4-s1", "name": "First-Order Differential Equations", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "further-maths-t4-s2", "name": "Second-Order Differential Equations", "questionsCount": 28, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    },
+    {
+      "id": "further-maths-t5",
+      "name": "Hyperbolic Functions",
+      "subtopics": [
+        { "id": "further-maths-t5-s1", "name": "Definitions & Graphs", "questionsCount": 20, "notesCount": 4, "completed": false },
+        { "id": "further-maths-t5-s2", "name": "Hyperbolic Identities & Calculus", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    },
+    {
+      "id": "further-maths-t6",
+      "name": "Proof & Number Theory",
+      "subtopics": [
+        { "id": "further-maths-t6-s1", "name": "Proof by Induction", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "further-maths-t6-s2", "name": "Further Proof Methods", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    },
+    {
+      "id": "further-maths-t7",
+      "name": "Further Mechanics",
+      "subtopics": [
+        { "id": "further-maths-t7-s1", "name": "Circular Motion", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "further-maths-t7-s2", "name": "Simple Harmonic Motion", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "further-maths-t7-s3", "name": "Momentum & Impulse", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#5c4bcc"
+    }
+  ],
+  "physics": [
+    {
+      "id": "physics-t1",
+      "name": "Mechanics",
+      "subtopics": [
+        { "id": "physics-t1-s1", "name": "Kinematics & Motion Graphs", "questionsCount": 32, "notesCount": 6, "completed": false },
+        { "id": "physics-t1-s2", "name": "Newton's Laws of Motion", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "physics-t1-s3", "name": "Energy, Work & Momentum", "questionsCount": 34, "notesCount": 6, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00BBF9"
+    },
+    {
+      "id": "physics-t2",
+      "name": "Waves & Optics",
+      "subtopics": [
+        { "id": "physics-t2-s1", "name": "Wave Properties & Behaviour", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "physics-t2-s2", "name": "Superposition & Interference", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "physics-t2-s3", "name": "Refraction & Optical Fibres", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00BBF9"
+    },
+    {
+      "id": "physics-t3",
+      "name": "Electricity",
+      "subtopics": [
+        { "id": "physics-t3-s1", "name": "Current, Voltage & Resistance", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "physics-t3-s2", "name": "Series & Parallel Circuits", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "physics-t3-s3", "name": "EMF & Internal Resistance", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00BBF9"
+    },
+    {
+      "id": "physics-t4",
+      "name": "Quantum Physics & Atomic Structure",
+      "subtopics": [
+        { "id": "physics-t4-s1", "name": "Photoelectric Effect", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "physics-t4-s2", "name": "Atomic Spectra & Energy Levels", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "physics-t4-s3", "name": "Wave-Particle Duality", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00BBF9"
+    },
+    {
+      "id": "physics-t5",
+      "name": "Fields",
+      "subtopics": [
+        { "id": "physics-t5-s1", "name": "Gravitational Fields", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "physics-t5-s2", "name": "Electric Fields", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "physics-t5-s3", "name": "Magnetic Fields & Induction", "questionsCount": 28, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00BBF9"
+    },
+    {
+      "id": "physics-t6",
+      "name": "Nuclear Physics",
+      "subtopics": [
+        { "id": "physics-t6-s1", "name": "Radioactivity & Decay", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "physics-t6-s2", "name": "Nuclear Reactions & Binding Energy", "questionsCount": 24, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00BBF9"
+    },
+    {
+      "id": "physics-t7",
+      "name": "Thermal Physics",
+      "subtopics": [
+        { "id": "physics-t7-s1", "name": "Ideal Gases & Gas Laws", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "physics-t7-s2", "name": "Thermal Energy Transfer", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00BBF9"
+    },
+    {
+      "id": "physics-t8",
+      "name": "Materials",
+      "subtopics": [
+        { "id": "physics-t8-s1", "name": "Stress, Strain & Young's Modulus", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "physics-t8-s2", "name": "Properties of Materials", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
       "color": "#00BBF9"
     }
   ],
   "chemistry": [
     {
-      "id": "atomic-structure",
+      "id": "chemistry-t1",
       "name": "Atomic Structure & Periodicity",
       "subtopics": [
-        { "id": "atomic-model", "name": "The Atomic Model", "questionsCount": 20, "notesCount": 4, "completed": true },
-        { "id": "periodic-table", "name": "The Periodic Table", "questionsCount": 24, "notesCount": 5, "completed": true },
-        { "id": "electron-config", "name": "Electronic Configuration", "questionsCount": 18, "notesCount": 3, "completed": false }
+        { "id": "chemistry-t1-s1", "name": "The Atomic Model & Subatomic Particles", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "chemistry-t1-s2", "name": "Electronic Configuration", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "chemistry-t1-s3", "name": "Periodic Trends", "questionsCount": 26, "notesCount": 5, "completed": false }
       ],
-      "completionPercent": 68,
-      "color": "#7c5cff"
+      "completionPercent": 0,
+      "color": "#00d4aa"
     },
     {
-      "id": "bonding",
-      "name": "Chemical Bonding",
+      "id": "chemistry-t2",
+      "name": "Chemical Bonding & Structure",
       "subtopics": [
-        { "id": "ionic-bonding", "name": "Ionic Bonding", "questionsCount": 22, "notesCount": 4, "completed": true },
-        { "id": "covalent-bonding", "name": "Covalent Bonding", "questionsCount": 26, "notesCount": 5, "completed": false },
-        { "id": "metallic-bonding", "name": "Metallic Bonding & Structures", "questionsCount": 18, "notesCount": 3, "completed": false }
+        { "id": "chemistry-t2-s1", "name": "Ionic Bonding & Lattices", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "chemistry-t2-s2", "name": "Covalent Bonding & Molecular Shape", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "chemistry-t2-s3", "name": "Intermolecular Forces", "questionsCount": 22, "notesCount": 4, "completed": false }
       ],
-      "completionPercent": 38,
-      "color": "#00F5D4"
+      "completionPercent": 0,
+      "color": "#00d4aa"
     },
     {
-      "id": "organic-chemistry",
+      "id": "chemistry-t3",
+      "name": "Energetics & Thermodynamics",
+      "subtopics": [
+        { "id": "chemistry-t3-s1", "name": "Enthalpy Changes", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "chemistry-t3-s2", "name": "Born-Haber Cycles", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "chemistry-t3-s3", "name": "Entropy & Gibbs Energy", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00d4aa"
+    },
+    {
+      "id": "chemistry-t4",
+      "name": "Kinetics & Equilibrium",
+      "subtopics": [
+        { "id": "chemistry-t4-s1", "name": "Reaction Rates & Rate Equations", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "chemistry-t4-s2", "name": "Equilibrium & Le Chatelier's Principle", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "chemistry-t4-s3", "name": "Acids, Bases & pH", "questionsCount": 28, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00d4aa"
+    },
+    {
+      "id": "chemistry-t5",
+      "name": "Inorganic Chemistry",
+      "subtopics": [
+        { "id": "chemistry-t5-s1", "name": "Group 2 Elements & Compounds", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "chemistry-t5-s2", "name": "Group 7 (Halogens)", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "chemistry-t5-s3", "name": "Transition Metals", "questionsCount": 28, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00d4aa"
+    },
+    {
+      "id": "chemistry-t6",
       "name": "Organic Chemistry",
       "subtopics": [
-        { "id": "alkanes", "name": "Alkanes & Alkenes", "questionsCount": 30, "notesCount": 6, "completed": false },
-        { "id": "alcohols", "name": "Alcohols & Ethers", "questionsCount": 24, "notesCount": 5, "completed": false },
-        { "id": "carbonyls", "name": "Carbonyl Compounds", "questionsCount": 28, "notesCount": 5, "completed": false }
+        { "id": "chemistry-t6-s1", "name": "Hydrocarbons: Alkanes & Alkenes", "questionsCount": 30, "notesCount": 6, "completed": false },
+        { "id": "chemistry-t6-s2", "name": "Alcohols, Aldehydes & Ketones", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "chemistry-t6-s3", "name": "Carboxylic Acids & Esters", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "chemistry-t6-s4", "name": "Amines & Amino Acids", "questionsCount": 22, "notesCount": 4, "completed": false }
       ],
-      "completionPercent": 15,
-      "color": "#ffb547"
+      "completionPercent": 0,
+      "color": "#00d4aa"
+    },
+    {
+      "id": "chemistry-t7",
+      "name": "Electrochemistry & Redox",
+      "subtopics": [
+        { "id": "chemistry-t7-s1", "name": "Redox Reactions & Oxidation States", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "chemistry-t7-s2", "name": "Electrode Potentials & Cells", "questionsCount": 24, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00d4aa"
+    },
+    {
+      "id": "chemistry-t8",
+      "name": "Analytical Techniques",
+      "subtopics": [
+        { "id": "chemistry-t8-s1", "name": "NMR Spectroscopy", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "chemistry-t8-s2", "name": "Mass Spectrometry & IR", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#00d4aa"
     }
   ],
-  "maths": [
+  "biology": [
     {
-      "id": "algebra",
-      "name": "Algebra & Functions",
+      "id": "biology-t1",
+      "name": "Cell Biology",
       "subtopics": [
-        { "id": "quadratics", "name": "Quadratic Equations", "questionsCount": 32, "notesCount": 6, "completed": true },
-        { "id": "polynomials", "name": "Polynomials", "questionsCount": 28, "notesCount": 5, "completed": true },
-        { "id": "functions", "name": "Functions & Graphs", "questionsCount": 36, "notesCount": 7, "completed": true }
+        { "id": "biology-t1-s1", "name": "Cell Structure & Organelles", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "biology-t1-s2", "name": "Cell Membranes & Transport", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "biology-t1-s3", "name": "Cell Division: Mitosis & Meiosis", "questionsCount": 28, "notesCount": 5, "completed": false }
       ],
-      "completionPercent": 90,
-      "color": "#ffb547"
+      "completionPercent": 0,
+      "color": "#22c55e"
     },
     {
-      "id": "calculus",
-      "name": "Calculus",
+      "id": "biology-t2",
+      "name": "Genetics & Inheritance",
       "subtopics": [
-        { "id": "differentiation", "name": "Differentiation", "questionsCount": 40, "notesCount": 8, "completed": true },
-        { "id": "integration", "name": "Integration", "questionsCount": 38, "notesCount": 7, "completed": false },
-        { "id": "differential-equations", "name": "Differential Equations", "questionsCount": 30, "notesCount": 6, "completed": false }
+        { "id": "biology-t2-s1", "name": "DNA Structure & Replication", "questionsCount": 30, "notesCount": 6, "completed": false },
+        { "id": "biology-t2-s2", "name": "Gene Expression & Protein Synthesis", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "biology-t2-s3", "name": "Mendelian & Non-Mendelian Inheritance", "questionsCount": 32, "notesCount": 6, "completed": false }
       ],
-      "completionPercent": 55,
-      "color": "#00F5D4"
+      "completionPercent": 0,
+      "color": "#22c55e"
     },
     {
-      "id": "statistics",
-      "name": "Statistics & Probability",
+      "id": "biology-t3",
+      "name": "Ecology & Ecosystems",
       "subtopics": [
-        { "id": "probability", "name": "Probability Theory", "questionsCount": 28, "notesCount": 5, "completed": false },
-        { "id": "distributions", "name": "Probability Distributions", "questionsCount": 32, "notesCount": 6, "completed": false },
-        { "id": "hypothesis-testing", "name": "Hypothesis Testing", "questionsCount": 24, "notesCount": 5, "completed": false }
+        { "id": "biology-t3-s1", "name": "Ecosystems & Energy Flow", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "biology-t3-s2", "name": "Population Dynamics", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "biology-t3-s3", "name": "Nutrient Cycles & Biodiversity", "questionsCount": 20, "notesCount": 4, "completed": false }
       ],
-      "completionPercent": 25,
-      "color": "#7c5cff"
+      "completionPercent": 0,
+      "color": "#22c55e"
+    },
+    {
+      "id": "biology-t4",
+      "name": "Human Physiology",
+      "subtopics": [
+        { "id": "biology-t4-s1", "name": "Digestion & Enzymes", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "biology-t4-s2", "name": "Gas Exchange & Breathing", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "biology-t4-s3", "name": "Nervous System & Homeostasis", "questionsCount": 26, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#22c55e"
+    },
+    {
+      "id": "biology-t5",
+      "name": "Biochemistry & Metabolism",
+      "subtopics": [
+        { "id": "biology-t5-s1", "name": "Biological Molecules", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "biology-t5-s2", "name": "Enzyme Kinetics", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "biology-t5-s3", "name": "Aerobic & Anaerobic Respiration", "questionsCount": 30, "notesCount": 6, "completed": false },
+        { "id": "biology-t5-s4", "name": "Photosynthesis", "questionsCount": 28, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#22c55e"
+    },
+    {
+      "id": "biology-t6",
+      "name": "Evolution & Classification",
+      "subtopics": [
+        { "id": "biology-t6-s1", "name": "Natural Selection & Adaptation", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "biology-t6-s2", "name": "Classification & Phylogeny", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#22c55e"
+    },
+    {
+      "id": "biology-t7",
+      "name": "Plant Biology",
+      "subtopics": [
+        { "id": "biology-t7-s1", "name": "Transport in Plants", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "biology-t7-s2", "name": "Plant Hormones & Responses", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#22c55e"
+    },
+    {
+      "id": "biology-t8",
+      "name": "Immunology & Disease",
+      "subtopics": [
+        { "id": "biology-t8-s1", "name": "The Immune System", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "biology-t8-s2", "name": "Vaccines & Monoclonal Antibodies", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#22c55e"
+    }
+  ],
+  "english-lit": [
+    {
+      "id": "english-lit-t1",
+      "name": "Poetry",
+      "subtopics": [
+        { "id": "english-lit-t1-s1", "name": "AQA Poetry Anthology: Love & Relationships", "questionsCount": 30, "notesCount": 6, "completed": false },
+        { "id": "english-lit-t1-s2", "name": "Unseen Poetry Analysis", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "english-lit-t1-s3", "name": "Poetic Form, Structure & Technique", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "english-lit-t2",
+      "name": "Prose Fiction",
+      "subtopics": [
+        { "id": "english-lit-t2-s1", "name": "19th Century Novel", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "english-lit-t2-s2", "name": "Modern & Contemporary Fiction", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "english-lit-t2-s3", "name": "Narrative Voice & Techniques", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "english-lit-t3",
+      "name": "Drama",
+      "subtopics": [
+        { "id": "english-lit-t3-s1", "name": "Shakespeare", "questionsCount": 30, "notesCount": 6, "completed": false },
+        { "id": "english-lit-t3-s2", "name": "Modern Drama", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "english-lit-t3-s3", "name": "Dramatic Techniques & Stagecraft", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "english-lit-t4",
+      "name": "Literary Criticism & Context",
+      "subtopics": [
+        { "id": "english-lit-t4-s1", "name": "Critical Approaches & Theory", "questionsCount": 20, "notesCount": 4, "completed": false },
+        { "id": "english-lit-t4-s2", "name": "Historical & Social Context", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "english-lit-t5",
+      "name": "Language & Stylistics",
+      "subtopics": [
+        { "id": "english-lit-t5-s1", "name": "Figurative Language & Imagery", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "english-lit-t5-s2", "name": "Structural & Form Analysis", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "english-lit-t6",
+      "name": "Comparative Study",
+      "subtopics": [
+        { "id": "english-lit-t6-s1", "name": "Comparing Texts & Themes", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "english-lit-t6-s2", "name": "Making Contextual Links", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f59e0b"
+    }
+  ],
+  "economics": [
+    {
+      "id": "economics-t1",
+      "name": "Microeconomics",
+      "subtopics": [
+        { "id": "economics-t1-s1", "name": "Supply, Demand & Market Equilibrium", "questionsCount": 32, "notesCount": 6, "completed": false },
+        { "id": "economics-t1-s2", "name": "Price Elasticity of Demand & Supply", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "economics-t1-s3", "name": "Market Failure & Externalities", "questionsCount": 26, "notesCount": 5, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#ef4444"
+    },
+    {
+      "id": "economics-t2",
+      "name": "Firm Behaviour & Market Structure",
+      "subtopics": [
+        { "id": "economics-t2-s1", "name": "Costs, Revenue & Profit", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "economics-t2-s2", "name": "Perfect Competition, Monopoly & Oligopoly", "questionsCount": 30, "notesCount": 6, "completed": false },
+        { "id": "economics-t2-s3", "name": "Labour Markets & Wage Determination", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#ef4444"
+    },
+    {
+      "id": "economics-t3",
+      "name": "Macroeconomics",
+      "subtopics": [
+        { "id": "economics-t3-s1", "name": "National Income & GDP", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "economics-t3-s2", "name": "Aggregate Demand & Supply", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "economics-t3-s3", "name": "Business Cycles & Economic Indicators", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#ef4444"
+    },
+    {
+      "id": "economics-t4",
+      "name": "Economic Policy",
+      "subtopics": [
+        { "id": "economics-t4-s1", "name": "Fiscal Policy", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "economics-t4-s2", "name": "Monetary Policy & Interest Rates", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "economics-t4-s3", "name": "Supply-Side Policy", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#ef4444"
+    },
+    {
+      "id": "economics-t5",
+      "name": "Global Economics",
+      "subtopics": [
+        { "id": "economics-t5-s1", "name": "International Trade & Comparative Advantage", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "economics-t5-s2", "name": "Exchange Rates & Balance of Payments", "questionsCount": 24, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#ef4444"
+    },
+    {
+      "id": "economics-t6",
+      "name": "Inequality & Development",
+      "subtopics": [
+        { "id": "economics-t6-s1", "name": "Income & Wealth Inequality", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "economics-t6-s2", "name": "Economic Development & Emerging Economies", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#ef4444"
+    },
+    {
+      "id": "economics-t7",
+      "name": "Financial Markets & Institutions",
+      "subtopics": [
+        { "id": "economics-t7-s1", "name": "Money, Banking & Credit", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "economics-t7-s2", "name": "Financial Crises & Regulation", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#ef4444"
+    }
+  ],
+  "business": [
+    {
+      "id": "business-t1",
+      "name": "Business Objectives & Strategy",
+      "subtopics": [
+        { "id": "business-t1-s1", "name": "Corporate Objectives & Mission", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "business-t1-s2", "name": "SWOT & Strategic Analysis", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "business-t1-s3", "name": "Growth & Competitive Strategies", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f97316"
+    },
+    {
+      "id": "business-t2",
+      "name": "Finance & Accounting",
+      "subtopics": [
+        { "id": "business-t2-s1", "name": "Financial Statements & Ratios", "questionsCount": 28, "notesCount": 5, "completed": false },
+        { "id": "business-t2-s2", "name": "Investment Appraisal", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "business-t2-s3", "name": "Cash Flow & Working Capital", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f97316"
+    },
+    {
+      "id": "business-t3",
+      "name": "Marketing",
+      "subtopics": [
+        { "id": "business-t3-s1", "name": "The Marketing Mix (7Ps)", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "business-t3-s2", "name": "Market Research & Segmentation", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "business-t3-s3", "name": "Branding & Pricing Strategies", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f97316"
+    },
+    {
+      "id": "business-t4",
+      "name": "Operations Management",
+      "subtopics": [
+        { "id": "business-t4-s1", "name": "Production Methods & Lean Production", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "business-t4-s2", "name": "Supply Chain & Quality Management", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f97316"
+    },
+    {
+      "id": "business-t5",
+      "name": "Human Resources",
+      "subtopics": [
+        { "id": "business-t5-s1", "name": "Motivation Theory & Practice", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "business-t5-s2", "name": "Leadership Styles & Organisational Structure", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "business-t5-s3", "name": "Recruitment, Training & HRM", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f97316"
+    },
+    {
+      "id": "business-t6",
+      "name": "The External Environment",
+      "subtopics": [
+        { "id": "business-t6-s1", "name": "PESTLE Analysis", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "business-t6-s2", "name": "Stakeholders & Business Ethics", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f97316"
+    },
+    {
+      "id": "business-t7",
+      "name": "Globalisation & International Business",
+      "subtopics": [
+        { "id": "business-t7-s1", "name": "Global Markets & Multinational Companies", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "business-t7-s2", "name": "International Business Strategy", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#f97316"
+    }
+  ],
+  "philosophy": [
+    {
+      "id": "philosophy-t1",
+      "name": "Philosophy of Religion",
+      "subtopics": [
+        { "id": "philosophy-t1-s1", "name": "Arguments for the Existence of God", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "philosophy-t1-s2", "name": "The Problem of Evil", "questionsCount": 26, "notesCount": 5, "completed": false },
+        { "id": "philosophy-t1-s3", "name": "Religious Language", "questionsCount": 22, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "philosophy-t2",
+      "name": "Ethics",
+      "subtopics": [
+        { "id": "philosophy-t2-s1", "name": "Normative Ethical Theories", "questionsCount": 30, "notesCount": 5, "completed": false },
+        { "id": "philosophy-t2-s2", "name": "Applied Ethics", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "philosophy-t2-s3", "name": "Meta-Ethics", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "philosophy-t3",
+      "name": "Developments in Christian Thought",
+      "subtopics": [
+        { "id": "philosophy-t3-s1", "name": "Christian Moral Principles", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "philosophy-t3-s2", "name": "Liberation Theology & Secularism", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "philosophy-t4",
+      "name": "Epistemology",
+      "subtopics": [
+        { "id": "philosophy-t4-s1", "name": "Knowledge, Belief & Justification", "questionsCount": 24, "notesCount": 4, "completed": false },
+        { "id": "philosophy-t4-s2", "name": "Perception & Reality", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "philosophy-t5",
+      "name": "Philosophical Argument & Analysis",
+      "subtopics": [
+        { "id": "philosophy-t5-s1", "name": "Logical Structure & Argument Analysis", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "philosophy-t5-s2", "name": "Philosophical Dialogue & Debate", "questionsCount": 18, "notesCount": 3, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "philosophy-t6",
+      "name": "Religious Experience & Revelation",
+      "subtopics": [
+        { "id": "philosophy-t6-s1", "name": "Mysticism & Revelatory Experience", "questionsCount": 22, "notesCount": 4, "completed": false },
+        { "id": "philosophy-t6-s2", "name": "Miracles & Divine Action", "questionsCount": 20, "notesCount": 4, "completed": false }
+      ],
+      "completionPercent": 0,
+      "color": "#8b5cf6"
     }
   ]
 }

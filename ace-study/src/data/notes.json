@@ -1,120 +1,619 @@
 [
   {
-    "id": "cell-structure",
-    "title": "Cell Structure & Organisation",
-    "subject": "biology",
-    "topicId": "cell-biology",
-    "readTime": "12 min",
-    "sections": [
-      {
-        "id": "overview",
-        "title": "Overview of Cell Types",
-        "content": "All living organisms are made of cells. There are two fundamental cell types:\n\n**Prokaryotic cells** — found in bacteria and archaea. They lack a membrane-bound nucleus and membrane-bound organelles. DNA exists as a circular chromosome in the cytoplasm (nucleoid region). They are typically 1–10 μm in size.\n\n**Eukaryotic cells** — found in plants, animals, fungi, and protists. They have a membrane-bound nucleus containing linear chromosomes. They contain specialised membrane-bound organelles. They are typically 10–100 μm in size.\n\nBoth cell types share common features: a cell membrane, ribosomes, cytoplasm, and DNA."
-      },
-      {
-        "id": "nucleus",
-        "title": "The Nucleus",
-        "content": "The nucleus is the control centre of the eukaryotic cell. It contains the cell's genetic information (DNA) in the form of chromatin (loose DNA) or chromosomes (condensed DNA during cell division).\n\n**Nuclear envelope** — a double membrane surrounding the nucleus, perforated by nuclear pores that regulate the movement of molecules in and out.\n\n**Nucleolus** — a dense region within the nucleus where ribosomal RNA (rRNA) is synthesised and ribosomes are assembled.\n\n**Chromatin** — the complex of DNA and proteins (histones) that makes up chromosomes in their uncondensed form during interphase."
-      },
-      {
-        "id": "mitochondria",
-        "title": "Mitochondria",
-        "content": "Mitochondria are the sites of aerobic respiration and ATP production. They are often called the 'powerhouse of the cell'.\n\n**Structure:**\n- Outer membrane — smooth, permeable to small molecules\n- Inner membrane — highly folded into **cristae** (singular: crista), which maximise surface area for ATP synthase enzymes\n- Matrix — the inner compartment containing enzymes for the Krebs cycle, mitochondrial DNA, and ribosomes\n\n**Function:**\nOxidative phosphorylation occurs on the inner membrane. The proton gradient created by the electron transport chain drives ATP synthase to produce ATP.\n\nMitochondria have their own circular DNA and ribosomes, supporting the endosymbiotic theory that they were once free-living bacteria."
-      },
-      {
-        "id": "endoplasmic-reticulum",
-        "title": "Endoplasmic Reticulum",
-        "content": "The endoplasmic reticulum (ER) is a network of interconnected membranes extending from the nuclear envelope.\n\n**Rough ER (RER):**\n- Studded with ribosomes on its surface\n- Site of protein synthesis and initial protein folding\n- Newly synthesised proteins enter the lumen for transport\n- Continuous with the outer nuclear membrane\n\n**Smooth ER (SER):**\n- No ribosomes — smooth appearance\n- Site of lipid synthesis (phospholipids, steroids)\n- Detoxification of drugs and harmful substances\n- Calcium ion storage (important in muscle contraction)\n\nProteins synthesised at the RER are packaged into transport vesicles and sent to the Golgi apparatus."
-      }
-    ],
-    "keyPoints": [
-      "Prokaryotes lack membrane-bound nucleus; eukaryotes have one",
-      "Mitochondrial inner membrane folds (cristae) maximise ATP synthesis surface area",
-      "RER is studded with ribosomes for protein synthesis; SER makes lipids",
-      "Nuclear pores regulate transport between nucleus and cytoplasm"
-    ],
-    "relatedFlashcardDeckId": "cell-biology",
-    "relatedTopicId": "cell-biology"
-  },
-  {
-    "id": "dna-structure",
-    "title": "DNA Structure & Replication",
-    "subject": "biology",
-    "topicId": "genetics",
-    "readTime": "15 min",
-    "sections": [
-      {
-        "id": "double-helix",
-        "title": "The Double Helix",
-        "content": "DNA (deoxyribonucleic acid) is the molecule that carries genetic information. Its structure was elucidated by Watson and Crick in 1953, using X-ray crystallography data from Rosalind Franklin.\n\n**Key features of DNA structure:**\n- Double helix — two polynucleotide strands wound around each other\n- Antiparallel strands — one strand runs 5'→3', the other 3'→5'\n- Nucleotide monomers — each containing a deoxyribose sugar, a phosphate group, and a nitrogenous base\n- Complementary base pairing — Adenine (A) pairs with Thymine (T) via 2 hydrogen bonds; Guanine (G) pairs with Cytosine (C) via 3 hydrogen bonds\n- Sugar-phosphate backbone — the 'rails' of the DNA ladder, connected by phosphodiester bonds"
-      },
-      {
-        "id": "replication",
-        "title": "DNA Replication",
-        "content": "DNA replication is **semi-conservative** — each new DNA molecule consists of one original strand and one newly synthesised strand.\n\n**Key enzymes:**\n- **Helicase** — unwinds and separates the double helix by breaking hydrogen bonds between bases (creates a 'replication fork')\n- **DNA Polymerase** — synthesises the new strand by adding nucleotides in a 5'→3' direction, using the existing strand as a template\n- **Primase** — synthesises a short RNA primer to provide a free 3'-OH group for DNA polymerase\n- **Ligase** — joins Okazaki fragments on the lagging strand together\n\n**Leading vs Lagging Strand:**\nThe leading strand is synthesised continuously. The lagging strand is synthesised discontinuously in short segments (Okazaki fragments) in the opposite direction."
-      }
-    ],
-    "keyPoints": [
-      "DNA is a double helix with antiparallel, complementary strands",
-      "A-T (2 H-bonds) and G-C (3 H-bonds) base pairing is complementary",
-      "Semi-conservative replication: each daughter molecule has one old, one new strand",
-      "Helicase unwinds; DNA Polymerase III synthesises; Ligase joins fragments"
-    ],
-    "relatedFlashcardDeckId": "genetics",
-    "relatedTopicId": "genetics"
-  },
-  {
-    "id": "quadratics",
-    "title": "Quadratic Equations",
+    "id": "maths-note-1",
+    "title": "Algebra and Functions",
     "subject": "maths",
-    "topicId": "algebra",
-    "readTime": "10 min",
+    "topicId": "maths-t1",
+    "readTime": "10 min read",
     "sections": [
       {
-        "id": "forms",
-        "title": "Forms of a Quadratic",
-        "content": "A quadratic equation has the general form **ax² + bx + c = 0** where a ≠ 0.\n\n**Three key forms:**\n\n**Standard form:** ax² + bx + c\n- Easy to identify a, b, c for the quadratic formula\n- The y-intercept is the value of c\n\n**Factored form:** a(x - p)(x - q)\n- The roots are x = p and x = q\n- Most useful when solving for zeros\n\n**Vertex (completed square) form:** a(x - h)² + k\n- The vertex (turning point) is at (h, k)\n- The axis of symmetry is x = h\n- If a > 0, the parabola opens upward (minimum at vertex); if a < 0, opens downward (maximum)"
+        "id": "laws-of-indices",
+        "title": "Laws of Indices",
+        "content": "Indices (or exponents) follow a set of rules that are fundamental to A-Level algebra.\n\n**Key index laws:**\n- $a^m \\times a^n = a^{m+n}$\n- $a^m \\div a^n = a^{m-n}$\n- $(a^m)^n = a^{mn}$\n- $a^0 = 1$ (for any $a \\neq 0$)\n- $a^{-n} = \\dfrac{1}{a^n}$\n- $a^{1/n} = \\sqrt[n]{a}$\n- $a^{m/n} = (\\sqrt[n]{a})^m$\n\nThese laws apply to all real numbers. It is crucial to apply them in the correct order. For example, simplify $\\dfrac{x^3 \\cdot x^{1/2}}{x^2}$:\n\n$$x^{3 + 1/2 - 2} = x^{3/2}$$\n\n**Negative and fractional indices** often appear in differentiation and integration, so mastering this topic underpins much of A-Level Mathematics."
       },
       {
-        "id": "quadratic-formula",
-        "title": "The Quadratic Formula",
-        "content": "For ax² + bx + c = 0, the solutions are:\n\n**x = (−b ± √(b² − 4ac)) / 2a**\n\n**The Discriminant (Δ = b² − 4ac):**\n- Δ > 0: Two distinct real roots\n- Δ = 0: One repeated real root (tangent to x-axis)\n- Δ < 0: No real roots (roots are complex)\n\n**Worked Example:**\nSolve 2x² − 5x − 3 = 0\na = 2, b = −5, c = −3\nΔ = (−5)² − 4(2)(−3) = 25 + 24 = 49\nx = (5 ± √49) / 4 = (5 ± 7) / 4\nx = 3 or x = −½"
+        "id": "surds",
+        "title": "Surds and Rationalisation",
+        "content": "A **surd** is an irrational root that cannot be simplified to a rational number, such as $\\sqrt{3}$ or $\\sqrt{5}$.\n\n**Key surd rules:**\n- $\\sqrt{a} \\times \\sqrt{b} = \\sqrt{ab}$\n- $\\sqrt{a} \\div \\sqrt{b} = \\sqrt{a/b}$\n- $(\\sqrt{a})^2 = a$\n\n**Simplifying surds:** Express $\\sqrt{72}$ in simplest form.\n$$\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$$\n\n**Rationalising the denominator** removes surds from the bottom of a fraction. For $\\dfrac{1}{\\sqrt{3}}$, multiply numerator and denominator by $\\sqrt{3}$:\n$$\\dfrac{1}{\\sqrt{3}} \\times \\dfrac{\\sqrt{3}}{\\sqrt{3}} = \\dfrac{\\sqrt{3}}{3}$$\n\nFor expressions of the form $\\dfrac{1}{a + \\sqrt{b}}$, multiply by the **conjugate** $a - \\sqrt{b}$ to use the difference of two squares identity: $(a+\\sqrt{b})(a-\\sqrt{b}) = a^2 - b$."
+      },
+      {
+        "id": "quadratic-functions",
+        "title": "Quadratic Functions and Graphs",
+        "content": "A quadratic function takes the form $f(x) = ax^2 + bx + c$ where $a \\neq 0$. Its graph is a **parabola**.\n\n**Completed square form:** $a(x + p)^2 + q$\n- The vertex (turning point) is at $(-p,\\, q)$\n- The axis of symmetry is $x = -p$\n- If $a > 0$: minimum turning point; if $a < 0$: maximum turning point\n\n**Finding roots:**\n1. Factorisation (when possible)\n2. Completing the square\n3. The quadratic formula: $x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$\n\n**The discriminant** $\\Delta = b^2 - 4ac$ determines the number of real roots:\n- $\\Delta > 0$: two distinct real roots\n- $\\Delta = 0$: one repeated real root (vertex on x-axis)\n- $\\Delta < 0$: no real roots\n\nThe graph intersects the y-axis at $(0, c)$ and the x-axis at the real roots (if they exist)."
+      },
+      {
+        "id": "inequalities",
+        "title": "Inequalities",
+        "content": "Inequalities express a range of values rather than a single solution.\n\n**Linear inequalities** are solved like equations, with one crucial difference: **multiplying or dividing by a negative number reverses the inequality sign**.\n\nExample: Solve $-2x + 3 > 7$\n$$-2x > 4 \\implies x < -2$$\n\n**Quadratic inequalities** require finding the critical values (roots) first.\n\nExample: Solve $x^2 - 5x + 6 < 0$\n1. Factorise: $(x-2)(x-3) < 0$\n2. Roots at $x = 2$ and $x = 3$\n3. The parabola opens upward, so it is negative **between** the roots: $2 < x < 3$\n\n**Set notation:**\n- $\\{x : x < -2\\}$ or $x \\in (-\\infty, -2)$\n- $\\{x : 2 < x < 3\\}$ or $x \\in (2, 3)$\n\nAlways sketch the graph to confirm which regions satisfy the inequality."
       }
     ],
     "keyPoints": [
-      "Standard, factored, and vertex forms each have different uses",
-      "Quadratic formula: x = (−b ± √(b² − 4ac)) / 2a",
-      "Discriminant b²−4ac determines number of real roots",
-      "Negative discriminant → no real roots (complex roots only)"
+      "Index laws govern multiplication, division, and powers of the same base",
+      "Negative indices represent reciprocals; fractional indices represent roots",
+      "Surds are irrational roots; rationalise denominators using conjugates",
+      "Discriminant $b^2 - 4ac$ determines the nature and number of quadratic roots",
+      "Dividing or multiplying an inequality by a negative number reverses the sign",
+      "Completed square form directly reveals the vertex and axis of symmetry"
     ],
-    "relatedFlashcardDeckId": "calculus",
-    "relatedTopicId": "algebra"
+    "relatedFlashcardDeckId": "maths-algebra",
+    "relatedTopicId": "maths-t1"
   },
   {
-    "id": "atomic-model",
-    "title": "The Atomic Model",
-    "subject": "chemistry",
-    "topicId": "atomic-structure",
-    "readTime": "11 min",
+    "id": "maths-note-2",
+    "title": "Calculus: Differentiation",
+    "subject": "maths",
+    "topicId": "maths-t2",
+    "readTime": "12 min read",
     "sections": [
       {
-        "id": "history",
-        "title": "Development of the Atomic Model",
-        "content": "Our understanding of the atom has evolved through a series of models:\n\n**Dalton's Model (1803)** — atoms are solid, indivisible spheres. Different elements have different atoms.\n\n**Thomson's Plum Pudding Model (1897)** — after discovering the electron, Thomson proposed atoms are a positive 'pudding' with embedded negative electrons.\n\n**Rutherford's Nuclear Model (1911)** — alpha particle scattering experiment showed most of an atom is empty space, with a small, dense, positively-charged nucleus.\n\n**Bohr's Model (1913)** — electrons occupy fixed orbits (shells) at specific energy levels. Electrons can jump between levels by absorbing or emitting photons.\n\n**Modern Quantum Model** — electrons occupy orbitals (probability clouds), not fixed orbits. Described by quantum numbers."
+        "id": "differentiation-intro",
+        "title": "Introduction to Differentiation",
+        "content": "Differentiation measures the **instantaneous rate of change** of a function. The derivative of $y = f(x)$ is written as $\\dfrac{dy}{dx}$ or $f'(x)$.\n\n**The power rule** is the most fundamental rule:\n$$\\frac{d}{dx}(x^n) = nx^{n-1}$$\n\nThis applies to any real value of $n$, including negative and fractional powers.\n\n**Examples:**\n- $f(x) = x^4 \\Rightarrow f'(x) = 4x^3$\n- $f(x) = 3x^2 + 5x - 2 \\Rightarrow f'(x) = 6x + 5$\n- $f(x) = x^{1/2} \\Rightarrow f'(x) = \\dfrac{1}{2}x^{-1/2}$\n\n**Key rules:**\n- Sum/difference: $\\dfrac{d}{dx}[f \\pm g] = f' \\pm g'$\n- Constant multiple: $\\dfrac{d}{dx}[cf(x)] = cf'(x)$\n- Derivative of a constant is zero: $\\dfrac{d}{dx}(k) = 0$"
       },
       {
-        "id": "subatomic-particles",
-        "title": "Subatomic Particles",
-        "content": "All atoms consist of three types of subatomic particles:\n\n| Particle | Relative Mass | Relative Charge | Location |\n|---------|--------------|----------------|----------|\n| Proton  | 1            | +1              | Nucleus  |\n| Neutron | 1            | 0               | Nucleus  |\n| Electron| 1/1836 (~0)  | −1              | Shells   |\n\n**Atomic Number (Z)** — the number of protons in the nucleus. Defines the element.\n**Mass Number (A)** — the total number of protons + neutrons in the nucleus.\n**Isotopes** — atoms of the same element with different numbers of neutrons (same Z, different A)."
+        "id": "applications",
+        "title": "Applications: Tangents, Normals, and Stationary Points",
+        "content": "The derivative gives the **gradient of the tangent** to a curve at any point.\n\n**Tangent to a curve** at point $(a, f(a))$:\n$$y - f(a) = f'(a)(x - a)$$\n\n**Normal to a curve** is perpendicular to the tangent, so its gradient is $-\\dfrac{1}{f'(a)}$.\n\n**Stationary points** occur where $f'(x) = 0$. To classify them, use the **second derivative test**:\n- $f''(x) > 0$: local minimum\n- $f''(x) < 0$: local maximum\n- $f''(x) = 0$: test is inconclusive — examine the sign of $f'(x)$ on either side\n\n**Example:** Find the stationary points of $y = x^3 - 3x^2$.\n$$\\frac{dy}{dx} = 3x^2 - 6x = 3x(x-2) = 0$$\nStationary points at $x = 0$ and $x = 2$.\n$$\\frac{d^2y}{dx^2} = 6x - 6$$\nAt $x = 0$: $-6 < 0$ (maximum); at $x = 2$: $6 > 0$ (minimum)."
+      },
+      {
+        "id": "chain-rule",
+        "title": "Chain Rule and Composite Functions",
+        "content": "The **chain rule** is used to differentiate composite functions (a function of a function).\n\nIf $y = f(g(x))$, then:\n$$\\frac{dy}{dx} = f'(g(x)) \\cdot g'(x)$$\n\nAlternatively, if $y = f(u)$ and $u = g(x)$:\n$$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n\n**Examples:**\n- Differentiate $y = (3x + 2)^5$. Let $u = 3x + 2$, so $y = u^5$.\n$$\\frac{dy}{dx} = 5u^4 \\cdot 3 = 15(3x+2)^4$$\n\n- Differentiate $y = \\sin(x^2)$. Let $u = x^2$.\n$$\\frac{dy}{dx} = \\cos(x^2) \\cdot 2x = 2x\\cos(x^2)$$\n\nThe chain rule extends naturally to product and quotient rules for more complex expressions. Always identify the 'inner' and 'outer' functions before applying the rule."
       }
     ],
     "keyPoints": [
-      "Atomic models evolved: Dalton → Thomson → Rutherford → Bohr → Quantum",
-      "Proton = +1 charge, mass 1; Neutron = 0 charge, mass 1; Electron = −1, mass ~0",
-      "Atomic number = protons; Mass number = protons + neutrons",
-      "Isotopes: same atomic number, different mass number (different neutron count)"
+      "Power rule: $\\frac{d}{dx}(x^n) = nx^{n-1}$ applies to all real $n$",
+      "Derivative at a point gives the gradient of the tangent to the curve",
+      "Stationary points occur where $f'(x) = 0$; classified by the second derivative",
+      "Chain rule: differentiate outer function, keep inner, multiply by derivative of inner",
+      "Normal gradient is the negative reciprocal of the tangent gradient",
+      "Second derivative $f''(x) > 0$ indicates a local minimum; $f''(x) < 0$ a maximum"
     ],
-    "relatedFlashcardDeckId": "atomic-structure",
-    "relatedTopicId": "atomic-structure"
+    "relatedFlashcardDeckId": "maths-calculus",
+    "relatedTopicId": "maths-t2"
+  },
+  {
+    "id": "further-maths-note-1",
+    "title": "Complex Numbers",
+    "subject": "further-maths",
+    "topicId": "further-maths-t1",
+    "readTime": "11 min read",
+    "sections": [
+      {
+        "id": "intro-complex",
+        "title": "Introduction to Complex Numbers",
+        "content": "Complex numbers extend the real number system by introducing the **imaginary unit** $i$, defined as:\n$$i = \\sqrt{-1} \\quad \\Rightarrow \\quad i^2 = -1$$\n\nA complex number has the form $z = a + bi$, where:\n- $a = \\text{Re}(z)$ is the **real part**\n- $b = \\text{Im}(z)$ is the **imaginary part**\n- $a, b \\in \\mathbb{R}$\n\n**Powers of $i$:**\n- $i^1 = i$, $i^2 = -1$, $i^3 = -i$, $i^4 = 1$ (cycle of 4)\n\n**Arithmetic of complex numbers:**\n- Addition: $(a+bi) + (c+di) = (a+c) + (b+d)i$\n- Subtraction: $(a+bi) - (c+di) = (a-c) + (b-d)i$\n- Multiplication: $(a+bi)(c+di) = (ac-bd) + (ad+bc)i$\n\nThe **complex conjugate** of $z = a+bi$ is $\\bar{z} = a - bi$. Note that $z\\bar{z} = a^2 + b^2 \\in \\mathbb{R}$."
+      },
+      {
+        "id": "argand-diagram",
+        "title": "The Argand Diagram",
+        "content": "Complex numbers can be represented geometrically on an **Argand diagram**, where the x-axis is the real axis and the y-axis is the imaginary axis.\n\nThe complex number $z = a + bi$ is plotted as the point $(a, b)$.\n\n**Modulus** of $z$:\n$$|z| = \\sqrt{a^2 + b^2}$$\nThis is the distance from the origin to the point $z$.\n\n**Argument** of $z$:\n$$\\arg(z) = \\theta \\quad \\text{where} \\quad \\tan\\theta = \\frac{b}{a}$$\nThe argument is the angle from the positive real axis, measured anticlockwise. The **principal argument** satisfies $-\\pi < \\theta \\leq \\pi$.\n\n**Modulus-argument (polar) form:**\n$$z = r(\\cos\\theta + i\\sin\\theta) = re^{i\\theta}$$\nwhere $r = |z|$ and $\\theta = \\arg(z)$. Euler's formula $e^{i\\theta} = \\cos\\theta + i\\sin\\theta$ connects complex numbers to trigonometry."
+      },
+      {
+        "id": "roots-of-unity",
+        "title": "Roots of Polynomials and Unity",
+        "content": "For a polynomial with **real coefficients**, complex roots always occur in **conjugate pairs**. If $z = a + bi$ is a root, then $\\bar{z} = a - bi$ is also a root.\n\n**nth roots of unity** are the $n$ solutions to $z^n = 1$. They are evenly spaced on the unit circle in the Argand diagram:\n$$z_k = e^{2\\pi i k / n} = \\cos\\left(\\frac{2\\pi k}{n}\\right) + i\\sin\\left(\\frac{2\\pi k}{n}\\right), \\quad k = 0, 1, \\ldots, n-1$$\n\n**Example:** The cube roots of unity ($n = 3$):\n- $z_0 = 1$\n- $z_1 = -\\frac{1}{2} + \\frac{\\sqrt{3}}{2}i$\n- $z_2 = -\\frac{1}{2} - \\frac{\\sqrt{3}}{2}i$\n\nThey satisfy $1 + \\omega + \\omega^2 = 0$ where $\\omega = e^{2\\pi i/3}$. This identity is frequently used in Further Maths proofs."
+      }
+    ],
+    "keyPoints": [
+      "$i = \\sqrt{-1}$ and $i^2 = -1$; complex numbers have real and imaginary parts",
+      "Complex conjugate $\\bar{z} = a - bi$; product $z\\bar{z} = |z|^2$ is always real",
+      "Modulus $|z| = \\sqrt{a^2+b^2}$; argument $\\theta$ is the angle from the positive real axis",
+      "Polar form $z = re^{i\\theta}$ links complex numbers to Euler's formula",
+      "Complex roots of real polynomials occur in conjugate pairs",
+      "The $n$ nth roots of unity lie equally spaced on the unit circle"
+    ],
+    "relatedFlashcardDeckId": "further-maths-complex",
+    "relatedTopicId": "further-maths-t1"
+  },
+  {
+    "id": "further-maths-note-2",
+    "title": "Matrices and Linear Transformations",
+    "subject": "further-maths",
+    "topicId": "further-maths-t2",
+    "readTime": "13 min read",
+    "sections": [
+      {
+        "id": "matrix-operations",
+        "title": "Matrix Operations",
+        "content": "A **matrix** is a rectangular array of numbers arranged in rows and columns. An $m \\times n$ matrix has $m$ rows and $n$ columns.\n\n**Addition** (same dimensions required):\n$$\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} + \\begin{pmatrix} e & f \\\\ g & h \\end{pmatrix} = \\begin{pmatrix} a+e & b+f \\\\ c+g & d+h \\end{pmatrix}$$\n\n**Scalar multiplication:** multiply every element by the scalar.\n\n**Matrix multiplication:** The product $AB$ is defined only when the number of columns of $A$ equals the number of rows of $B$. The $(i,j)$ entry of $AB$ is the dot product of row $i$ of $A$ and column $j$ of $B$.\n\n**Important:** Matrix multiplication is **not commutative** — in general, $AB \\neq BA$.\n\nThe $2 \\times 2$ identity matrix is $I = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$, satisfying $AI = IA = A$."
+      },
+      {
+        "id": "determinants-inverses",
+        "title": "Determinants and Inverses",
+        "content": "The **determinant** of a $2 \\times 2$ matrix $M = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ is:\n$$\\det(M) = |M| = ad - bc$$\n\nGeometrically, $|\\det(M)|$ gives the scale factor of the area change under the transformation represented by $M$. A negative determinant means the orientation is reversed.\n\n**Inverse of a $2 \\times 2$ matrix** (when $\\det(M) \\neq 0$):\n$$M^{-1} = \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$$\n\nIf $\\det(M) = 0$, the matrix is **singular** and has no inverse. Singular matrices map all points to a line or a point (the transformation collapses dimensions).\n\n**Solving simultaneous equations:** The system $M\\mathbf{x} = \\mathbf{b}$ has solution $\\mathbf{x} = M^{-1}\\mathbf{b}$ provided $M$ is non-singular."
+      },
+      {
+        "id": "transformations",
+        "title": "Linear Transformations in 2D",
+        "content": "Matrices represent **linear transformations** of 2D space. The columns of a matrix show where the basis vectors $\\mathbf{e}_1 = (1,0)$ and $\\mathbf{e}_2 = (0,1)$ are mapped.\n\n**Common transformations:**\n\n- **Reflection** in the x-axis: $\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$\n- **Rotation** anticlockwise by $\\theta$: $\\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$\n- **Enlargement** by scale factor $k$: $\\begin{pmatrix} k & 0 \\\\ 0 & k \\end{pmatrix}$\n- **Reflection** in $y = x$: $\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$\n\n**Combining transformations:** Apply $A$ first then $B$ gives the combined matrix $BA$ (note the order — right-most matrix is applied first).\n\n**Invariant lines** are lines mapped to themselves under a transformation. Points on an invariant line satisfy $M\\mathbf{x} = \\lambda \\mathbf{x}$ — this connects to **eigenvectors**."
+      }
+    ],
+    "keyPoints": [
+      "Matrix multiplication requires columns of A to equal rows of B and is not commutative",
+      "Determinant $ad - bc$ gives the area scale factor of a 2D transformation",
+      "A singular matrix (det = 0) has no inverse and collapses dimensions",
+      "Inverse: $M^{-1} = \\frac{1}{\\det M}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$",
+      "Rotation matrix anticlockwise by $\\theta$ uses cos and sin entries",
+      "Combined transformation $BA$ applies $A$ first, then $B$"
+    ],
+    "relatedFlashcardDeckId": "further-maths-matrices",
+    "relatedTopicId": "further-maths-t2"
+  },
+  {
+    "id": "physics-note-1",
+    "title": "Mechanics: Forces and Newton's Laws",
+    "subject": "physics",
+    "topicId": "physics-t1",
+    "readTime": "10 min read",
+    "sections": [
+      {
+        "id": "newtons-laws",
+        "title": "Newton's Three Laws of Motion",
+        "content": "Newton's laws form the foundation of classical mechanics.\n\n**First Law (Inertia):** An object remains at rest or continues with uniform velocity unless acted upon by a resultant (net) force.\n$$\\text{If } \\sum F = 0 \\Rightarrow \\text{constant velocity}$$\n\n**Second Law:** The resultant force on an object is directly proportional to, and in the same direction as, its acceleration:\n$$F = ma$$\nwhere $F$ is in Newtons (N), $m$ in kg, and $a$ in $\\text{ms}^{-2}$.\n\n**Third Law:** For every action there is an equal and opposite reaction. Forces always act in pairs on different objects:\n- If object A exerts force $F$ on object B, then B exerts force $-F$ on A\n- Third law pairs are the same type of force (e.g. both gravitational, or both normal contact)\n\n**Weight** is the gravitational force on a mass: $W = mg$, where $g \\approx 9.81 \\text{ ms}^{-2}$ near Earth's surface."
+      },
+      {
+        "id": "free-body-diagrams",
+        "title": "Free Body Diagrams and Resolving Forces",
+        "content": "A **free body diagram (FBD)** shows all forces acting on a single object, represented as arrows indicating direction and magnitude.\n\n**Common forces:**\n- Weight ($W = mg$) — vertically downward\n- Normal contact force ($N$) — perpendicular to surface\n- Friction ($f$) — opposing motion, parallel to surface\n- Tension ($T$) — along a string or rope\n- Applied force ($F$)\n\n**Resolving forces on an inclined plane** at angle $\\theta$:\n- Component along slope: $mg\\sin\\theta$\n- Component perpendicular to slope: $mg\\cos\\theta$\n\nApplying Newton's second law in each direction:\n$$\\text{Along slope: } F - mg\\sin\\theta - f = ma$$\n$$\\text{Perpendicular: } N - mg\\cos\\theta = 0 \\Rightarrow N = mg\\cos\\theta$$\n\nFriction force: $f \\leq \\mu N$, where $\\mu$ is the coefficient of friction. At limiting equilibrium, $f = \\mu N$."
+      },
+      {
+        "id": "momentum",
+        "title": "Momentum and Impulse",
+        "content": "**Linear momentum** is defined as:\n$$p = mv$$\nwhere $p$ is in kg ms$^{-1}$, $m$ in kg, and $v$ in ms$^{-1}$. Momentum is a vector quantity.\n\n**The Principle of Conservation of Linear Momentum:** In a closed system (no external resultant forces), total momentum before a collision equals total momentum after:\n$$m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2$$\n\n**Impulse** is the change in momentum:\n$$J = \\Delta p = mv - mu = Ft$$\nImpulse equals the area under a force-time graph.\n\n**Types of collision:**\n- **Elastic:** both momentum and kinetic energy are conserved\n- **Inelastic:** momentum is conserved but kinetic energy is not\n- **Perfectly inelastic:** objects stick together after collision\n\nNewton's second law can be written as $F = \\dfrac{\\Delta p}{\\Delta t}$, which is its more general form."
+      }
+    ],
+    "keyPoints": [
+      "Newton's Second Law: $F = ma$; resultant force produces acceleration in same direction",
+      "Weight $W = mg$; on a slope, components are $mg\\sin\\theta$ and $mg\\cos\\theta$",
+      "Friction $f \\leq \\mu N$; at limiting equilibrium $f = \\mu N$",
+      "Momentum $p = mv$ is conserved in closed systems (no external resultant force)",
+      "Impulse $J = Ft = \\Delta p$ equals the area under a force-time graph",
+      "Elastic collisions conserve KE; inelastic collisions do not"
+    ],
+    "relatedFlashcardDeckId": "physics-mechanics",
+    "relatedTopicId": "physics-t1"
+  },
+  {
+    "id": "physics-note-2",
+    "title": "Electricity: Circuits and Resistance",
+    "subject": "physics",
+    "topicId": "physics-t2",
+    "readTime": "11 min read",
+    "sections": [
+      {
+        "id": "current-voltage",
+        "title": "Current, Voltage, and Ohm's Law",
+        "content": "**Electric current** is the rate of flow of charge:\n$$I = \\frac{\\Delta Q}{\\Delta t}$$\nwhere $I$ is in Amperes (A), $Q$ in Coulombs (C), and $t$ in seconds.\n\n**Potential difference (voltage)** is the energy transferred per unit charge:\n$$V = \\frac{W}{Q}$$\nwhere $V$ is in Volts (V) and $W$ is energy in Joules (J).\n\n**Ohm's Law** states that for an ohmic conductor at constant temperature:\n$$V = IR$$\nwhere $R$ is resistance in Ohms ($\\Omega$).\n\n**Resistivity** is a material property:\n$$R = \\frac{\\rho L}{A}$$\nwhere $\\rho$ is resistivity ($\\Omega$m), $L$ is the length (m), and $A$ is the cross-sectional area (m²).\n\n**I-V characteristics:** Ohmic conductors give a straight line through the origin. Diodes only allow current in one direction. Filament bulbs show increasing resistance with temperature (curved I-V graph)."
+      },
+      {
+        "id": "series-parallel",
+        "title": "Series and Parallel Circuits",
+        "content": "**Series circuits:**\n- Same current through all components: $I_1 = I_2 = I_3$\n- Voltages add up: $V_{\\text{total}} = V_1 + V_2 + V_3$\n- Resistances add up: $R_{\\text{total}} = R_1 + R_2 + R_3$\n\n**Parallel circuits:**\n- Same voltage across all components: $V_1 = V_2 = V_3$\n- Currents add up: $I_{\\text{total}} = I_1 + I_2 + I_3$\n- Reciprocal rule for resistance: $\\dfrac{1}{R_{\\text{total}}} = \\dfrac{1}{R_1} + \\dfrac{1}{R_2} + \\dfrac{1}{R_3}$\n\n**Power dissipated** in a resistor:\n$$P = IV = I^2R = \\frac{V^2}{R}$$\n\n**Kirchhoff's Laws:**\n- **First Law (current):** At any junction, the sum of currents in equals sum of currents out (conservation of charge)\n- **Second Law (voltage):** Around any closed loop, the sum of EMFs equals the sum of potential differences (conservation of energy)"
+      },
+      {
+        "id": "emf-internal-resistance",
+        "title": "EMF and Internal Resistance",
+        "content": "A real battery has an **electromotive force (EMF)** $\\varepsilon$ and an **internal resistance** $r$. The terminal voltage is less than the EMF when current flows:\n$$\\varepsilon = V + Ir = IR + Ir = I(R+r)$$\nwhere $V = IR$ is the terminal voltage and $Ir$ is the **lost volts**.\n\n**Rearranging:** $V = \\varepsilon - Ir$\n\nThis is a straight line equation for a $V$-$I$ graph:\n- y-intercept: $\\varepsilon$ (EMF, when $I = 0$, open circuit)\n- gradient: $-r$ (negative of internal resistance)\n\n**Finding $\\varepsilon$ and $r$ experimentally:** Vary external resistance $R$, measure $V$ and $I$, plot $V$ against $I$ and find the gradient and intercept.\n\n**Maximum power transfer:** Maximum power is delivered to the external circuit when $R = r$. At this point, efficiency is only 50% — half the energy is lost internally."
+      }
+    ],
+    "keyPoints": [
+      "Current $I = \\Delta Q / \\Delta t$; Voltage $V = W/Q$; Ohm's Law $V = IR$",
+      "Resistivity: $R = \\rho L / A$; a material property independent of component size",
+      "Series: resistances add; parallel: reciprocals add",
+      "Power: $P = IV = I^2R = V^2/R$",
+      "EMF: $\\varepsilon = I(R+r)$; lost volts $= Ir$; terminal voltage $V = \\varepsilon - Ir$",
+      "V-I graph for a battery has gradient $-r$ and y-intercept $\\varepsilon$"
+    ],
+    "relatedFlashcardDeckId": "physics-electricity",
+    "relatedTopicId": "physics-t2"
+  },
+  {
+    "id": "chemistry-note-1",
+    "title": "Bonding and Structure",
+    "subject": "chemistry",
+    "topicId": "chemistry-t1",
+    "readTime": "12 min read",
+    "sections": [
+      {
+        "id": "ionic-bonding",
+        "title": "Ionic Bonding",
+        "content": "**Ionic bonding** involves the transfer of electrons from a metal to a non-metal, forming oppositely charged ions held together by strong electrostatic attraction.\n\n**Formation of ions:**\n- Metal atoms lose electrons to form **cations** (positive ions), e.g. $\\text{Na} \\rightarrow \\text{Na}^+ + e^-$\n- Non-metal atoms gain electrons to form **anions** (negative ions), e.g. $\\text{Cl} + e^- \\rightarrow \\text{Cl}^-$\n- Ions achieve **noble gas** electronic configuration\n\n**Giant ionic lattice structure:**\n- Ions arranged in a regular 3D lattice\n- Each ion surrounded by oppositely charged ions\n- Very strong electrostatic forces throughout the lattice\n\n**Properties of ionic compounds:**\n- High melting and boiling points (strong ionic bonds require lots of energy to break)\n- Conduct electricity when molten or dissolved (ions free to move)\n- Do not conduct when solid (ions held in fixed positions)\n- Often soluble in water (polar water molecules surround ions)"
+      },
+      {
+        "id": "covalent-bonding",
+        "title": "Covalent Bonding and Molecular Structure",
+        "content": "**Covalent bonds** form when atoms share pairs of electrons. They occur predominantly between non-metal atoms.\n\n**Bond properties:**\n- **Bond length:** the distance between bonded nuclei. Decreases as bond order increases: single > double > triple\n- **Bond energy:** energy needed to break 1 mole of bonds. Increases with bond order: single < double < triple\n- **Bond polarity:** if atoms have different electronegativities, the shared electrons are pulled towards the more electronegative atom, creating a dipole ($\\delta^+$ and $\\delta^-$)\n\n**Molecular shapes** are predicted using **VSEPR theory** (Valence Shell Electron Pair Repulsion):\n- Electron pairs repel each other and arrange to minimise repulsion\n- Lone pairs repel more than bonding pairs\n- $\\text{CH}_4$: tetrahedral, 109.5°; $\\text{NH}_3$: trigonal pyramidal, 107°; $\\text{H}_2\\text{O}$: bent, 104.5°\n\n**Giant covalent structures** (e.g. diamond, graphite, $\\text{SiO}_2$) have very high melting points due to strong covalent bonds throughout the lattice."
+      },
+      {
+        "id": "intermolecular-forces",
+        "title": "Intermolecular Forces",
+        "content": "**Intermolecular forces (IMFs)** are attractions between molecules. They are much weaker than covalent or ionic bonds.\n\n**Types of IMF (weakest to strongest):**\n\n1. **London dispersion forces (van der Waals)** — present in all molecules. Caused by temporary dipoles created by random electron movement. Strength increases with: larger molecular size, greater surface area.\n\n2. **Permanent dipole–dipole interactions** — between polar molecules that have a permanent dipole. Stronger than London forces for similar-sized molecules.\n\n3. **Hydrogen bonds** — a special, strong type of dipole-dipole interaction. Occurs when H is bonded to N, O, or F (highly electronegative, small atoms). Energy: ~20 kJ mol$^{-1}$.\n\n**Effects on physical properties:**\n- Stronger IMFs $\\Rightarrow$ higher boiling point\n- $\\text{H}_2\\text{O}$ has anomalously high boiling point (100°C) due to extensive hydrogen bonding\n- Ice is less dense than liquid water: hydrogen bonds form an open, regular lattice structure"
+      }
+    ],
+    "keyPoints": [
+      "Ionic bonds form by electron transfer; giant lattice gives high melting points",
+      "Ionic compounds conduct when molten or in solution, not when solid",
+      "VSEPR: lone pairs repel more than bonding pairs, reducing bond angles",
+      "Bond length decreases and bond energy increases with bond order",
+      "Hydrogen bonding requires H bonded to N, O, or F — the most electronegative elements",
+      "Stronger intermolecular forces lead to higher boiling points"
+    ],
+    "relatedFlashcardDeckId": "chemistry-bonding",
+    "relatedTopicId": "chemistry-t1"
+  },
+  {
+    "id": "chemistry-note-2",
+    "title": "Energetics and Thermochemistry",
+    "subject": "chemistry",
+    "topicId": "chemistry-t2",
+    "readTime": "11 min read",
+    "sections": [
+      {
+        "id": "enthalpy-changes",
+        "title": "Enthalpy Changes",
+        "content": "**Enthalpy** ($H$) is the heat content of a system at constant pressure. The **enthalpy change** ($\\Delta H$) is the heat transferred during a reaction:\n$$\\Delta H = H_{\\text{products}} - H_{\\text{reactants}}$$\n\n**Sign convention:**\n- $\\Delta H < 0$: **exothermic** — energy released to surroundings, products have lower enthalpy\n- $\\Delta H > 0$: **endothermic** — energy absorbed from surroundings, products have higher enthalpy\n\n**Standard conditions:** 298 K, 100 kPa, all species in standard states. Standard enthalpy changes are written as $\\Delta H^\\circ$.\n\n**Key definitions:**\n- $\\Delta H^\\circ_f$: standard enthalpy of **formation** — enthalpy change when 1 mol of a compound is formed from its elements in standard states\n- $\\Delta H^\\circ_c$: standard enthalpy of **combustion** — enthalpy change when 1 mol of a substance completely burns in oxygen\n- $\\Delta H^\\circ_{\\text{atom}}$: enthalpy of **atomisation** — enthalpy change to form 1 mol of gaseous atoms from an element"
+      },
+      {
+        "id": "hess-law",
+        "title": "Hess's Law and Born-Haber Cycles",
+        "content": "**Hess's Law:** The total enthalpy change for a reaction is independent of the route taken, as long as the initial and final conditions are the same.\n\nThis follows from the **law of conservation of energy**. It allows calculation of enthalpy changes that cannot be measured directly.\n\n**Using Hess's Law:**\n$$\\Delta H_{\\text{reaction}} = \\sum \\Delta H^\\circ_f (\\text{products}) - \\sum \\Delta H^\\circ_f (\\text{reactants})$$\n\n**Born-Haber cycles** use Hess's Law to find lattice enthalpies of ionic compounds, which cannot be measured directly. They incorporate:\n- Enthalpy of atomisation (solid $\\rightarrow$ gaseous atoms)\n- Ionisation energies (forming cations)\n- Electron affinities (forming anions)\n- Lattice enthalpy (gaseous ions $\\rightarrow$ ionic solid)\n\nLattice enthalpy is always exothermic (energy released on forming the lattice). Larger charge density of ions $\\Rightarrow$ more exothermic lattice enthalpy."
+      },
+      {
+        "id": "bond-enthalpies",
+        "title": "Bond Enthalpies",
+        "content": "**Mean bond enthalpy** is the average energy required to break 1 mole of a given type of bond in the gaseous state, averaged over many different molecules.\n\nBond breaking is **endothermic** (energy in); bond forming is **exothermic** (energy out).\n\n**Calculating $\\Delta H$ from bond enthalpies:**\n$$\\Delta H \\approx \\sum \\text{bonds broken} - \\sum \\text{bonds formed}$$\n\n**Example:** Combustion of methane $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$\n\n| Bonds broken | Energy / kJ mol$^{-1}$ |\n|---|---|\n| 4 × C-H (4 × 413) | 1652 |\n| 2 × O=O (2 × 498) | 996 |\n| **Total in** | **2648** |\n\n| Bonds formed | Energy / kJ mol$^{-1}$ |\n|---|---|\n| 2 × C=O (2 × 805) | 1610 |\n| 4 × O-H (4 × 464) | 1856 |\n| **Total out** | **3466** |\n\n$\\Delta H \\approx 2648 - 3466 = -818 \\text{ kJ mol}^{-1}$\n\nValues from bond enthalpies are approximations because they use mean values."
+      }
+    ],
+    "keyPoints": [
+      "Exothermic reactions release energy ($\\Delta H < 0$); endothermic absorb it ($\\Delta H > 0$)",
+      "Standard conditions: 298 K, 100 kPa, species in standard states",
+      "Hess's Law: total $\\Delta H$ is independent of route taken",
+      "$\\Delta H_{\\text{rxn}} = \\sum \\Delta H^\\circ_f$(products) $- \\sum \\Delta H^\\circ_f$(reactants)",
+      "Bond breaking is endothermic; bond forming is exothermic",
+      "Bond enthalpy calculations give approximate $\\Delta H$ values using mean bond energies"
+    ],
+    "relatedFlashcardDeckId": "chemistry-energetics",
+    "relatedTopicId": "chemistry-t2"
+  },
+  {
+    "id": "biology-note-1",
+    "title": "Cell Structure and Organisation",
+    "subject": "biology",
+    "topicId": "biology-t1",
+    "readTime": "12 min read",
+    "sections": [
+      {
+        "id": "cell-types",
+        "title": "Prokaryotic and Eukaryotic Cells",
+        "content": "All living organisms are composed of cells. There are two fundamental cell types distinguished by their internal organisation.\n\n**Prokaryotic cells** (bacteria and archaea):\n- No membrane-bound nucleus — DNA is circular and found in the cytoplasm (nucleoid region)\n- No membrane-bound organelles\n- Ribosomes are smaller (70S, comprising 50S and 30S subunits)\n- Cell wall made of **peptidoglycan**\n- May have a capsule, flagella, or plasmids\n- Size: typically 1–10 μm\n\n**Eukaryotic cells** (animals, plants, fungi, protists):\n- Membrane-bound nucleus containing linear DNA\n- Membrane-bound organelles (mitochondria, ER, Golgi apparatus)\n- Ribosomes are larger (80S)\n- Size: typically 10–100 μm\n\n**Shared features:** plasma membrane, cytoplasm, ribosomes, DNA.\n\nPlant cells additionally have: cell wall (cellulose), chloroplasts, large central vacuole, and plasmodesmata (cytoplasmic connections between cells)."
+      },
+      {
+        "id": "organelles",
+        "title": "Key Organelles and Their Functions",
+        "content": "Each organelle carries out specific functions essential to cell life.\n\n**Mitochondria:** Site of aerobic respiration and ATP production. Double membrane — inner membrane folded into **cristae** to increase surface area. Matrix contains enzymes for the Krebs cycle.\n\n**Chloroplasts:** Found in plant cells. Site of photosynthesis. Double membrane — inner membrane forms **thylakoids** (stacked into grana) where the light-dependent reactions occur. Stroma contains enzymes for the Calvin cycle.\n\n**Rough ER:** Studded with ribosomes; site of protein synthesis and folding.\n\n**Smooth ER:** Lipid synthesis and detoxification.\n\n**Golgi apparatus:** Processes and packages proteins from the RER into vesicles for secretion or delivery to lysosomes.\n\n**Lysosomes:** Membrane-bound vesicles containing hydrolytic enzymes (work at low pH). Break down worn-out organelles and engulfed bacteria.\n\n**Ribosomes:** Site of protein synthesis (translation). Not membrane-bound."
+      },
+      {
+        "id": "cell-membranes",
+        "title": "The Fluid Mosaic Model of Cell Membranes",
+        "content": "The **fluid mosaic model** (Singer & Nicolson, 1972) describes the structure of cell membranes.\n\n**Phospholipid bilayer:**\n- Hydrophilic phosphate heads face outwards (towards water)\n- Hydrophobic fatty acid tails face inwards (away from water)\n- The bilayer is **fluid** — phospholipids move laterally\n\n**Proteins** embedded in the bilayer:\n- **Intrinsic (integral) proteins** — span the entire bilayer; include channel proteins and carrier proteins for transport\n- **Extrinsic (peripheral) proteins** — on the surface; involved in cell signalling\n\n**Cholesterol** — interspersed between phospholipids. Regulates membrane fluidity: prevents crystallisation at low temperatures and prevents excessive fluidity at high temperatures.\n\n**Glycoproteins and glycolipids** — carbohydrate chains attached to proteins/lipids on the outer surface. Function in cell recognition, signalling, and immune responses.\n\nMembrane fluidity increases with: higher temperature, more unsaturated fatty acid tails, and less cholesterol."
+      }
+    ],
+    "keyPoints": [
+      "Prokaryotes: no nucleus, no membrane-bound organelles, 70S ribosomes, peptidoglycan wall",
+      "Eukaryotes: membrane-bound nucleus, 80S ribosomes, membrane-bound organelles",
+      "Cristae of mitochondria and thylakoids of chloroplasts increase surface area for reactions",
+      "Golgi apparatus processes and packages proteins from the RER",
+      "Fluid mosaic model: phospholipid bilayer with embedded proteins and cholesterol",
+      "Cholesterol stabilises membrane fluidity across temperature changes"
+    ],
+    "relatedFlashcardDeckId": "biology-cells",
+    "relatedTopicId": "biology-t1"
+  },
+  {
+    "id": "biology-note-2",
+    "title": "Genetics and Inheritance",
+    "subject": "biology",
+    "topicId": "biology-t2",
+    "readTime": "13 min read",
+    "sections": [
+      {
+        "id": "mendelian-genetics",
+        "title": "Mendelian Inheritance",
+        "content": "Gregor Mendel's experiments with pea plants established the fundamental principles of inheritance.\n\n**Key terms:**\n- **Allele** — a version of a gene\n- **Genotype** — the alleles an organism carries (e.g. Aa)\n- **Phenotype** — the observable characteristics produced by the genotype\n- **Homozygous** — both alleles are identical (AA or aa)\n- **Heterozygous** — alleles are different (Aa)\n- **Dominant** — allele expressed in both homozygous and heterozygous genotypes (written as capital letter)\n- **Recessive** — allele only expressed when homozygous (written in lower case)\n\n**Mendel's Laws:**\n1. **Law of Segregation** — alleles separate during meiosis so each gamete receives one allele\n2. **Law of Independent Assortment** — alleles for different genes segregate independently (assuming genes are on different chromosomes)\n\n**Punnett squares** are used to predict offspring ratios. A monohybrid cross Aa × Aa gives offspring ratio 1 AA : 2 Aa : 1 aa (3 dominant : 1 recessive phenotype ratio)."
+      },
+      {
+        "id": "dihybrid-crosses",
+        "title": "Dihybrid Inheritance and Linkage",
+        "content": "A **dihybrid cross** involves two genes at once. For two unlinked genes (on different chromosomes), independently assorting:\n\n**AaBb × AaBb** gives a **9:3:3:1 phenotype ratio** in offspring:\n- 9 A_B_: dominant phenotype for both traits\n- 3 A_bb: dominant for first, recessive for second\n- 3 aaB_: recessive for first, dominant for second\n- 1 aabb: recessive for both traits\n\n**Gene linkage:** Genes on the same chromosome are **linked** and tend to be inherited together, not independently. This deviates from the expected 9:3:3:1 ratio.\n\n**Crossing over** during meiosis I can separate linked alleles, producing **recombinant gametes**. The frequency of recombination (recombination frequency) is used to map the relative positions of genes on chromosomes.\n\n**Autosomal linkage** — genes on non-sex chromosomes. **Sex linkage** — genes on the X chromosome (or Y). X-linked recessive traits are more common in males (who only have one X chromosome and cannot be carriers)."
+      },
+      {
+        "id": "mutations-variation",
+        "title": "Mutations and Sources of Genetic Variation",
+        "content": "**Mutations** are changes to the nucleotide sequence of DNA. They are the ultimate source of genetic variation.\n\n**Types of gene (point) mutations:**\n- **Substitution** — one base replaced by another\n  - Silent: codes for same amino acid (due to degeneracy of the genetic code)\n  - Missense: different amino acid produced\n  - Nonsense: premature stop codon — truncated, often non-functional protein\n- **Insertion/Deletion** — one or more bases added or removed\n  - Causes a **frameshift** — all codons downstream are altered\n  - Usually very damaging to protein function\n\n**Chromosome mutations:**\n- Non-disjunction during meiosis → wrong number of chromosomes (aneuploidy)\n- Down's syndrome: trisomy of chromosome 21\n\n**Sources of variation in sexual reproduction:**\n1. Independent assortment of chromosomes during meiosis I (produces $2^{23}$ combinations in humans)\n2. Crossing over during meiosis I\n3. Random fertilisation of gametes\n4. Mutations\n\nVariation is acted upon by **natural selection**, driving evolutionary change."
+      }
+    ],
+    "keyPoints": [
+      "Dominant alleles are expressed in Aa genotype; recessive only in aa",
+      "Mendel's Law of Segregation: alleles separate in meiosis — one per gamete",
+      "Dihybrid cross AaBb × AaBb gives 9:3:3:1 phenotype ratio if genes are unlinked",
+      "Linked genes are on the same chromosome; crossing over produces recombinants",
+      "Substitution mutations may be silent, missense, or nonsense",
+      "Insertions and deletions cause frameshifts — all downstream codons are altered"
+    ],
+    "relatedFlashcardDeckId": "biology-genetics",
+    "relatedTopicId": "biology-t2"
+  },
+  {
+    "id": "english-lit-note-1",
+    "title": "Analysing Prose Fiction",
+    "subject": "english-lit",
+    "topicId": "english-lit-t1",
+    "readTime": "9 min read",
+    "sections": [
+      {
+        "id": "narrative-voice",
+        "title": "Narrative Voice and Perspective",
+        "content": "**Narrative voice** refers to who tells the story and from what perspective. The choice of narrator fundamentally shapes how readers receive and interpret events.\n\n**First-person narrator:** Uses 'I'. The narrator is a character within the story. This creates **intimacy and subjectivity** — we see only through their eyes and may question their reliability.\n- **Unreliable narrator** — a narrator whose account is biased, limited, or deliberately deceptive (e.g. Stevens in *The Remains of the Day*)\n\n**Third-person limited:** Narrator is outside the story but closely follows one character's thoughts and feelings. More access to interiority than omniscient narration, but still limited.\n\n**Third-person omniscient:** The narrator knows all — every character's thoughts, past events, and future outcomes. Creates a sense of authority and breadth.\n\n**Free indirect discourse:** A technique blending the narrator's voice with a character's thoughts/speech without clear attribution — creates ambiguity and closeness to character consciousness. Common in Austen and Joyce.\n\nAlways consider: *why* has the author chosen this perspective? What does it reveal or conceal?"
+      },
+      {
+        "id": "language-imagery",
+        "title": "Language, Imagery, and Tone",
+        "content": "Close analysis of **language** is central to A-Level English Literature. Avoid simply identifying devices — always analyse their **effect**.\n\n**Imagery:** Figurative language that creates mental pictures.\n- **Metaphor** — direct comparison without 'like' or 'as': implies transformation or identity\n- **Simile** — comparison using 'like' or 'as': highlights a specific quality\n- **Personification** — attributing human qualities to non-human things\n- **Pathetic fallacy** — weather/setting reflects the emotional state of characters\n\n**Tone** is the author's (or narrator's) attitude towards the subject, conveyed through diction (word choice), syntax, and imagery.\n\n**Key analytical moves:**\n1. **Identify** the technique or feature\n2. **Analyse** the connotations of specific words\n3. **Explain** the effect on the reader and link to theme or context\n4. **Contextualise** — relate to the author's intentions, historical context, or other moments in the text\n\nAvoid the 'feature-spotting' trap: a metaphor is only interesting if you explain what it *does*."
+      },
+      {
+        "id": "structure-form",
+        "title": "Structure, Form, and Genre",
+        "content": "**Structure** refers to the way a text is organised — the sequencing and arrangement of narrative events, sections, and chapters.\n\n**Key structural features:**\n- **Chronological structure** — events in time order; creates a sense of inevitability\n- **Non-linear/fragmented structure** — flashbacks, flash-forwards, or disrupted timelines; can reflect a character's psychological state or create dramatic irony\n- **Circular structure** — the narrative returns to its beginning; can suggest entrapment, cyclical themes, or resolution\n- **In medias res** — story begins in the middle of events\n\n**Form:** The type of text — novel, novella, short story, epistolary, stream-of-consciousness. Form shapes meaning: a confessional letter (epistolary form) implies secrets and selective disclosure.\n\n**Genre conventions** set reader expectations:\n- Gothic: darkness, the uncanny, psychological terror, secrets\n- Bildungsroman: a protagonist's moral and psychological growth\n- Tragedy: inevitable downfall, hamartia, catharsis\n\nAlways ask: how does the **form** of the text reinforce its **content**?"
+      }
+    ],
+    "keyPoints": [
+      "First-person narrators create intimacy but may be unreliable; always question their perspective",
+      "Free indirect discourse blends narrator and character voice without clear attribution",
+      "Pathetic fallacy uses setting or weather to reflect characters' emotional states",
+      "Analyse technique + connotation + effect + contextual link — not just identification",
+      "Non-linear structure can reflect psychological fragmentation or create dramatic irony",
+      "Form shapes meaning: always consider why an author chose a particular genre or narrative structure"
+    ],
+    "relatedFlashcardDeckId": "english-lit-prose",
+    "relatedTopicId": "english-lit-t1"
+  },
+  {
+    "id": "english-lit-note-2",
+    "title": "Poetry Analysis and Comparison",
+    "subject": "english-lit",
+    "topicId": "english-lit-t2",
+    "readTime": "10 min read",
+    "sections": [
+      {
+        "id": "poetic-form",
+        "title": "Poetic Form and Structure",
+        "content": "**Form** in poetry refers to the shape and structure of a poem, including line length, stanza organisation, and the use of established poetic forms.\n\n**Key forms:**\n- **Sonnet** (14 lines): Petrarchan (octave + sestet, ABBAABBA CDECDE) often poses a problem then resolves it; Shakespearean (three quatrains + couplet, ABAB CDCD EFEF GG) builds argument and resolves in the final couplet\n- **Ode** — a formal, elevated lyric poem, often addressed to a subject\n- **Elegy** — a poem of mourning or meditation on death\n- **Free verse** — no fixed rhyme scheme or metre; the form mirrors the freedom or instability of the subject\n- **Villanelle** — 19 lines, two refrains, highly structured; the repetition can convey obsession or inevitability\n\n**Structure within a poem:**\n- Enjambment — lines running on without a pause; creates momentum, breathlessness, or continuity\n- Caesura — a pause within a line (often marked by punctuation); creates emphasis, hesitation, or contrast\n- End-stopped lines — a line ending with a pause; creates finality or control\n\nAlways consider how **form reinforces meaning**."
+      },
+      {
+        "id": "sound-devices",
+        "title": "Sound, Metre, and Rhythm",
+        "content": "Sound devices create **auditory texture** in poetry. In analysis, always link sound to meaning.\n\n**Metre** is the rhythmic pattern of stressed and unstressed syllables.\n- **Iambic pentameter** — 5 iambs per line (da-DUM pattern); associated with natural speech, authority, and control. Deviations are significant — a **spondee** (DUM-DUM) creates emphasis.\n- **Trochaic** — stressed then unstressed (DUM-da); can feel forceful or abrupt\n\n**Rhyme:**\n- Perfect rhyme — exact match; creates closure and order\n- Half/slant rhyme — near-match; creates unease or incompleteness\n- Internal rhyme — rhyme within a single line; creates cohesion\n\n**Sound devices:**\n- **Alliteration** — repetition of initial consonant sounds; can be harsh (plosives: p, b, t, d) or soft (sibilance: s, sh)\n- **Assonance** — repetition of vowel sounds; long vowels slow the pace, short vowels quicken it\n- **Onomatopoeia** — words that sound like what they describe\n\nSibilance can suggest secrecy or menace; plosives can convey anger or violence."
+      },
+      {
+        "id": "comparison-essay",
+        "title": "Writing Comparative Essays",
+        "content": "Comparison is central to A-Level English Literature, whether comparing poems in an anthology or texts across a theme.\n\n**Essay structure:**\n- **Introduction** — establish the comparison directly; offer a clear argument about how the texts treat the theme similarly or differently\n- **Body paragraphs** — compare throughout, not 'all about text A, then all about text B'\n- **Conclusion** — synthesise the argument; reflect on which text engages more powerfully with the theme, and why\n\n**Linking phrases:**\n- Similarity: 'Similarly...', 'Both poets explore...', 'In the same way...'\n- Contrast: 'In contrast...', 'Whereas [Poet A]...', 'Unlike...'\n\n**AO framework (for AQA/OCR):**\n- **AO1** — argument and use of textual evidence\n- **AO2** — language, form, and structure analysis\n- **AO3** — context (biographical, historical, literary)\n- **AO4/AO5** — connections between texts; different interpretations\n\n**Context must be embedded**, not bolted on. Link context to a specific moment in the text and explain how it shapes meaning — do not simply state a historical fact."
+      }
+    ],
+    "keyPoints": [
+      "Sonnets: Petrarchan (problem/resolution) vs Shakespearean (argument + couplet resolution)",
+      "Enjambment creates momentum; caesura creates pause and emphasis",
+      "Iambic pentameter deviations (spondees, pyrrhics) are almost always meaningful",
+      "Sibilance suggests secrecy or menace; plosive alliteration conveys force or anger",
+      "Compare throughout the essay — do not write about texts in separate halves",
+      "Context must be embedded and linked to textual evidence, not stated as isolated fact"
+    ],
+    "relatedFlashcardDeckId": "english-lit-poetry",
+    "relatedTopicId": "english-lit-t2"
+  },
+  {
+    "id": "economics-note-1",
+    "title": "Market Structures and Competition",
+    "subject": "economics",
+    "topicId": "economics-t1",
+    "readTime": "11 min read",
+    "sections": [
+      {
+        "id": "perfect-competition",
+        "title": "Perfect Competition",
+        "content": "**Perfect competition** is a theoretical market structure used as a benchmark. Its conditions are:\n- Many buyers and sellers — no single firm can influence price (**price takers**)\n- Identical (homogeneous) products\n- Perfect information — all buyers and sellers know all prices\n- No barriers to entry or exit — firms can freely enter or leave\n- No externalities\n\nIn the **short run**, firms can earn supernormal profit (price > ATC), normal profit, or make a loss. In the **long run**, supernormal profits attract new entrants, increasing supply and driving price down until only **normal profit** (price = ATC) remains. Losses cause firms to exit, reducing supply and raising price.\n\n**Long-run equilibrium:** $P = MC = ATC$ (at the minimum of ATC). This achieves:\n- **Productive efficiency:** output at minimum ATC\n- **Allocative efficiency:** $P = MC$ (price reflects marginal cost to society)\n\nPerfect competition maximises consumer welfare but firms have no incentive to innovate (no long-run supernormal profits)."
+      },
+      {
+        "id": "monopoly",
+        "title": "Monopoly",
+        "content": "A **monopoly** exists when one firm dominates a market. In the UK, a firm with more than 25% market share may be investigated by the CMA.\n\n**Characteristics:**\n- Single seller; the firm is the **price maker**\n- Unique product with no close substitutes\n- Very high barriers to entry: economies of scale, patents, brand loyalty, vertical integration, regulatory barriers\n\n**Profit maximisation:** Like all firms, a monopolist maximises profit where $MR = MC$. However, because the demand curve is downward sloping, $MR < AR$ (price) at all positive output levels.\n\n**Compared to perfect competition:**\n- Higher price, lower output\n- Not productively efficient ($P > \\text{min ATC}$)\n- Not allocatively efficient ($P > MC$)\n- **Deadweight welfare loss** — the triangle of lost producer and consumer surplus\n\n**Arguments for monopoly:**\n- Supernormal profits can fund R&D and innovation\n- Natural monopolies (e.g. water, rail) have very high fixed costs — only one firm can achieve minimum efficient scale\n- Economies of scale may result in lower prices than in a competitive market"
+      },
+      {
+        "id": "oligopoly",
+        "title": "Oligopoly and Game Theory",
+        "content": "An **oligopoly** is a market dominated by a few large firms. Key features:\n- High concentration ratio (e.g. top 4 firms hold >60% market share)\n- High barriers to entry\n- **Interdependence** — each firm's decisions affect and are affected by rivals\n- Products may be homogeneous (petrol) or differentiated (supermarkets)\n\n**The kinked demand curve model** explains price rigidity in oligopolies:\n- If a firm raises price, rivals do not follow — it loses customers (elastic demand above current price)\n- If a firm cuts price, rivals match — all firms lose revenue (inelastic demand below current price)\n- Result: a kink in the demand curve and a **discontinuity in the MR curve** — price remains stable over a range of MC changes\n\n**Game theory (Prisoner's Dilemma):**\n- Firms can choose to **compete** or **collude**\n- Colluding (acting as a cartel) maximises joint profits but is illegal in the UK and EU\n- **Nash equilibrium** — each firm does the best it can given the other's strategy; often leads to a non-cooperative outcome\n- Dominant strategy: the best action regardless of what rivals do"
+      }
+    ],
+    "keyPoints": [
+      "Perfect competition: price = MC = min ATC in long run; productively and allocatively efficient",
+      "Supernormal profits attract entry; losses cause exit — long run returns to normal profit",
+      "Monopoly: MR < AR; profit max at MR = MC; creates deadweight welfare loss",
+      "Monopoly barriers to entry include patents, economies of scale, and brand loyalty",
+      "Oligopoly interdependence explained by kinked demand curve — price rigidity",
+      "Nash equilibrium: each firm plays its best strategy given rivals' strategies"
+    ],
+    "relatedFlashcardDeckId": "economics-markets",
+    "relatedTopicId": "economics-t1"
+  },
+  {
+    "id": "economics-note-2",
+    "title": "Macroeconomics: Aggregate Demand and Supply",
+    "subject": "economics",
+    "topicId": "economics-t2",
+    "readTime": "10 min read",
+    "sections": [
+      {
+        "id": "aggregate-demand",
+        "title": "Aggregate Demand",
+        "content": "**Aggregate Demand (AD)** is the total demand for goods and services in an economy at a given price level in a given time period.\n\n**AD = C + I + G + (X − M)**\n- **C** — Consumer spending (largest component, ~65% of UK GDP)\n- **I** — Investment (spending by firms on capital goods)\n- **G** — Government spending\n- **X − M** — Net exports (exports minus imports)\n\n**The AD curve** slopes downward from left to right (as price level falls, real output demanded rises) due to:\n- **Wealth effect** — lower prices increase real value of savings\n- **Interest rate effect** — lower prices reduce demand for money, lower interest rates, stimulate I and C\n- **International competitiveness effect** — lower domestic prices make exports cheaper, imports dearer\n\n**Shifting the AD curve:**\n- Rightward shift (increase in AD): lower income tax, lower interest rates, higher government spending, increased consumer confidence, fall in exchange rate\n- Leftward shift (decrease in AD): higher taxes, higher interest rates, reduced confidence, austerity"
+      },
+      {
+        "id": "aggregate-supply",
+        "title": "Aggregate Supply",
+        "content": "**Aggregate Supply (AS)** is the total output of goods and services that all firms in an economy plan to produce at each price level.\n\n**Short-run AS (SRAS)** slopes upward: as the price level rises, it becomes more profitable to produce — output increases. SRAS can shift due to changes in costs of production:\n- Wage increases → SRAS shifts left (costs up)\n- Lower raw material prices → SRAS shifts right (costs down)\n- Depreciation of exchange rate → SRAS shifts left (imported costs rise)\n\n**Long-run AS (LRAS):** In the Keynesian model, LRAS is a reverse L-shape (elastic at low output, vertical at full capacity). In the **Neoclassical/monetarist** model, LRAS is vertical at the **natural rate of output** (productive potential), indicating that in the long run output is supply-side determined.\n\n**Shifting LRAS** (improving productive capacity):\n- Improved education and training (human capital)\n- Increased investment in infrastructure\n- Technological progress\n- Deregulation and competition policy\n- Immigration increasing labour supply"
+      },
+      {
+        "id": "macroeconomic-equilibrium",
+        "title": "Macroeconomic Equilibrium and the Multiplier",
+        "content": "**Macroeconomic equilibrium** occurs where AD = AS. Changes in AD or AS shift the equilibrium price level and output.\n\n**Demand-side shocks:**\n- A rightward shift in AD (e.g. fiscal stimulus) increases real output and the price level in the short run\n- If the economy is at full employment, the increase may be purely inflationary (moving along a vertical LRAS)\n\n**Supply-side shocks:**\n- A leftward shift in SRAS (e.g. oil price spike) causes **stagflation** — higher prices and lower output simultaneously\n- A rightward shift in LRAS raises productive capacity (more output at same price level)\n\n**The Keynesian Multiplier:** An initial injection of spending into the economy generates a larger final increase in national income:\n$$\\text{Multiplier} = \\frac{1}{1 - MPC} = \\frac{1}{MPW}$$\nwhere MPC is the marginal propensity to consume and MPW is the marginal propensity to withdraw (= MPS + MPT + MPM).\n\nA higher MPC → larger multiplier. In practice, the multiplier is limited by leakages: saving, taxation, and imports."
+      }
+    ],
+    "keyPoints": [
+      "AD = C + I + G + (X - M); slopes downward due to wealth, interest rate, and competitiveness effects",
+      "AD shifts right with lower taxes, lower interest rates, or higher government spending",
+      "SRAS slopes upward; shifts when production costs change",
+      "Neoclassical LRAS is vertical at natural output level — supply-side determined in long run",
+      "Stagflation: leftward SRAS shift causes simultaneous higher prices and lower output",
+      "Multiplier = 1 / MPW; larger MPC → larger multiplier effect of any injection"
+    ],
+    "relatedFlashcardDeckId": "economics-macro",
+    "relatedTopicId": "economics-t2"
+  },
+  {
+    "id": "business-note-1",
+    "title": "Business Objectives and Strategy",
+    "subject": "business",
+    "topicId": "business-t1",
+    "readTime": "9 min read",
+    "sections": [
+      {
+        "id": "business-objectives",
+        "title": "Business Objectives",
+        "content": "A **business objective** is a specific, measurable goal that an organisation works towards. Objectives translate the overall mission or vision into concrete targets.\n\n**Common objectives:**\n- **Profit maximisation** — traditional assumption of neoclassical economics; maximise the difference between total revenue and total costs\n- **Revenue/sales maximisation** — particularly common where managers are rewarded based on sales volume rather than profit (principal-agent problem)\n- **Growth** — increasing market share, output, or asset base; important for accessing capital markets and economies of scale\n- **Survival** — primary objective in difficult economic conditions or for new market entrants\n- **Satisficing** (H.A. Simon) — achieving a satisfactory rather than maximum level of profit; reflects the reality that managers have imperfect information and multiple stakeholders\n- **Corporate Social Responsibility (CSR)** — objectives relating to ethical, environmental, and social impact\n\n**SMART objectives** are Specific, Measurable, Achievable, Relevant, and Time-bound. They translate strategy into actionable plans that can be monitored and evaluated."
+      },
+      {
+        "id": "ansoff-matrix",
+        "title": "The Ansoff Matrix",
+        "content": "The **Ansoff Matrix** is a strategic tool used to analyse growth opportunities by considering products and markets.\n\n|  | **Existing Market** | **New Market** |\n|---|---|---|\n| **Existing Product** | Market Penetration | Market Development |\n| **New Product** | Product Development | Diversification |\n\n**Market penetration** — selling more of an existing product in an existing market. Lowest risk. Strategies: competitive pricing, increased marketing, loyalty schemes.\n\n**Market development** — entering new markets with existing products. Moderate risk. Strategies: exporting, targeting new demographics, new geographic regions.\n\n**Product development** — creating new products for existing markets. Moderate risk. Requires R&D investment. Strategies: product line extensions, innovation.\n\n**Diversification** — new products in new markets. Highest risk. Can be related (similar industries) or unrelated (conglomerates). Spreads risk but requires new competencies.\n\n**Risk increases** moving from penetration to diversification. The matrix helps firms match their growth ambition to their risk appetite and existing competencies."
+      },
+      {
+        "id": "porter-five-forces",
+        "title": "Porter's Five Forces",
+        "content": "Michael Porter's **Five Forces framework** analyses the competitive intensity and attractiveness of an industry.\n\n**1. Threat of new entrants:** High barriers to entry (economies of scale, capital requirements, brand loyalty, regulation) reduce this threat and protect incumbent firms.\n\n**2. Bargaining power of suppliers:** High when there are few suppliers, switching costs are high, or the supplier's input is critical and has no substitute.\n\n**3. Bargaining power of buyers:** High when buyers purchase in large volumes, products are undifferentiated, and switching costs are low.\n\n**4. Threat of substitutes:** Products from a different industry that fulfil the same need (e.g. tea as a substitute for coffee). Limits pricing power.\n\n**5. Competitive rivalry:** The intensity of competition among existing firms. Increases with many equal-sized competitors, slow industry growth, low switching costs, and high fixed costs.\n\n**Application:** A firm with low rivalry, few substitutes, weak buyer/supplier power, and high entry barriers operates in a highly attractive industry — easier to earn and sustain supernormal profits."
+      }
+    ],
+    "keyPoints": [
+      "Profit maximisation assumes MR = MC; satisficing recognises managers have imperfect information",
+      "Principal-agent problem: managers may pursue sales growth over shareholder profit maximisation",
+      "Ansoff Matrix: penetration (lowest risk) to diversification (highest risk)",
+      "Porter's Five Forces assesses industry attractiveness and competitive intensity",
+      "High barriers to entry protect incumbents from new competition",
+      "SMART objectives translate strategy into specific, measurable, time-bound targets"
+    ],
+    "relatedFlashcardDeckId": "business-strategy",
+    "relatedTopicId": "business-t1"
+  },
+  {
+    "id": "business-note-2",
+    "title": "Financial Management and Ratio Analysis",
+    "subject": "business",
+    "topicId": "business-t2",
+    "readTime": "10 min read",
+    "sections": [
+      {
+        "id": "financial-statements",
+        "title": "Financial Statements",
+        "content": "Businesses produce three core financial statements:\n\n**1. Income Statement (Profit & Loss Account):**\n- Revenue − Cost of Goods Sold = **Gross Profit**\n- Gross Profit − Operating Expenses = **Operating Profit (EBIT)**\n- Operating Profit − Interest − Tax = **Net Profit (Profit after tax)**\n\n**2. Balance Sheet:** A snapshot of a business's assets, liabilities, and equity at a point in time.\n- **Assets** = Non-current (fixed) assets + Current assets\n- **Liabilities** = Non-current liabilities + Current liabilities\n- **Equity** = Assets − Liabilities (shareholders' funds)\n- The fundamental equation: **Assets = Liabilities + Equity**\n\n**3. Cash Flow Statement:** Tracks actual cash movements (not profit):\n- Operating activities\n- Investing activities\n- Financing activities\n\n**Key distinction:** A profitable business can still fail due to **cash flow problems** (e.g. selling goods on credit but unable to pay suppliers). Cash flow and profit are not the same."
+      },
+      {
+        "id": "ratio-analysis",
+        "title": "Financial Ratios",
+        "content": "**Ratio analysis** uses figures from financial statements to assess business performance. Ratios are only meaningful when compared to previous periods or industry benchmarks.\n\n**Profitability ratios:**\n- Gross Profit Margin = $\\dfrac{\\text{Gross Profit}}{\\text{Revenue}} \\times 100$\n- Net Profit Margin = $\\dfrac{\\text{Net Profit}}{\\text{Revenue}} \\times 100$\n- Return on Capital Employed (ROCE) = $\\dfrac{\\text{EBIT}}{\\text{Capital Employed}} \\times 100$\n\n**Liquidity ratios** (ability to meet short-term obligations):\n- Current Ratio = $\\dfrac{\\text{Current Assets}}{\\text{Current Liabilities}}$ (target: ~2:1)\n- Acid Test (Quick) Ratio = $\\dfrac{\\text{Current Assets} - \\text{Inventories}}{\\text{Current Liabilities}}$ (target: ~1:1)\n\n**Gearing ratio** (proportion of debt in capital structure):\n- Gearing = $\\dfrac{\\text{Non-current Liabilities}}{\\text{Capital Employed}} \\times 100$\n- High gearing (>50%) increases financial risk; interest payments are a fixed obligation"
+      },
+      {
+        "id": "investment-appraisal",
+        "title": "Investment Appraisal",
+        "content": "**Investment appraisal** is the process of evaluating the financial viability of long-term capital expenditure decisions.\n\n**Payback Period:** The time taken for cumulative net cash inflows to equal the initial investment.\n- Simple to calculate and understand\n- Ignores cash flows after the payback period and the time value of money\n\n**Average Rate of Return (ARR):**\n$$ARR = \\frac{\\text{Average Annual Profit}}{\\text{Initial Investment}} \\times 100\\%$$\n- Takes all cash flows into account\n- Still ignores the time value of money\n\n**Net Present Value (NPV):**\n$$NPV = \\sum_{t=1}^{n} \\frac{CF_t}{(1+r)^t} - \\text{Initial Investment}$$\nwhere $CF_t$ is the cash flow in year $t$ and $r$ is the discount rate.\n- **NPV > 0**: project is financially viable\n- **NPV < 0**: project destroys value\n- Most theoretically rigorous method — accounts for the time value of money\n\nNPV is preferred by financial theory but payback is widely used in practice due to its simplicity."
+      }
+    ],
+    "keyPoints": [
+      "Income statement: Revenue − COGS = Gross Profit; minus expenses = Operating Profit",
+      "Balance sheet: Assets = Liabilities + Equity (snapshot at a point in time)",
+      "A profitable business can fail if it has poor cash flow — profit ≠ cash",
+      "ROCE = EBIT / Capital Employed × 100; key measure of overall financial efficiency",
+      "Acid test ratio excludes inventories — a stricter measure of short-term liquidity",
+      "NPV > 0 means a project adds value; it accounts for the time value of money"
+    ],
+    "relatedFlashcardDeckId": "business-finance",
+    "relatedTopicId": "business-t2"
+  },
+  {
+    "id": "philosophy-note-1",
+    "title": "Epistemology: Knowledge and Justified Belief",
+    "subject": "philosophy",
+    "topicId": "philosophy-t1",
+    "readTime": "11 min read",
+    "sections": [
+      {
+        "id": "what-is-knowledge",
+        "title": "What Is Knowledge?",
+        "content": "**Epistemology** is the branch of philosophy concerned with the nature, sources, and limits of knowledge.\n\n**The Traditional (Tripartite) Analysis of Knowledge:** Knowledge is **Justified True Belief (JTB)**. To know that $p$:\n1. $p$ must be **true**\n2. You must **believe** that $p$\n3. Your belief must be **justified** (you must have good reason to believe $p$)\n\n**Types of knowledge:**\n- **Propositional (knowing that)** — knowing that the Earth orbits the Sun\n- **Procedural (knowing how)** — knowing how to ride a bike\n- **Acquaintance (knowing of)** — knowing a person\n\nEpistemology focuses primarily on propositional knowledge.\n\n**Gettier Problems (1963):** Edmund Gettier provided counterexamples showing that JTB is not sufficient for knowledge. In Gettier cases, a person has a justified true belief but does not seem to have knowledge (the truth is accidentally connected to the justification).\n\nExample: You check your watch (which has stopped) and it reads 3:10. It is actually 3:10. You have a JTB that it is 3:10, but you do not *know* it."
+      },
+      {
+        "id": "rationalism-empiricism",
+        "title": "Rationalism vs Empiricism",
+        "content": "The debate between **rationalism** and **empiricism** concerns the primary source of knowledge.\n\n**Rationalism:** Knowledge is primarily derived from reason, independent of sensory experience. Some knowledge is **a priori** — known prior to (and independent of) experience.\n- Descartes: Cogito ergo sum ('I think, therefore I am') — a foundational truth known through reason alone\n- Plato: innate knowledge — the soul knows Forms from before birth (theory of recollection)\n- Mathematical truths (e.g. $2 + 2 = 4$) are necessarily true and known through reason\n\n**Empiricism:** All knowledge derives from sensory experience. No **innate ideas** — the mind begins as a *tabula rasa* (blank slate).\n- Locke: All ideas come from sensation (outer experience) or reflection (inner experience)\n- Hume: Impressions (vivid sensory experiences) precede ideas (fainter copies). Relations of ideas vs matters of fact.\n- Berkeley: To be is to be perceived (*esse est percipi*)\n\n**Kant's synthesis:** Some knowledge is both a priori (not derived from experience) and **synthetic** (adds new information) — e.g. 'every event has a cause'. The mind imposes structure on experience through categories of understanding."
+      },
+      {
+        "id": "scepticism",
+        "title": "Scepticism and Responses to It",
+        "content": "**Scepticism** is the philosophical position that certain knowledge (or knowledge of a specific domain) is impossible or unattainable.\n\n**Cartesian scepticism (Descartes, *Meditations*):**\n- The **evil demon hypothesis** — an all-powerful demon could deceive us about everything, including mathematics. If this is possible, how can we claim to know anything?\n- The **dream argument** — we cannot be certain we are not dreaming; our experiences could be entirely illusory\n- Descartes' method of **hyperbolic doubt** — doubt everything that can possibly be doubted to find an indubitable foundation\n\n**Descartes' response:** Cogito ergo sum — 'I think, therefore I am'. The very act of doubting proves that a thinking subject exists. This provides a secure foundation for rebuilding knowledge.\n\n**Other responses to scepticism:**\n- **Moorean response** (G.E. Moore) — common sense: 'Here is one hand, here is another' — we know these things with more certainty than any philosophical argument that contradicts them\n- **Contextualism** — the standards for knowledge vary with context; sceptical standards are unusually high and not normally required\n- **Reliabilism** — knowledge requires a reliably truth-producing cognitive process, not infallibility"
+      }
+    ],
+    "keyPoints": [
+      "JTB analysis: knowledge = justified true belief; Gettier showed this is insufficient",
+      "Rationalism: a priori knowledge from reason alone; e.g. Descartes' Cogito",
+      "Empiricism: all knowledge from experience; Locke's tabula rasa; Hume's impressions and ideas",
+      "Kant synthesised both: some knowledge is a priori and synthetic (e.g. causal necessity)",
+      "Cartesian scepticism: evil demon and dream arguments — can we know anything?",
+      "Moore's response: certainty of common sense facts outweighs sceptical arguments"
+    ],
+    "relatedFlashcardDeckId": "philosophy-epistemology",
+    "relatedTopicId": "philosophy-t1"
+  },
+  {
+    "id": "philosophy-note-2",
+    "title": "Ethics: Moral Theories",
+    "subject": "philosophy",
+    "topicId": "philosophy-t2",
+    "readTime": "12 min read",
+    "sections": [
+      {
+        "id": "utilitarianism",
+        "title": "Utilitarianism",
+        "content": "**Utilitarianism** is a **consequentialist** moral theory: the rightness of an action is determined entirely by its consequences.\n\n**Jeremy Bentham's act utilitarianism:**\n- The **principle of utility** — actions are right if they produce the greatest happiness for the greatest number\n- Happiness = pleasure; unhappiness = pain\n- The **hedonic calculus** evaluates pleasure by: intensity, duration, certainty, propinquity (nearness), fecundity, purity, and extent\n\n**John Stuart Mill's refinements:**\n- Distinguished between **higher pleasures** (intellectual, moral) and **lower pleasures** (bodily) — 'better to be Socrates dissatisfied than a fool satisfied'\n- **Rule utilitarianism** — follow rules that, if generally adopted, would maximise utility (rather than calculating each act separately)\n\n**Criticisms of utilitarianism:**\n- **Justice objection** — could justify punishing an innocent person if it maximises utility\n- **Demandingness** — requires constant sacrifice of personal interests for the greater good\n- **Measurement problem** — how do we compare pleasures across people?\n- **Integrity objection** (Bernard Williams) — forces agents to violate their personal commitments and integrity"
+      },
+      {
+        "id": "kantian-ethics",
+        "title": "Kantian (Deontological) Ethics",
+        "content": "**Immanuel Kant** argued that morality is based on **reason**, not consequences. Actions have intrinsic moral worth — what matters is the **motive** (acting from duty) not the outcome.\n\n**The Categorical Imperative** — a universal moral law that applies to all rational beings, regardless of desires or circumstances. Kant formulated it in several ways:\n\n1. **Formula of Universal Law:** 'Act only according to that maxim by which you can at the same time will that it should become a universal law.' — can you consistently universalise your action?\n2. **Formula of Humanity:** 'Act so that you treat humanity, whether in your own person or that of another, always as an end, and never as a means only.' — respect persons as rational autonomous agents\n\n**Perfect duties** — absolute prohibitions or requirements (e.g. do not lie). **Imperfect duties** — duties that allow some latitude in how they are fulfilled (e.g. help others).\n\n**Criticisms:**\n- Too rigid — the absolute prohibition on lying could mean telling a murderer where their victim is hiding\n- No way to resolve conflicts between duties\n- Ignores the role of emotions and relationships in morality (virtue ethics response)"
+      },
+      {
+        "id": "virtue-ethics",
+        "title": "Virtue Ethics",
+        "content": "**Virtue ethics** focuses on the **character** of the moral agent rather than on rules or consequences. Its roots lie in Aristotle's *Nicomachean Ethics*.\n\n**Key concepts:**\n- **Eudaimonia** — often translated as 'happiness' or 'flourishing'; the ultimate goal of human life, achieved through virtuous activity in accordance with reason\n- **Virtue (arete)** — an excellent character trait or disposition. A virtue is a mean between two vices:\n  - **Courage** is the mean between cowardice (deficiency) and recklessness (excess)\n  - **Generosity** is the mean between miserliness and prodigality\n- **The doctrine of the mean** — virtue lies between extremes of excess and deficiency\n- **Phronesis (practical wisdom)** — the ability to discern the right action in particular circumstances; the master virtue\n\n**How do we become virtuous?** Through **habit** and practice (*ethos*). Aristotle: 'We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.'\n\n**Criticisms:**\n- Provides insufficient guidance in moral dilemmas\n- Culturally relative — what counts as virtue may vary across cultures\n- Not action-guiding in a direct way"
+      }
+    ],
+    "keyPoints": [
+      "Utilitarianism: right action maximises greatest happiness for greatest number (consequentialist)",
+      "Bentham's hedonic calculus measures pleasure by intensity, duration, extent etc.",
+      "Mill: higher pleasures (intellectual) outweigh lower (bodily); rule vs act utilitarianism",
+      "Kant: act from duty; Categorical Imperative — universalisability and treating persons as ends",
+      "Aristotle: eudaimonia is the goal; virtue is a mean between two vices",
+      "Phronesis (practical wisdom) enables discernment of the virtuous action in context"
+    ],
+    "relatedFlashcardDeckId": "philosophy-ethics",
+    "relatedTopicId": "philosophy-t2"
   }
 ]
