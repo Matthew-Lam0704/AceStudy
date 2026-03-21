@@ -60,7 +60,7 @@ export default function QuestionPage({ params }: { params: Promise<{ questionId:
 
       {/* Options */}
       <div className="space-y-3 mb-6">
-        {question.options.map((option, i) => {
+        {(question.options ?? []).map((option, i) => {
           let borderColor = 'var(--border)';
           let bg = 'var(--surface)';
           let textColor = 'var(--text-primary)';
@@ -130,7 +130,7 @@ export default function QuestionPage({ params }: { params: Promise<{ questionId:
               </p>
               {!isCorrect && (
                 <p className="text-sm mt-0.5" style={{ color: 'var(--text-secondary)' }}>
-                  Correct answer: <strong>{question.options[question.correctAnswer]}</strong>
+                  Correct answer: <strong>{question.options?.[question.correctAnswer as number]}</strong>
                 </p>
               )}
             </div>
