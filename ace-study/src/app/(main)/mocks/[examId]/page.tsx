@@ -159,7 +159,7 @@ export default function ExamPage({ params }: { params: Promise<{ examId: string 
                   <div className="min-w-0">
                     <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>Q{i + 1}: {q.question.slice(0, 80)}{q.question.length > 80 ? '…' : ''}</p>
                     {!correct && answered && (
-                      <p className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>Correct: {q.options[q.correctAnswer]}</p>
+                      <p className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>Correct: {q.options?.[q.correctAnswer as number]}</p>
                     )}
                   </div>
                 </div>
@@ -242,7 +242,7 @@ export default function ExamPage({ params }: { params: Promise<{ examId: string 
           </div>
 
           <div className="space-y-3">
-            {currentQuestion.options.map((option, i) => (
+            {(currentQuestion.options ?? []).map((option, i) => (
               <button
                 key={i}
                 onClick={() => setAnswers((prev) => ({ ...prev, [currentQuestion.id]: i }))}
